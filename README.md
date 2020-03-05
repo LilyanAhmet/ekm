@@ -1,5 +1,5 @@
-# Ecomex Karrierezentrum Company Project
+# EKM Klose/Schroeder GbR Company Project
 
-- Design and software development on the corporate website of Ecomex Company.
-- Design of Ecomex Corporate Logo
-- Design of Ecomex Service Journey Animation Video
+- Design and software development on the corporate website of EKM Klose/Schroeder GbR Company.
+- Design of EKM Klose/Schroeder GbR Corporate Logo
+- Design of EKM Klose/Schroeder GbR Service Journey Animation Videos
