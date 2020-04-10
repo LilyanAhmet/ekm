@@ -1,4 +1,4 @@
-@import "./variabels.css" ;
+@import "./variabels.css";
 
 body {
   font-family: "Gilroy", sans-serif;
@@ -23,26 +23,120 @@ p {
 a {
   text-decoration: none;
 }
-
+dl,
+ol,
+ul {
+  padding-left: 0;
+}
+.Separator {
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: var(--main-color);
+}
+.margin-m-10{
+  margin-top: -10px;
+}
 .navbar {
   width: 90%;
   box-shadow: none !important;
 }
-#nav-bg{
+#nav-bg {
   background-color: var(--main-color);
-  border-radius: 0% 100% 15% 54% / 100% 0% 200% 1% ;
+  border-radius: 0% 200% 15% 0% / 150% 0% 200% 150%;
 }
 .navbar-nav .dropdown-menu.show {
   display: table;
   width: 100%;
   border-radius: 0;
+  background-color: transparent;
+  border: none !important;
+  transform: translate3d(0px, 25px, 0px) !important;
 }
 .navbar .dropdown-menu a {
   display: inline;
 }
-
+.navbar .dropdown-menu a {
+  font-family: Gilroy;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white-color) !important;
+}
+.navbar .dropdown-menu a:hover {
+  color: var(--light-turquoise-color) !important;
+  background-color: transparent !important;
+}
+.navbar .dropdown-menu a:active {
+  color: var(--light-turquoise-color) !important;
+  background-color: transparent !important;
+}
+.navbar .nav-item .nav-link {
+  font-family: Gilroy;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--white-color);
+}
 
 /*Footer*/
 footer.page-footer {
   background-color: var(--grey-color);
+}
+footer.page-footer a {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--font-color) !important;
+}
+footer .title {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--font-color);
+}
+footer.page-footer .footer-copyright {
+  background-color: var(--grey-color) !important;
+  overflow: hidden;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--font-color) !important;
+}
+.footer p {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--font-color);
+}
+footer .social {
+  display: flex;
+  list-style: none;
+}
+
+footer .social li {
+  display: inline-flex;
+  padding-right: 30px;
 }

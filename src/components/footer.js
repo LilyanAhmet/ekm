@@ -1,10 +1,17 @@
 import React from "react"
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact"
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact"
+
+// resources
+import Logo from "../images/footer-logo.png"
+import Icon from "../images/ekm-icon.svg"
 const footer = () => {
   return (
     <MDBFooter className="font-small pt-4 mt-4">
       <MDBContainer className="text-center text-md-left">
         <MDBRow>
+          <MDBCol>
+            <img className="img-fluid" src={Logo} />
+          </MDBCol>
           <MDBCol>
             <h5 className="title">Über Uns</h5>
             <ul>
@@ -54,13 +61,6 @@ const footer = () => {
             </ul>
           </MDBCol>
           <MDBCol>
-            <h5 className="title">Footer Content</h5>
-            <p>
-              Here you can use rows and columns here to organize your footer
-              content.
-            </p>
-          </MDBCol>
-          <MDBCol>
             <h5 className="title">Links</h5>
             <ul>
               <li className="list-unstyled">
@@ -69,20 +69,56 @@ const footer = () => {
               <li className="list-unstyled">
                 <a href="#!">Link 2</a>
               </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 3</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 4</a>
-              </li>
             </ul>
           </MDBCol>
         </MDBRow>
+        <hr className="Separator" />
       </MDBContainer>
+
       <div className="footer-copyright text-center py-3">
-        <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a href="https://www.mdbootstrap.com"> MDBootstrap.com </a>
+        <MDBContainer>
+          <MDBRow>
+            <MDBCol md="4" sm="12">
+              <p>
+                &copy; {new Date().getFullYear()} Urheberrechte EKM
+                Klose/Schroeder GbR
+              </p>
+            </MDBCol>
+            <MDBCol md="4" sm="12">
+              <img className="margin-m-10" src={Icon} />
+            </MDBCol>
+            <MDBCol md="4" sm="12">
+              <ul className="social">
+                <li>
+                  <a>
+                    <MDBIcon fab icon="facebook-f" />
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <MDBIcon fab icon="linkedin-in" />
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    {" "}
+                    <MDBIcon fab icon="twitter" />
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    {" "}
+                    <MDBIcon fab icon="youtube" />
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <MDBIcon fab icon="instagram" />
+                  </a>
+                </li>
+              </ul>
+            </MDBCol>
+          </MDBRow>
         </MDBContainer>
       </div>
     </MDBFooter>

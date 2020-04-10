@@ -46,6 +46,15 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Gilroy"],
+          urls: ["/static/fonts/fonts.css"],
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options:
           process.env.NODE_ENV === 'development'
