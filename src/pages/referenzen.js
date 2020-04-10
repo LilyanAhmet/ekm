@@ -1,13 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-const uberEkm = () => {
+
+const referenzen = () => {
   return (
     <Layout>
-      <SEO title="uberEkm" />
-      <div>uberEkm</div>
+      <SEO title="referenzen" />
+      <div>referenzen</div>
     </Layout>
   )
 }
 
-export default uberEkm
+export default referenzen

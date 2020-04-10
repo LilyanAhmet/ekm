@@ -1,23 +1,94 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+  MDBIcon,
+} from "mdbreact"
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <div>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
-  </header>
-)
+import Logo from "../images/ekm-logo.svg"
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+class Header extends React.Component {
+  state = {
+    isOpen: false,
+  }
+
+  toggleCollapse = () => {
+    this.setState({ isOpen: !this.state.isOpen })
+  }
+
+  render() {
+    return (
+      <header>
+        <MDBNavbar expand="md" id="nav-bg">
+          <MDBNavbarBrand>
+            <img src={Logo} className="white-text" />
+          </MDBNavbarBrand>
+          <MDBNavbarToggler onClick={this.toggleCollapse} />
+          <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+            <MDBNavbarNav left>
+              <MDBNavItem>
+                <MDBDropdown>
+                  <MDBDropdownToggle nav caret>
+                    <span className="mr-2">Über Uns</span>
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem href="#!">Über EKM</MDBDropdownItem>
+                    <MDBDropdownItem href="#!">Berater </MDBDropdownItem>
+                    <MDBDropdownItem href="#!">Erfahrungen</MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </MDBNavItem>
+              <MDBNavItem active>
+                <Link className="nav-link waves-effect waves-light" to="#!">
+                  Unternehmercoaching
+                </Link>
+              </MDBNavItem>
+              <MDBNavItem>
+                <Link className="nav-link waves-effect waves-light" to="#!">
+                  Karrieremanagament
+                </Link>
+              </MDBNavItem>
+              <MDBNavItem>
+                <Link className="nav-link waves-effect waves-light" to="#!">
+                  Referenzen
+                </Link>
+              </MDBNavItem>
+              <MDBNavItem>
+                <Link className="nav-link waves-effect waves-light" to="#!">
+                  Blog
+                </Link>
+              </MDBNavItem>
+              <MDBNavItem>
+                <Link className="nav-link waves-effect waves-light" to="#!">
+                  Kontakt
+                </Link>
+              </MDBNavItem>
+            </MDBNavbarNav>
+            <MDBNavbarNav right>
+              <MDBNavItem>
+                <Link className="nav-link waves-effect waves-light" to="#!">
+                  <MDBIcon fas icon="phone" />
+                </Link>
+              </MDBNavItem>
+              <MDBNavItem>
+                <Link className="nav-link waves-effect waves-light" to="#!">
+                  <MDBIcon fas icon="envelope" />
+                </Link>
+              </MDBNavItem>
+            </MDBNavbarNav>
+          </MDBCollapse>
+        </MDBNavbar>
+      </header>
+    )
+  }
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header

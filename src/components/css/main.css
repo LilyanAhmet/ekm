@@ -1,23 +1,48 @@
+@import "./variabels.css" ;
+
 body {
-    font-family: "Gilroy", sans-serif;
-    color: var(--mainBlack);
-    background: var(--mainWhite);
-    line-height: 1.4;
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Gilroy", sans-serif;
-    margin-bottom: 1.25rem;
-    letter-spacing: var(--mainSpacing);
-  }
-  p {
-    margin-bottom: 1.25rem;
-  }
-  a {
-    text-decoration: none;
-  }
+  font-family: "Gilroy", sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  line-height: 1.4;
+  font-size: 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gilroy", sans-serif;
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
+}
+p {
+  margin-bottom: 1.25rem;
+}
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  width: 90%;
+  box-shadow: none !important;
+}
+#nav-bg{
+  background-color: var(--main-color);
+  border-radius: 0% 100% 15% 54% / 100% 0% 200% 1% ;
+}
+.navbar-nav .dropdown-menu.show {
+  display: table;
+  width: 100%;
+  border-radius: 0;
+}
+.navbar .dropdown-menu a {
+  display: inline;
+}
+
+
+/*Footer*/
+footer.page-footer {
+  background-color: var(--grey-color);
+}

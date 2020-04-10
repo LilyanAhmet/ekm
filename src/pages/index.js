@@ -1,11 +1,14 @@
-import React from "react"
+import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-  </Layout>
-)
-
-export default IndexPage
+export default class index extends Component {
+  render() {
+    return (
+      <div>
+        <Layout>
+          <SEO title="Home" />
+        </Layout>
+      </div>
+    )
+  }
+}
