@@ -41,9 +41,9 @@ class Header extends React.Component {
                     <span className="mr-2">Über Uns</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem href="#!">Über EKM</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Berater </MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Erfahrungen</MDBDropdownItem>
+                    <MDBDropdownItem href="/ueber-ekm">Über EKM</MDBDropdownItem>
+                    <MDBDropdownItem href="/berater">Berater </MDBDropdownItem>
+                    <MDBDropdownItem href="/erfahrungen">Erfahrungen</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
