@@ -6,14 +6,14 @@ import { graphql } from "gatsby"
 class unternehmercoaching extends React.Component {
     render() {
         const graphData = this.props.data
-        console.log(graphData);
+        console.log(graphData.allContentfulServicePage);
         return (
             <Layout>
                 <SEO title="unternehmercoaching"/>
-                <div>{graphData.allContentfulConsultant.edges[0].node.name}</div>
-                <div>{graphData.allContentfulConsultant.edges[0].node.description.description}</div>
-                <div>{graphData.allContentfulConsultant.edges[1].node.name}</div>
-                <div>{graphData.allContentfulConsultant.edges[1].node.existenzgrndungsberatung.existenzgrndungsberatung}</div>
+                <div>{graphData.allContentfulServicePage.edges[0].node.title}</div>
+                <div>{graphData.allContentfulServicePage.edges[0].node.text.text}</div>
+                <div>{graphData.allContentfulServicePage.edges[1].node.title}</div>
+                <div>{graphData.allContentfulServicePage.edges[1].node.text.text}</div>
             </Layout>
         )
     }
@@ -21,32 +21,19 @@ class unternehmercoaching extends React.Component {
 export default unternehmercoaching
 
 export const query = graphql`
-       query {
-  allContentfulConsultant {
+  query {
+  allContentfulServicePage {
     edges {
       node {
-        name
-        photo {
-          fluid {
-            src
-          }
-        }
-        description {
-          description
-        }
-        businessDevelopment {
-          businessDevelopment
-        }
-        existenzgrndungsberatung {
-          existenzgrndungsberatung
-        }
-        zertifizierungen {
-          fluid {
-            src
-          }
+        title
+        text {
+          text
         }
       }
     }
   }
 }
+
+
 `
+

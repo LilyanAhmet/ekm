@@ -13,7 +13,10 @@ class karrieremanagament extends React.Component {
         return (
             <Layout>
                 <SEO title="karrieremanagament"/>
-                <div>{graphData.contentfulServicePage.title.text}</div>
+                <div>{graphData.allContentfulServicePage.edges[0].node.title}</div>
+                <div>{graphData.allContentfulServicePage.edges[0].node.text.text}</div>
+                <div>{graphData.allContentfulServicePage.edges[1].node.title}</div>
+                <div>{graphData.allContentfulServicePage.edges[1].node.text.text}</div>
             </Layout>
         )
     }
@@ -21,41 +24,19 @@ class karrieremanagament extends React.Component {
 export default karrieremanagament
 
 export const query = graphql`
-query {
-    contentfulServicePage {
+  query {
+  allContentfulServicePage {
+    edges {
+      node {
         title
         text {
-            text
+          text
         }
-        serviceShort {
-            icon {
-                fluid {
-                    src
-                }
-            }
-            title
-            description
-        }
-        serviceLong {
-        ... on ContentfulServiceLong {
-                icon {
-                    fluid {
-                        src
-                    }
-                }
-                title
-                subtitle
-                content1Title
-                content1Text
-                content2Title
-                content2Text
-                content3Text
-                content3Title
-            }
-        }
+      }
     }
+  }
 }
 
-`
 
+`
 
