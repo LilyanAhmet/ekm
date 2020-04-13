@@ -219,10 +219,37 @@ ul {
 }
 
 .ekm .certificate .title hr {
-  width: 60%;
+  width: 75%;
   height: 3px;
   border-radius: 1.5px;
   background-image: linear-gradient( 78deg, var(--dark-turquoise-color), var(--light-turquoise-color) 100% );
+}
+
+
+/*erfahrungen*/
+.experience{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.experience h1 {
+  font-size: 30px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--font-color);
+}
+.experience p{
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: justify;
+  color: var(--font-color);
 }
 /*Footer*/
 footer.page-footer {

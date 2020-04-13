@@ -7,6 +7,7 @@ import {graphql} from "gatsby";
 /* resources */
 import Avatar from "../images/avatar.svg"
 import Certificate from "../images/cerft-1.svg"
+
 export default class berater extends Component {
   state = {
     activeItem: "1",
