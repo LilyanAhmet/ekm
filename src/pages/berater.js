@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Nav, Tab, Col, Row, Container } from "react-bootstrap"
 import { MDBContainer, MDBRow, MDBCol, MDBMask, MDBView } from "mdbreact"
-
+import {graphql} from "gatsby";
 /* resources */
 import Avatar from "../images/avatar.svg"
 import Certificate from "../images/cerft-1.svg"
@@ -20,6 +20,8 @@ export default class berater extends Component {
     }
   }
   render() {
+    const graphData = this.props.data
+    console.log(graphData);
     return (
       <Layout>
         <SEO title="berater" />
@@ -196,3 +198,35 @@ export default class berater extends Component {
     )
   }
 }
+
+
+export const query = graphql`
+       query {
+  allContentfulConsultant {
+    edges {
+      node {
+        name
+        photo {
+          fluid {
+            src
+          }
+        }
+        description {
+          description
+        }
+        businessDevelopment {
+          businessDevelopment
+        }
+        existenzgrndungsberatung {
+          existenzgrndungsberatung
+        }
+        zertifizierungen {
+          fluid {
+            src
+          }
+        }
+      }
+    }
+  }
+}
+`
