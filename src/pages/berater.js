@@ -46,6 +46,81 @@ export default class berater extends Component {
             </p>
           </Col>
         </Row>
+        <Row className="margin-p-40">
+          <Col md={12}>
+            <div className="box ">
+              <div className="title">
+                <h2>Business Development</h2> <hr />
+              </div>
+              <div className="text">
+                <p>
+                  {array[i].node.businessDevelopment.businessDevelopment}
+                </p>
+              </div>
+            </div>
+          </Col>
+        </Row>
+        <Row className="margin-p-40">
+          <Col md={12}>
+            <div className="box">
+              <div className="title">
+                <h2>Existenzgründungsberatung</h2> <hr />
+              </div>
+              <div className="text">
+                <p>
+                  {array[i].node.existenzgrndungsberatung.existenzgrndungsberatung}
+                </p>
+              </div>
+            </div>
+          </Col>
+        </Row>
+        <Row className="margin-p-40">
+          <Col md={12}>
+            <div className="certificate ">
+              <div className="title">
+                <h2>Zertifizierungen</h2> <hr />
+              </div>
+              <Row className="margin-p-40">
+                <Col md={4} sm={12}>
+                  <MDBView hover zoom>
+                    <img
+                        src={array[i].node.zertifizierungen[0].fluid.src}
+                        className="img-fluid"
+                        alt=""
+                    />
+                    <MDBMask className="flex-center">
+                      <p className="white-text">Zoom effect</p>
+                    </MDBMask>
+                  </MDBView>
+                </Col>
+                <Col md={4} sm={12}>
+                  <MDBView hover zoom>
+                    <img
+                        src={array[i].node.zertifizierungen[1].fluid.src}
+                        className="img-fluid"
+                        alt=""
+                    />
+                    <MDBMask className="flex-center">
+                      <p className="white-text">Zoom effect</p>
+                    </MDBMask>
+                  </MDBView>
+                </Col>
+                <Col md={4} sm={12}>
+                  <MDBView hover zoom>
+                    <img
+                        src={array[i].node.zertifizierungen[2].fluid.src}
+                        className="img-fluid"
+                        alt=""
+                    />
+                    <MDBMask className="flex-center">
+                      <p className="white-text">Zoom effect</p>
+                    </MDBMask>
+                  </MDBView>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
       </Tab.Pane>)
     }
     return navItems
@@ -76,258 +151,7 @@ export default class berater extends Component {
                 </Col>
                 <Col sm={12}>
                   <Tab.Content>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        <Col md={3} sm={12}>
-                          <img className="img-fluid" src={Avatar} />
-                        </Col>
-                        <Col md={9} sm={12}>
-                          <p>
-                            Michael Schroeder, Betriebswirt (VWA), seit über 30
-                            Jahren im Finanzdienstleistungssektor tätig, davon
-                            20 Jahre auf Executive Level bzw. in der
-                            Geschäftsführung. Schwerpunkttemen Kredit- und
-                            Aussenhandelsgeschäft, Finanzierung von
-                            Existenzgründern, Unternehmen, Projekten, privaten
-                            wie gewerblichen Bauvorhaben. Master Black-Belt im
-                            Rahmen der Prozeßoptimierung (SixSigma und Lean
-                            Management) und mehrjährige
-                            Projektmanagementerfahrung.
-                          </p>
-                        </Col>
-                      </Row>
-                      <Row className="margin-p-40">
-                        <Col md={12}>
-                          <div className="box ">
-                            <div className="title">
-                              <h2>Business Development</h2> <hr />
-                            </div>
-                            <div className="text">
-                              <p>
-                                Wir begleiten Sie bereits im Rahmen der
-                                Existenzgründung und hier auch schon bei der
-                                Umsetzung Ihrer Idee in einen Businessplan und
-                                gern auch bei Finanzierungsfragen. bei der
-                                Entwicklung einer geeigneten Finanzierung, die
-                                aus Fördermöglichkeiten, privaten Investoren und
-                                Bankfinanzierungen besteht. Auch für bereits
-                                etablierte Unternehmen können wir gezielt durch
-                                eine SWAT-Analyse geplante Wachstumspläne
-                                überprüfen, Lösungen besprechen und Sie bis hin
-                                zur Findung einer geeigneten Finanzierungslösung
-                                begleiten. Wir unterstützen Sie bei den
-                                gewählten Schwerpunkten mit individuellen
-                                Lösungen und werden stets versuchen, vorhandene
-                                Fördermöglichkeiten aufzuzeigen und anzubieten.
-                              </p>
-                            </div>
-                          </div>
-                        </Col>
-                      </Row>
-                      <Row className="margin-p-40">
-                        <Col md={12}>
-                          <div className="box">
-                            <div className="title">
-                              <h2>Existenzgründungsberatung</h2> <hr />
-                            </div>
-                            <div className="text">
-                              <p>
-                                Haben Sie eine Idee, von der Sie glauben, dass
-                                diese Idee Sie ernähren könnte? Wir helfen Ihnen
-                                bei der Validierung Ihrer Idee und begleiten Sie
-                                auf dem Weg zum Businessplan und der
-                                Entscheidung, diese Idee weiter zu verfolgen mit
-                                dem Ziel, Sie bis zum Start Ihrer Tätigkeit zu
-                                unterstützen und Ihnen den Weg zu ebnen. Wir
-                                bieten Ihnen von der Förderung bei
-                                Existenzgründungen über private Investoren auch
-                                digitale Enabler an, die Ihnen mit Rat und Tat
-                                zur Seite stehen. Unsere Schwerpunkte liegen im
-                                Coaching des Gründers, der Entwicklung des
-                                Businessplans und der Usecases sowie der
-                                Erstellung einer SWAT-Analyse. Die
-                                Vollständigkeit der Finanzierungsunterlagen und
-                                ein gut aufbereiteter Finanzierungsvorschlag
-                                runden das gemeinsame Bankgespräch ab.
-                              </p>
-                            </div>
-                          </div>
-                        </Col>
-                      </Row>
-                      <Row className="margin-p-40">
-                        <Col md={12}>
-                          <div className="certificate ">
-                            <div className="title">
-                              <h2>Zertifizierungen</h2> <hr />
-                            </div>
-                            <Row className="margin-p-40">
-                              <Col md={4} sm={12}>
-                                <MDBView hover zoom>
-                                  <img
-                                    src={Certificate}
-                                    className="img-fluid"
-                                    alt=""
-                                  />
-                                  <MDBMask className="flex-center">
-                                    <p className="white-text">Zoom effect</p>
-                                  </MDBMask>
-                                </MDBView>
-                              </Col>
-                              <Col md={4} sm={12}>
-                                <MDBView hover zoom>
-                                  <img
-                                    src={Certificate}
-                                    className="img-fluid"
-                                    alt=""
-                                  />
-                                  <MDBMask className="flex-center">
-                                    <p className="white-text">Zoom effect</p>
-                                  </MDBMask>
-                                </MDBView>
-                              </Col>
-                              <Col md={4} sm={12}>
-                                <MDBView hover zoom>
-                                  <img
-                                    src={Certificate}
-                                    className="img-fluid"
-                                    alt=""
-                                  />
-                                  <MDBMask className="flex-center">
-                                    <p className="white-text">Zoom effect</p>
-                                  </MDBMask>
-                                </MDBView>
-                              </Col>
-                            </Row>
-                          </div>
-                        </Col>
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                      <Row>
-                        <Col md={3} sm={12}>
-                          <img className="img-fluid" src={Avatar} />
-                        </Col>
-                        <Col md={9} sm={12}>
-                          <p>
-                            Michael Schroeder, Betriebswirt (VWA), seit über 30
-                            Jahren im Finanzdienstleistungssektor tätig, davon
-                            20 Jahre auf Executive Level bzw. in der
-                            Geschäftsführung. Schwerpunkttemen Kredit- und
-                            Aussenhandelsgeschäft, Finanzierung von
-                            Existenzgründern, Unternehmen, Projekten, privaten
-                            wie gewerblichen Bauvorhaben. Master Black-Belt im
-                            Rahmen der Prozeßoptimierung (SixSigma und Lean
-                            Management) und mehrjährige
-                            Projektmanagementerfahrung.
-                          </p>
-                        </Col>
-                      </Row>
-                      <Row className="margin-p-40">
-                        <Col md={12}>
-                          <div className="box ">
-                            <div className="title">
-                              <h2>Business Development</h2> <hr />
-                            </div>
-                            <div className="text">
-                              <p>
-                                Wir begleiten Sie bereits im Rahmen der
-                                Existenzgründung und hier auch schon bei der
-                                Umsetzung Ihrer Idee in einen Businessplan und
-                                gern auch bei Finanzierungsfragen. bei der
-                                Entwicklung einer geeigneten Finanzierung, die
-                                aus Fördermöglichkeiten, privaten Investoren und
-                                Bankfinanzierungen besteht. Auch für bereits
-                                etablierte Unternehmen können wir gezielt durch
-                                eine SWAT-Analyse geplante Wachstumspläne
-                                überprüfen, Lösungen besprechen und Sie bis hin
-                                zur Findung einer geeigneten Finanzierungslösung
-                                begleiten. Wir unterstützen Sie bei den
-                                gewählten Schwerpunkten mit individuellen
-                                Lösungen und werden stets versuchen, vorhandene
-                                Fördermöglichkeiten aufzuzeigen und anzubieten.
-                              </p>
-                            </div>
-                          </div>
-                        </Col>
-                      </Row>
-                      <Row className="margin-p-40">
-                        <Col md={12}>
-                          <div className="box">
-                            <div className="title">
-                              <h2>Existenzgründungsberatung</h2> <hr />
-                            </div>
-                            <div className="text">
-                              <p>
-                                Haben Sie eine Idee, von der Sie glauben, dass
-                                diese Idee Sie ernähren könnte? Wir helfen Ihnen
-                                bei der Validierung Ihrer Idee und begleiten Sie
-                                auf dem Weg zum Businessplan und der
-                                Entscheidung, diese Idee weiter zu verfolgen mit
-                                dem Ziel, Sie bis zum Start Ihrer Tätigkeit zu
-                                unterstützen und Ihnen den Weg zu ebnen. Wir
-                                bieten Ihnen von der Förderung bei
-                                Existenzgründungen über private Investoren auch
-                                digitale Enabler an, die Ihnen mit Rat und Tat
-                                zur Seite stehen. Unsere Schwerpunkte liegen im
-                                Coaching des Gründers, der Entwicklung des
-                                Businessplans und der Usecases sowie der
-                                Erstellung einer SWAT-Analyse. Die
-                                Vollständigkeit der Finanzierungsunterlagen und
-                                ein gut aufbereiteter Finanzierungsvorschlag
-                                runden das gemeinsame Bankgespräch ab.
-                              </p>
-                            </div>
-                          </div>
-                        </Col>
-                      </Row>
-                      <Row className="margin-p-40">
-                        <Col md={12}>
-                          <div className="certificate ">
-                            <div className="title">
-                              <h2>Zertifizierungen</h2> <hr />
-                            </div>
-                            <Row className="margin-p-40">
-                              <Col md={4} sm={12}>
-                                <MDBView hover zoom>
-                                  <img
-                                    src={Certificate}
-                                    className="img-fluid"
-                                    alt=""
-                                  />
-                                  <MDBMask className="flex-center">
-                                    <p className="white-text">Zoom effect</p>
-                                  </MDBMask>
-                                </MDBView>
-                              </Col>
-                              <Col md={4} sm={12}>
-                                <MDBView hover zoom>
-                                  <img
-                                    src={Certificate}
-                                    className="img-fluid"
-                                    alt=""
-                                  />
-                                  <MDBMask className="flex-center">
-                                    <p className="white-text">Zoom effect</p>
-                                  </MDBMask>
-                                </MDBView>
-                              </Col>
-                              <Col md={4} sm={12}>
-                                <MDBView hover zoom>
-                                  <img
-                                    src={Certificate}
-                                    className="img-fluid"
-                                    alt=""
-                                  />
-                                  <MDBMask className="flex-center">
-                                    <p className="white-text">Zoom effect</p>
-                                  </MDBMask>
-                                </MDBView>
-                              </Col>
-                            </Row>
-                          </div>
-                        </Col>
-                      </Row>
-                    </Tab.Pane>
+                    {this.createTabPanes(graphData.allContentfulConsultant.edges)}
                   </Tab.Content>
                 </Col>
               </Row>
