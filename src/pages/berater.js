@@ -20,6 +20,38 @@ export default class berater extends Component {
       })
     }
   }
+  createNavItems = (array) => {
+    let numbersth = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth'];
+    let navItems = []
+    let children = []
+    for (let i = 0; i < array.length; i++) {
+      children.push(<Nav.Link  eventKey={numbersth[i]}
+                                     className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">{array[i].node.name}</Nav.Link>)
+      navItems.push(<Nav.Item>{children[i]}</Nav.Item>)
+    }
+    return navItems
+    }
+  createTabPanes = (array) => {
+    let numbersth = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth'];
+    let navItems = []
+    for (let i = 0; i < array.length; i++) {
+      navItems.push(<Tab.Pane eventKey={numbersth[i]}>
+        <Row>
+          <Col md={3} sm={12}>
+            <img className="img-fluid" src={Avatar} />
+          </Col>
+          <Col md={9} sm={12}>
+            <p>
+              {array[i].node.description.description}
+            </p>
+          </Col>
+        </Row>
+      </Tab.Pane>)
+    }
+    return navItems
+  }
+
+
   render() {
     const graphData = this.props.data
     console.log(graphData)
@@ -39,22 +71,7 @@ export default class berater extends Component {
               <Row>
                 <Col sm={12}>
                   <Nav variant="pills" className="col-xs-12">
-                    <Nav.Item>
-                      <Nav.Link
-                        eventKey="first"
-                        className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg"
-                      >
-                        Michael Schroeder
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link
-                        eventKey="second"
-                        className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg"
-                      >
-                        Dennis Klose
-                      </Nav.Link>
-                    </Nav.Item>
+                    {this.createNavItems(graphData.allContentfulConsultant.edges)}
                   </Nav>
                 </Col>
                 <Col sm={12}>
