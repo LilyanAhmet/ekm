@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Nav, Tab, Col, Row, Container } from "react-bootstrap"
 import { MDBContainer, MDBRow, MDBCol, MDBMask, MDBView } from "mdbreact"
-import {graphql} from "gatsby";
+import { graphql } from "gatsby"
 /* resources */
 import Avatar from "../images/avatar.svg"
 import Certificate from "../images/cerft-1.svg"
@@ -22,7 +22,7 @@ export default class berater extends Component {
   }
   render() {
     const graphData = this.props.data
-    console.log(graphData);
+    console.log(graphData)
     return (
       <Layout>
         <SEO title="berater" />
@@ -79,6 +79,111 @@ export default class berater extends Component {
                           </p>
                         </Col>
                       </Row>
+                      <Row className="margin-p-40">
+                        <Col md={12}>
+                          <div className="box ">
+                            <div className="title">
+                              <h2>Business Development</h2> <hr />
+                            </div>
+                            <div className="text">
+                              <p>
+                                Wir begleiten Sie bereits im Rahmen der
+                                Existenzgründung und hier auch schon bei der
+                                Umsetzung Ihrer Idee in einen Businessplan und
+                                gern auch bei Finanzierungsfragen. bei der
+                                Entwicklung einer geeigneten Finanzierung, die
+                                aus Fördermöglichkeiten, privaten Investoren und
+                                Bankfinanzierungen besteht. Auch für bereits
+                                etablierte Unternehmen können wir gezielt durch
+                                eine SWAT-Analyse geplante Wachstumspläne
+                                überprüfen, Lösungen besprechen und Sie bis hin
+                                zur Findung einer geeigneten Finanzierungslösung
+                                begleiten. Wir unterstützen Sie bei den
+                                gewählten Schwerpunkten mit individuellen
+                                Lösungen und werden stets versuchen, vorhandene
+                                Fördermöglichkeiten aufzuzeigen und anzubieten.
+                              </p>
+                            </div>
+                          </div>
+                        </Col>
+                      </Row>
+                      <Row className="margin-p-40">
+                        <Col md={12}>
+                          <div className="box">
+                            <div className="title">
+                              <h2>Existenzgründungsberatung</h2> <hr />
+                            </div>
+                            <div className="text">
+                              <p>
+                                Haben Sie eine Idee, von der Sie glauben, dass
+                                diese Idee Sie ernähren könnte? Wir helfen Ihnen
+                                bei der Validierung Ihrer Idee und begleiten Sie
+                                auf dem Weg zum Businessplan und der
+                                Entscheidung, diese Idee weiter zu verfolgen mit
+                                dem Ziel, Sie bis zum Start Ihrer Tätigkeit zu
+                                unterstützen und Ihnen den Weg zu ebnen. Wir
+                                bieten Ihnen von der Förderung bei
+                                Existenzgründungen über private Investoren auch
+                                digitale Enabler an, die Ihnen mit Rat und Tat
+                                zur Seite stehen. Unsere Schwerpunkte liegen im
+                                Coaching des Gründers, der Entwicklung des
+                                Businessplans und der Usecases sowie der
+                                Erstellung einer SWAT-Analyse. Die
+                                Vollständigkeit der Finanzierungsunterlagen und
+                                ein gut aufbereiteter Finanzierungsvorschlag
+                                runden das gemeinsame Bankgespräch ab.
+                              </p>
+                            </div>
+                          </div>
+                        </Col>
+                      </Row>
+                      <Row className="margin-p-40">
+                        <Col md={12}>
+                          <div className="certificate ">
+                            <div className="title">
+                              <h2>Zertifizierungen</h2> <hr />
+                            </div>
+                            <Row className="margin-p-40">
+                              <Col md={4} sm={12}>
+                                <MDBView hover zoom>
+                                  <img
+                                    src={Certificate}
+                                    className="img-fluid"
+                                    alt=""
+                                  />
+                                  <MDBMask className="flex-center">
+                                    <p className="white-text">Zoom effect</p>
+                                  </MDBMask>
+                                </MDBView>
+                              </Col>
+                              <Col md={4} sm={12}>
+                                <MDBView hover zoom>
+                                  <img
+                                    src={Certificate}
+                                    className="img-fluid"
+                                    alt=""
+                                  />
+                                  <MDBMask className="flex-center">
+                                    <p className="white-text">Zoom effect</p>
+                                  </MDBMask>
+                                </MDBView>
+                              </Col>
+                              <Col md={4} sm={12}>
+                                <MDBView hover zoom>
+                                  <img
+                                    src={Certificate}
+                                    className="img-fluid"
+                                    alt=""
+                                  />
+                                  <MDBMask className="flex-center">
+                                    <p className="white-text">Zoom effect</p>
+                                  </MDBMask>
+                                </MDBView>
+                              </Col>
+                            </Row>
+                          </div>
+                        </Col>
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
                       <Row>
@@ -100,99 +205,116 @@ export default class berater extends Component {
                           </p>
                         </Col>
                       </Row>
+                      <Row className="margin-p-40">
+                        <Col md={12}>
+                          <div className="box ">
+                            <div className="title">
+                              <h2>Business Development</h2> <hr />
+                            </div>
+                            <div className="text">
+                              <p>
+                                Wir begleiten Sie bereits im Rahmen der
+                                Existenzgründung und hier auch schon bei der
+                                Umsetzung Ihrer Idee in einen Businessplan und
+                                gern auch bei Finanzierungsfragen. bei der
+                                Entwicklung einer geeigneten Finanzierung, die
+                                aus Fördermöglichkeiten, privaten Investoren und
+                                Bankfinanzierungen besteht. Auch für bereits
+                                etablierte Unternehmen können wir gezielt durch
+                                eine SWAT-Analyse geplante Wachstumspläne
+                                überprüfen, Lösungen besprechen und Sie bis hin
+                                zur Findung einer geeigneten Finanzierungslösung
+                                begleiten. Wir unterstützen Sie bei den
+                                gewählten Schwerpunkten mit individuellen
+                                Lösungen und werden stets versuchen, vorhandene
+                                Fördermöglichkeiten aufzuzeigen und anzubieten.
+                              </p>
+                            </div>
+                          </div>
+                        </Col>
+                      </Row>
+                      <Row className="margin-p-40">
+                        <Col md={12}>
+                          <div className="box">
+                            <div className="title">
+                              <h2>Existenzgründungsberatung</h2> <hr />
+                            </div>
+                            <div className="text">
+                              <p>
+                                Haben Sie eine Idee, von der Sie glauben, dass
+                                diese Idee Sie ernähren könnte? Wir helfen Ihnen
+                                bei der Validierung Ihrer Idee und begleiten Sie
+                                auf dem Weg zum Businessplan und der
+                                Entscheidung, diese Idee weiter zu verfolgen mit
+                                dem Ziel, Sie bis zum Start Ihrer Tätigkeit zu
+                                unterstützen und Ihnen den Weg zu ebnen. Wir
+                                bieten Ihnen von der Förderung bei
+                                Existenzgründungen über private Investoren auch
+                                digitale Enabler an, die Ihnen mit Rat und Tat
+                                zur Seite stehen. Unsere Schwerpunkte liegen im
+                                Coaching des Gründers, der Entwicklung des
+                                Businessplans und der Usecases sowie der
+                                Erstellung einer SWAT-Analyse. Die
+                                Vollständigkeit der Finanzierungsunterlagen und
+                                ein gut aufbereiteter Finanzierungsvorschlag
+                                runden das gemeinsame Bankgespräch ab.
+                              </p>
+                            </div>
+                          </div>
+                        </Col>
+                      </Row>
+                      <Row className="margin-p-40">
+                        <Col md={12}>
+                          <div className="certificate ">
+                            <div className="title">
+                              <h2>Zertifizierungen</h2> <hr />
+                            </div>
+                            <Row className="margin-p-40">
+                              <Col md={4} sm={12}>
+                                <MDBView hover zoom>
+                                  <img
+                                    src={Certificate}
+                                    className="img-fluid"
+                                    alt=""
+                                  />
+                                  <MDBMask className="flex-center">
+                                    <p className="white-text">Zoom effect</p>
+                                  </MDBMask>
+                                </MDBView>
+                              </Col>
+                              <Col md={4} sm={12}>
+                                <MDBView hover zoom>
+                                  <img
+                                    src={Certificate}
+                                    className="img-fluid"
+                                    alt=""
+                                  />
+                                  <MDBMask className="flex-center">
+                                    <p className="white-text">Zoom effect</p>
+                                  </MDBMask>
+                                </MDBView>
+                              </Col>
+                              <Col md={4} sm={12}>
+                                <MDBView hover zoom>
+                                  <img
+                                    src={Certificate}
+                                    className="img-fluid"
+                                    alt=""
+                                  />
+                                  <MDBMask className="flex-center">
+                                    <p className="white-text">Zoom effect</p>
+                                  </MDBMask>
+                                </MDBView>
+                              </Col>
+                            </Row>
+                          </div>
+                        </Col>
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Col>
               </Row>
             </Tab.Container>
-            <Row className="margin-p-40">
-              <Col md={12}>
-                <div className="box ">
-                  <div className="title">
-                    <h2>Business Development</h2> <hr />
-                  </div>
-                  <div className="text">
-                    <p>
-                      Wir begleiten Sie bereits im Rahmen der Existenzgründung
-                      und hier auch schon bei der Umsetzung Ihrer Idee in einen
-                      Businessplan und gern auch bei Finanzierungsfragen. bei
-                      der Entwicklung einer geeigneten Finanzierung, die aus
-                      Fördermöglichkeiten, privaten Investoren und
-                      Bankfinanzierungen besteht. Auch für bereits etablierte
-                      Unternehmen können wir gezielt durch eine SWAT-Analyse
-                      geplante Wachstumspläne überprüfen, Lösungen besprechen
-                      und Sie bis hin zur Findung einer geeigneten
-                      Finanzierungslösung begleiten. Wir unterstützen Sie bei
-                      den gewählten Schwerpunkten mit individuellen Lösungen und
-                      werden stets versuchen, vorhandene Fördermöglichkeiten
-                      aufzuzeigen und anzubieten.
-                    </p>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-            <Row className="margin-p-40">
-              <Col md={12}>
-                <div className="box">
-                  <div className="title">
-                    <h2>Existenzgründungsberatung</h2> <hr />
-                  </div>
-                  <div className="text">
-                    <p>
-                      Haben Sie eine Idee, von der Sie glauben, dass diese Idee
-                      Sie ernähren könnte? Wir helfen Ihnen bei der Validierung
-                      Ihrer Idee und begleiten Sie auf dem Weg zum Businessplan
-                      und der Entscheidung, diese Idee weiter zu verfolgen mit
-                      dem Ziel, Sie bis zum Start Ihrer Tätigkeit zu
-                      unterstützen und Ihnen den Weg zu ebnen. Wir bieten Ihnen
-                      von der Förderung bei Existenzgründungen über private
-                      Investoren auch digitale Enabler an, die Ihnen mit Rat und
-                      Tat zur Seite stehen. Unsere Schwerpunkte liegen im
-                      Coaching des Gründers, der Entwicklung des Businessplans
-                      und der Usecases sowie der Erstellung einer SWAT-Analyse.
-                      Die Vollständigkeit der Finanzierungsunterlagen und ein
-                      gut aufbereiteter Finanzierungsvorschlag runden das
-                      gemeinsame Bankgespräch ab.
-                    </p>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-            <Row className="margin-p-40">
-              <Col md={12}>
-                <div className="certificate ">
-                  <div className="title">
-                    <h2>Zertifizierungen</h2> <hr />
-                  </div>
-                  <Row className="margin-p-40">
-                    <Col md={4} sm={12}>
-                      <MDBView hover zoom>
-                        <img src={Certificate} className="img-fluid" alt="" />
-                        <MDBMask className="flex-center">
-                          <p className="white-text">Zoom effect</p>
-                        </MDBMask>
-                      </MDBView>
-                    </Col>
-                    <Col md={4} sm={12}>
-                      <MDBView hover zoom>
-                        <img src={Certificate} className="img-fluid" alt="" />
-                        <MDBMask className="flex-center">
-                          <p className="white-text">Zoom effect</p>
-                        </MDBMask>
-                      </MDBView>
-                    </Col>
-                    <Col md={4} sm={12}>
-                      <MDBView hover zoom>
-                        <img src={Certificate} className="img-fluid" alt="" />
-                        <MDBMask className="flex-center">
-                          <p className="white-text">Zoom effect</p>
-                        </MDBMask>
-                      </MDBView>
-                    </Col>
-                  </Row>
-                </div>
-              </Col>
-            </Row>
           </Container>
         </div>
       </Layout>
@@ -200,34 +322,33 @@ export default class berater extends Component {
   }
 }
 
-
 export const query = graphql`
-       query {
-  allContentfulConsultant {
-    edges {
-      node {
-        name
-        photo {
-          fluid {
-            src
+  query {
+    allContentfulConsultant {
+      edges {
+        node {
+          name
+          photo {
+            fluid {
+              src
+            }
           }
-        }
-        description {
-          description
-        }
-        businessDevelopment {
-          businessDevelopment
-        }
-        existenzgrndungsberatung {
-          existenzgrndungsberatung
-        }
-        zertifizierungen {
-          fluid {
-            src
+          description {
+            description
+          }
+          businessDevelopment {
+            businessDevelopment
+          }
+          existenzgrndungsberatung {
+            existenzgrndungsberatung
+          }
+          zertifizierungen {
+            fluid {
+              src
+            }
           }
         }
       }
     }
   }
-}
 `
