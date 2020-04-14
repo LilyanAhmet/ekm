@@ -6,7 +6,7 @@ import Logo from "../images/footer-logo.png"
 import Icon from "../images/ekm-icon.svg"
 const footer = () => {
   return (
-    <MDBFooter className="font-small pt-4 mt-4">
+    <MDBFooter className="font-small pt-4">
       <MDBContainer className="text-center text-md-left">
         <MDBRow>
           <MDBCol>
