@@ -1,13 +1,13 @@
 @import "./variabels.css";
 @font-face {
-  font-family: 'Gilroy';
-  src: url('../../static/fonts/Gilroy-Regular.otf');
+  font-family: "Gilroy";
+  src: url("../../static/fonts/Gilroy-Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy Ebold';
-  src: url('../../static/fonts/Gilroy-Bold.otf');
+  font-family: "Gilroy Ebold";
+  src: url("../../static/fonts/Gilroy-Bold.otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -58,7 +58,7 @@ ul {
   width: 90%;
   box-shadow: none !important;
 }
-.bggray{
+.bggray {
   background-color: var(--grey-color);
 }
 #nav-bg {
@@ -71,8 +71,8 @@ ul {
   background-repeat: no-repeat !important;
   background-size: 70% 4px !important;
 }
-.borderleft{
-  background-image: url('../../images/border-left.svg');
+.borderleft {
+  background-image: url("../../images/border-left.svg");
   background-position: left !important;
   background-repeat: no-repeat !important;
   background-size: contain;
@@ -342,11 +342,8 @@ ul {
   text-align: justify;
   color: var(--font-color);
 }
-.services .service-long{
-}
-.services .service-long .details{
-}
-.services .service-long .details p{
+
+.services .service-long .details p {
   padding-right: 0;
   font-size: 16px;
   font-weight: bold;
@@ -356,10 +353,10 @@ ul {
   letter-spacing: -0.1px;
   color: var(--font-color);
 }
-.services .service-long .details .title{
+.services .service-long .details .title {
   display: flex;
 }
-.services .service-long .details .title h2{
+.services .service-long .details .title h2 {
   padding-left: 30px;
   font-size: 25px;
   font-weight: bold;
@@ -369,16 +366,14 @@ ul {
   letter-spacing: normal;
   color: var(--font-color);
 }
-.services .service-long .details .title img{
+.services .service-long .details .title img {
   max-width: 66px;
   margin-left: -15px;
 }
-.services .service-long .details .list{
-}
-.services .service-long .details .list .block{
+.services .service-long .details .list .block {
   padding-left: 30px;
 }
-.services .service-long .details .list .block h6{
+.services .service-long .details .list .block h6 {
   font-size: 16px;
   font-weight: 500;
   font-stretch: normal;
@@ -388,7 +383,7 @@ ul {
   color: #1b435e;
 }
 
-.services .service-long .details .list .block p{
+.services .service-long .details .list .block p {
   font-size: 14px;
   font-weight: 400;
   font-stretch: normal;
@@ -396,7 +391,77 @@ ul {
   line-height: 1.25;
   letter-spacing: normal;
   color: var(--font-color);
+}
 
+/*references*/
+
+.references {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.references h1 {
+  font-size: 25px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--font-color);
+}
+.references p {
+  margin: auto;
+  margin-top: 20px;
+  max-width: 600px;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--font-color);
+}
+.references .box {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 40px 0 rgba(22, 55, 78, 0.14);
+  background-color: #ffffff;
+}
+.references .box .square img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-shadow: 6px 4px 5px 0 rgba(0,0,0,.04);
+
+}
+.references .box .top {
+  display: flex;
+}
+.references .box .top .left {
+  display: -webkit-inline-box;
+}
+.references .box .top .right {
+  position: absolute;
+  right: 0;
+}
+
+.references .box .top .right img {
+  padding:0px 15px ;
+  max-width: 90px;
+}
+.references .box .bottom p {
+  padding: 30px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: justify;
+  color: var(--font-color);
 }
 /*Footer*/
 footer.page-footer {
