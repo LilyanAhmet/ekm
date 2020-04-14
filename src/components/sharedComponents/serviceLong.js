@@ -31,10 +31,6 @@ export default class serviceLong extends Component {
                       <h6>{this.props.contentThree}</h6>
                       <p>{this.props.contentThreeText}</p>
                     </div>
-                    <div className="block borderleft">
-                      <h6>{this.props.contentFour}</h6>
-                      <p>{this.props.contentFourText}</p>
-                    </div>
                   </div>
                 </div>
               </MDBCol>
@@ -62,10 +58,6 @@ export default class serviceLong extends Component {
                     <div className="block borderleft">
                       <h6>{this.props.contentThree}</h6>
                       <p>{this.props.contentThreeText}</p>
-                    </div>
-                    <div className="block borderleft">
-                      <h6>{this.props.contentFour}</h6>
-                      <p>{this.props.contentFourText}</p>
                     </div>
                   </div>
                 </div>

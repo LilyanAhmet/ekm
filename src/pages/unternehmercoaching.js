@@ -74,8 +74,6 @@ class unternehmercoaching extends React.Component {
             contentTwoText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
             contentThree="content1"
             contentThreeText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            contentFour="content1"
-            contentFourText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
             left = {true}         />
            <ServiceLong
             img={LongImg}
@@ -88,8 +86,6 @@ class unternehmercoaching extends React.Component {
             contentTwoText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
             contentThree="content1"
             contentThreeText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            contentFour="content1"
-            contentFourText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
             left = {false}
          />
         </MDBContainer>
