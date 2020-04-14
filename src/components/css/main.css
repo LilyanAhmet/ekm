@@ -1,5 +1,16 @@
 @import "./variabels.css";
-
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../static/fonts/Gilroy-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy Ebold';
+  src: url('../../static/fonts/Gilroy-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   color: var(--mainBlack);
   background: var(--mainWhite);
@@ -12,18 +23,22 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: Gilroy;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
 p {
+  font-family: Gilroy;
   margin-bottom: 1.25rem;
 }
 a {
+  font-family: Gilroy;
   text-decoration: none;
 }
 dl,
 ol,
 ul {
+  font-family: Gilroy;
   padding-left: 0;
 }
 .Separator {
