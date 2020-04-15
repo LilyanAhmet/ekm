@@ -395,11 +395,11 @@ ul {
 
 /*references*/
 
-.references {
+.reference-block{
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.references h1 {
+.reference-block h1 {
   font-size: 25px;
   padding-bottom: 10px;
   font-weight: bold;
@@ -410,7 +410,7 @@ ul {
   text-align: center;
   color: var(--font-color);
 }
-.references p {
+.reference-block p {
   margin: auto;
   margin-top: 20px;
   max-width: 600px;
@@ -423,38 +423,93 @@ ul {
   text-align: center;
   color: var(--font-color);
 }
-.references .box {
+.references .box-container .box .square .squ {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 26px;
+  height: 28px;
+  background-image: url("../../images/small-square.svg");
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  transition: top ease 0.5s;
+}
+.references .box-container .box .top .right .quote {
+  padding: 0px 15px;
+  width: 70px;
+  height: 56px;
+  background-image: url("../../images/quote.svg");
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: contain;
+  margin-right: 10px;
+  transition: top ease 0.5s;
+}
+.references .box-container .box:hover .squ{
+  background-image: url("../../images/small-square-green.svg");
+ 
+}
+.references .box-container .box:hover .right .quote{
+  background-image: url("../../images/quote-green.svg");
+  
+}
+.references .box-container {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+.references .box-container .box {
+  margin-top: 70px;
   position: relative;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 40px 0 rgba(22, 55, 78, 0.14);
   background-color: #ffffff;
+  top: 0;
+  transition: top ease 0.5s;
 }
-.references .box .square img{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  box-shadow: 6px 4px 5px 0 rgba(0,0,0,.04);
+.references .box-container .box:hover {
+  top: -30px;
+}
 
-}
-.references .box .top {
+.references .box-container .box .top {
   display: flex;
 }
-.references .box .top .left {
+.references .box-container .box .top .left {
   display: -webkit-inline-box;
 }
-.references .box .top .right {
+.references .box-container .box .top .left .text{
+  margin-left: 10px;
+}
+.references .box-container .box .top .left .text h6 {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--font-color)
+}
+.references .box-container .box .top .left .text p {
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--light-turquoise-color)
+}
+.references .box-container .box .top .right {
   position: absolute;
   right: 0;
 }
 
-.references .box .top .right img {
-  padding:0px 15px ;
-  max-width: 90px;
-}
-.references .box .bottom p {
+.references .box-container .box .bottom p {
   padding: 30px 10px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;

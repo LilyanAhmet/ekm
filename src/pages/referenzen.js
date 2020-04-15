@@ -11,7 +11,7 @@ const referenzen = () => {
   return (
     <Layout>
       <SEO title="unternehmercoaching" />
-      <div className="references">
+      <div className="reference-block">
         <MDBContainer size="lg">
           <MDBRow>
             <MDBCol md={12}>
@@ -28,7 +28,7 @@ const referenzen = () => {
             <MDBCol md={4} sm={12}>
               <ReferenceBox
                 name="lilyan ahmetoglu"
-                title="consultant"
+                title="CEO, PrettyDopeDesigns"
                 img={img}
                 description="There’s no way we could have hired these many people and gotten so
                 much business had we not had all of those back-office systems
@@ -36,11 +36,61 @@ const referenzen = () => {
                 that is so easy and scalable."
               />
             </MDBCol>
-            <MDBCol md={4} sm={12}></MDBCol>
-            <MDBCol md={4} sm={12}></MDBCol>
-            <MDBCol md={4} sm={12}></MDBCol>
-            <MDBCol md={4} sm={12}></MDBCol>
-            <MDBCol md={4} sm={12}></MDBCol>
+            <MDBCol md={4} sm={12}>
+              <ReferenceBox
+                name="lilyan ahmetoglu"
+                title="CEO, PrettyDopeDesigns"
+                img={img}
+                description="There’s no way we could have hired these many people and gotten so
+                much business had we not had all of those back-office systems
+                figured out. It’s been easier growing our company with a system
+                that is so easy and scalable."
+              />
+            </MDBCol>
+            <MDBCol md={4} sm={12}>
+              <ReferenceBox
+                name="lilyan ahmetoglu"
+                title="CEO, PrettyDopeDesigns"
+                img={img}
+                description="There’s no way we could have hired these many people and gotten so
+                much business had we not had all of those back-office systems
+                figured out. It’s been easier growing our company with a system
+                that is so easy and scalable."
+              />
+            </MDBCol>
+            <MDBCol md={4} sm={12}>
+              <ReferenceBox
+                name="lilyan ahmetoglu"
+                title="CEO, PrettyDopeDesigns"
+                img={img}
+                description="There’s no way we could have hired these many people and gotten so
+                much business had we not had all of those back-office systems
+                figured out. It’s been easier growing our company with a system
+                that is so easy and scalable."
+              />
+            </MDBCol>
+            <MDBCol md={4} sm={12}>
+              <ReferenceBox
+                name="lilyan ahmetoglu"
+                title="CEO, PrettyDopeDesigns"
+                img={img}
+                description="There’s no way we could have hired these many people and gotten so
+                much business had we not had all of those back-office systems
+                figured out. It’s been easier growing our company with a system
+                that is so easy and scalable."
+              />
+            </MDBCol>
+            <MDBCol md={4} sm={12}>
+              <ReferenceBox
+                name="lilyan ahmetoglu"
+                title="CEO, PrettyDopeDesigns"
+                img={img}
+                description="There’s no way we could have hired these many people and gotten so
+                much business had we not had all of those back-office systems
+                figured out. It’s been easier growing our company with a system
+                that is so easy and scalable."
+              />
+            </MDBCol>
           </MDBRow>
         </MDBContainer>
       </div>
