@@ -25,7 +25,8 @@ export default class index extends Component {
       <div>
         <Layout trans={true}>
           <SEO title="Home" />
-          <MDBView>
+          <div className="promo">
+          <MDBView >
             <MDBMask className="white-text gradient" />
             <MDBContainer
               style={{
@@ -77,6 +78,7 @@ export default class index extends Component {
               </MDBRow>
             </MDBContainer>
           </MDBView>
+          </div>
           <div className="home">
             <MDBContainer size="lg">
               <MDBRow>

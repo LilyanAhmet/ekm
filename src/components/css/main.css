@@ -154,7 +154,7 @@ ul {
 }
 /*intro*/
 
-.view .mask {
+.promo .view .mask {
   background-image: url("../../images/bg.svg");
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -162,7 +162,7 @@ ul {
   background-attachment: unset !important;
   height: 100vh !important;
 }
-.view h6 {
+.promo .view h6 {
   margin-top: 40px;
   font-family: Gilroy;
   font-size: 16px;
@@ -174,7 +174,7 @@ ul {
   text-align: justify;
   color: #ffffff;
 }
-.view h1 {
+.promo .view h1 {
   margin-top: 40px;
   font-family: Gilroy;
   font-weight: normal;
@@ -185,30 +185,30 @@ ul {
   text-align: justify;
   color: #ffffff;
 }
-.view span {
+.promo .view span {
   font-family: Gilroy Ebold;
   font-weight: bolder;
   font-style: bolder;
 }
-.view img,
+.promo .view img,
 .view video {
   position: absolute !important;
   top: 7rem !important;
   display: block;
 }
-.view .box {
+.promo .view .box {
   height: 30px;
   border-radius: 30px !important;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.view .box .btn {
+.promo .view .box .btn {
   height: 24px;
   padding: 15px 20px;
   margin: 0;
   text-align: center;
   line-height: 0;
 }
-.view .box p {
+.promo .view .box p {
   display: inline-block;
   font-size: 10px;
   padding-left: 10px;
@@ -304,10 +304,10 @@ ul {
 }
 .newsletter .contents {
   padding: 100px 50px;
-  
+
   display: flex;
 }
-.newsletter .contents p{
+.newsletter .contents p {
   padding-top: 10px;
   font-size: 18px;
   font-weight: bold;
@@ -319,9 +319,9 @@ ul {
 }
 .newsletter .md-form.md-outline {
   margin-top: 0 !important;
-  margin-bottom:  0 !important;
+  margin-bottom: 0 !important;
   border: 1px solid #fff;
-    border-radius: 4px;
+  border-radius: 4px;
 }
 .newsletter input[type="text"]::placeholder {
   color: white;
@@ -331,26 +331,59 @@ ul {
 .newsletter input[type="text"] {
   background: transparent;
   padding-right: 50px;
-  border: 1px solid #fff!important;
+  border: 1px solid #fff !important;
   border-radius: 0.5rem;
-  border-top-right-radius: 0.5rem!important;
-  border-bottom-right-radius:0.5rem!important;
-  color:#fff
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+  color: #fff;
 }
 
 .newsletter .input-group-append .btn {
   height: 35px;
-  padding-top: 5px!important;
-  padding-bottom: 0!important;
-  margin-left: -70px!important;
-  background-color: transparent!important;
-  border-radius: 0!important;
+  padding-top: 5px !important;
+  padding-bottom: 0 !important;
+  margin-left: -70px !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
   border-left: #fff 1px solid;
 }
 
-.newsletter .input-group-append .btn img{
+.newsletter .input-group-append .btn img {
   padding-bottom: 5px;
   width: 30px;
+}
+/*ueber-ekm*/
+.ueber-ekm {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.ueber-ekm h1 {
+  font-size: 30px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--font-color);
+}
+.ueber-ekm p {
+  padding-top: 30px;
+  padding-right: 20%;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.42px;
+  text-align: justify;
+  color: var(--font-color);
+}
+.ueber-ekm .borderimg {
+  float: left;
+  background-size: contain !important;
+  width: 30%;
 }
 /*ekm*/
 .ekm {
