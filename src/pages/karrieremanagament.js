@@ -9,7 +9,7 @@ import Description from "../components/sharedComponents/description"
 import ServiceShort from "../components/sharedComponents/serviceShort"
 import ServiceLong from "../components/sharedComponents/serviceLong"
 /* resources */
-import karImage from "../images/Unternehmercoaching.svg"
+import karImage from "../images/karrieremanagament.svg"
 import IconOne from "../images/icon1.svg"
 import IconTwo from "../images/icon2.svg"
 import IconThree from "../images/icon3.svg"
@@ -44,7 +44,7 @@ class karrieremanagament extends React.Component {
                     <ServiceShort
                         icon={array[i].icon.fluid.src}
                         title={array[i].title}
-                        desciption={array[i].subtitle}
+                        desciption={array[i].description}
                     />
                 </MDBCol>
             )
@@ -58,19 +58,19 @@ class karrieremanagament extends React.Component {
       <Layout>
         <SEO title="karrieremanagament" />
         <Description
-          title={graphData.allContentfulServicePage.edges[0].node.title}
+          title={graphData.allContentfulServicePage.edges[1].node.title}
           description={
-            graphData.allContentfulServicePage.edges[0].node.text.text
+            graphData.allContentfulServicePage.edges[1].node.text.text
           }
           img={karImage}
         />
                 <MDBContainer size="lg">
           <MDBRow>
-              {this.createServiceShort(graphData.allContentfulServicePage.edges[0].node.serviceShort)}
+              {this.createServiceShort(graphData.allContentfulServicePage.edges[1].node.serviceShort)}
           </MDBRow>
         </MDBContainer>
         <MDBContainer fluid className="bggray">
-            {this.createServiceLong(graphData.allContentfulServicePage.edges[0].node.serviceLong)}
+            {this.createServiceLong(graphData.allContentfulServicePage.edges[1].node.serviceLong)}
         </MDBContainer>
       </Layout>
     )
@@ -89,6 +89,7 @@ export const query = graphql`
         }
         serviceShort {
           title
+          description
           icon {
             fluid {
               src
@@ -117,6 +118,7 @@ export const query = graphql`
             content2Text
             content3Title
             content3Text
+            subtitle
           }
         }
       }

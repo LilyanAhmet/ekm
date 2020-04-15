@@ -27,7 +27,7 @@ class unternehmercoaching extends React.Component {
                     img={array[i].image.fluid.src}
                     icon={array[i].icon.fluid.src}
                     title={array[i].title}
-                    shortDescription={array[i].subtitle}
+                    shortDescription={array[i].description}
                     contentOne={array[i].content1Title}
                     contentOneText={array[i].content1Text}
                     contentTwo={array[i].content2Title}
@@ -58,25 +58,24 @@ class unternehmercoaching extends React.Component {
   render() {
     const graphData = this.props.data
     console.log(graphData.allContentfulServicePage);
-      console.log(graphData.allContentfulServicePage.edges[1].node)
     return (
       <Layout>
         <SEO title="unternehmercoaching" />
         <Description
-          title={graphData.allContentfulServicePage.edges[1].node.title}
+          title={graphData.allContentfulServicePage.edges[0].node.title}
           description={
-            graphData.allContentfulServicePage.edges[1].node.text.text
+            graphData.allContentfulServicePage.edges[0].node.text.text
           }
           img={DescImage}
         />
 
         <MDBContainer size="lg">
           <MDBRow>
-              {this.createServiceShort(graphData.allContentfulServicePage.edges[1].node.serviceShort)}
+              {this.createServiceShort(graphData.allContentfulServicePage.edges[0].node.serviceShort)}
           </MDBRow>
         </MDBContainer>
         <MDBContainer fluid className="bggray">
-            {this.createServiceLong(graphData.allContentfulServicePage.edges[1].node.serviceLong)}
+            {this.createServiceLong(graphData.allContentfulServicePage.edges[0].node.serviceLong)}
         </MDBContainer>
       </Layout>
     )
@@ -93,6 +92,7 @@ export const query = graphql`
         text{text}
         serviceShort {
           title
+          description
           icon {
             fluid {
               src
