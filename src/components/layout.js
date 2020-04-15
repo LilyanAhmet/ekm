@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
+import HeaderTrans from "./headerTrans"
 import Footer from "./footer"
 import "./css/main.css"
 import "@fortawesome/fontawesome-free/css/all.min.css"
@@ -12,7 +13,13 @@ class Layout extends React.Component {
   render() {
     return (
       <>
+      {!this.props.trans && (
         <Header />
+      )}
+         {this.props.trans && (
+        <HeaderTrans />
+      )}
+        
         <main>{this.props.children}</main>
         <Footer />
       </>

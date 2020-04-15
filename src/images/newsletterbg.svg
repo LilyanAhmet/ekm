@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="301" viewBox="0 0 1440 301">
+    <defs>
+        <linearGradient id="prefix__b" x1="100%" x2="0%" y1="47.815%" y2="52.185%">
+            <stop offset="0%" stop-color="#2CCCCC"/>
+            <stop offset="100%" stop-color="#0CEFA5"/>
+            <stop offset="100%" stop-color="#0CEFA5"/>
+        </linearGradient>
+        <rect id="prefix__a" width="1440" height="301" x="0" y="0" rx="10"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="prefix__c" fill="#fff">
+            <use xlink:href="#prefix__a"/>
+        </mask>
+        <use fill="url(#prefix__b)" xlink:href="#prefix__a"/>
+        <ellipse cx="1168.216" cy="-37.5" fill="#FFF" mask="url(#prefix__c)" opacity=".2" rx="168" ry="129.5"/>
+        <ellipse cx="332.757" cy="338.5" fill="#FFF" mask="url(#prefix__c)" opacity=".2" rx="168" ry="129.5"/>
+        <ellipse cx="1307.676" cy="-18" fill="#FFF" mask="url(#prefix__c)" opacity=".2" rx="103.784" ry="80"/>
+        <ellipse cx="490.378" cy="330" fill="#FFF" mask="url(#prefix__c)" opacity=".2" rx="103.784" ry="80"/>
+        <ellipse cx="984" cy="-52.5" fill="#FFF" mask="url(#prefix__c)" opacity=".2" rx="148.541" ry="114.5"/>
+        <ellipse cx="131.676" cy="364.5" fill="#FFF" mask="url(#prefix__c)" opacity=".2" rx="148.541" ry="114.5"/>
+    </g>
+</svg>

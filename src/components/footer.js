@@ -61,13 +61,13 @@ const footer = () => {
             </ul>
           </MDBCol>
           <MDBCol>
-            <h5 className="title">Links</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Link 1</a>
+            
+            <ul className="margin-p-10">
+              <li className="list-unstyled margin-p-10">
+                <a href="#!"><h5 className="title"><MDBIcon fas icon="phone" className="margin-p-right-10" /> +49 2 21 5796 7940</h5></a>
               </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 2</a>
+              <li className="list-unstyled margin-p-20 ">
+                <a href="#!"><h5 className="title"><MDBIcon fas icon="envelope" className="margin-p-right-10"/> info@ekm.de</h5></a>
               </li>
             </ul>
           </MDBCol>

@@ -8,8 +8,14 @@
 @font-face {
   font-family: "Gilroy Ebold";
   src: url("../../static/fonts/Gilroy-Bold.otf");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Gilroy Ebold";
+  src: url("../../static/fonts/Gilroy-Extrabold.otf");
+  font-weight: bolder;
+  font-style: bolder;
 }
 body {
   color: var(--mainBlack);
@@ -43,9 +49,19 @@ ul {
 }
 .Separator {
   width: 100%;
-  height: 3px;
+  height: 2px;
   border-radius: 1.5px;
   background-color: var(--main-color);
+}
+.btn {
+  font-family: Gilroy !important;
+  border-radius: 30px !important;
+  color: black !important;
+  text-transform: unset !important;
+}
+.fab {
+  font-weight: 400;
+  font-size: 18px;
 }
 .margin-m-10 {
   margin-top: -10px;
@@ -53,7 +69,24 @@ ul {
 .margin-p-40 {
   margin-top: 40px;
 }
-
+.margin-p-10 {
+  margin-top: 10px;
+}
+.margin-p-20 {
+  margin-top: 20px;
+}
+.margin-p-right-10 {
+  margin-right: 10px;
+}
+.padding-p-bottom-10 {
+  padding-bottom: 10rem;
+}
+.padding-p-top-10 {
+  padding-top: 5rem;
+}
+.fixed-top {
+  position: absolute !important;
+}
 .navbar {
   width: 90%;
   box-shadow: none !important;
@@ -119,7 +152,206 @@ ul {
   letter-spacing: normal;
   color: var(--white-color);
 }
+/*intro*/
 
+.view .mask {
+  background-image: url("../../images/bg.svg");
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-attachment: unset !important;
+  height: 100vh !important;
+}
+.view h6 {
+  margin-top: 40px;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #ffffff;
+}
+.view h1 {
+  margin-top: 40px;
+  font-family: Gilroy;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #ffffff;
+}
+.view span {
+  font-family: Gilroy Ebold;
+  font-weight: bolder;
+  font-style: bolder;
+}
+.view img,
+.view video {
+  position: absolute !important;
+  top: 7rem !important;
+  display: block;
+}
+.view .box {
+  height: 30px;
+  border-radius: 30px !important;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.view .box .btn {
+  height: 24px;
+  padding: 15px 20px;
+  margin: 0;
+  text-align: center;
+  line-height: 0;
+}
+.view .box p {
+  display: inline-block;
+  font-size: 10px;
+  padding-left: 10px;
+}
+.home {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.home h1 {
+  font-size: 30px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--font-color);
+}
+.home .details {
+  margin-top: 70px;
+}
+.home .details h2 {
+  font-family: Gilroy Ebold;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.37;
+  letter-spacing: normal;
+  color: var(--font-color);
+}
+
+.home .details p {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.24;
+  letter-spacing: normal;
+  text-align: justify;
+  color: var(--font-color);
+}
+.home .details .bottom {
+  margin-top: 40px;
+}
+.home .details .bottom img {
+  max-width: 70px;
+  margin-left: 0;
+  object-fit: contain;
+  margin-left: -10px;
+}
+.home .details .bottom h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.65;
+  letter-spacing: normal;
+  color: var(--font-color);
+  margin-bottom: 25px;
+}
+.home .details .bottom p {
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: justify;
+  color: var(--font-color);
+}
+.home .details .bottom a {
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--font-color);
+}
+/*newsletter*/
+.newsletter {
+  max-width: 1440px;
+  max-height: 240px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  width: 100%;
+  background-image: url("../../images/newsletterbg.svg");
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: contain;
+}
+.newsletter .contents {
+  padding: 100px 50px;
+  
+  display: flex;
+}
+.newsletter .contents p{
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: var(--font-color);
+}
+.newsletter .md-form.md-outline {
+  margin-top: 0 !important;
+  margin-bottom:  0 !important;
+  border: 1px solid #fff;
+    border-radius: 4px;
+}
+.newsletter input[type="text"]::placeholder {
+  color: white;
+  font-size: 14px;
+  font-family: Gilroy;
+}
+.newsletter input[type="text"] {
+  background: transparent;
+  padding-right: 50px;
+  border: 1px solid #fff!important;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0.5rem!important;
+  border-bottom-right-radius:0.5rem!important;
+  color:#fff
+}
+
+.newsletter .input-group-append .btn {
+  height: 35px;
+  padding-top: 5px!important;
+  padding-bottom: 0!important;
+  margin-left: -70px!important;
+  background-color: transparent!important;
+  border-radius: 0!important;
+  border-left: #fff 1px solid;
+}
+
+.newsletter .input-group-append .btn img{
+  padding-bottom: 5px;
+  width: 30px;
+}
 /*ekm*/
 .ekm {
   padding-top: 60px;
@@ -275,7 +507,7 @@ ul {
   color: var(--font-color);
 }
 .experience p {
-  font-size: 18px;
+  font-size: 16px;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.2;
@@ -395,7 +627,7 @@ ul {
 
 /*references*/
 
-.reference-block{
+.reference-block {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -446,13 +678,11 @@ ul {
   margin-right: 10px;
   transition: top ease 0.5s;
 }
-.references .box-container .box:hover .squ{
+.references .box-container .box:hover .squ {
   background-image: url("../../images/small-square-green.svg");
- 
 }
-.references .box-container .box:hover .right .quote{
+.references .box-container .box:hover .right .quote {
   background-image: url("../../images/quote-green.svg");
-  
 }
 .references .box-container {
   position: relative;
@@ -479,7 +709,7 @@ ul {
 .references .box-container .box .top .left {
   display: -webkit-inline-box;
 }
-.references .box-container .box .top .left .text{
+.references .box-container .box .top .left .text {
   margin-left: 10px;
 }
 .references .box-container .box .top .left .text h6 {
@@ -490,7 +720,7 @@ ul {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--font-color)
+  color: var(--font-color);
 }
 .references .box-container .box .top .left .text p {
   margin-top: 0;
@@ -500,7 +730,7 @@ ul {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--light-turquoise-color)
+  color: var(--light-turquoise-color);
 }
 .references .box-container .box .top .right {
   position: absolute;
@@ -532,8 +762,9 @@ footer.page-footer a {
   color: var(--font-color) !important;
 }
 footer .title {
+  font-family: Gilroy Ebold;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: bolder;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;

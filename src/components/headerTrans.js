@@ -16,7 +16,7 @@ import {
 
 import Logo from "../images/ekm-logo.svg"
 
-class Header extends React.Component {
+class HeaderTrans extends React.Component {
   state = {
     isOpen: false,
   }
@@ -28,7 +28,9 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <MDBNavbar expand="md" id="nav-bg">
+        <MDBNavbar expand="md" transparent
+              fixed='top'
+              >
           <MDBNavbarBrand>
            <a href="/"><img src={Logo} className="white-text" /></a>  
           </MDBNavbarBrand>
@@ -91,4 +93,4 @@ class Header extends React.Component {
     )
   }
 }
-export default Header
+export default HeaderTrans
