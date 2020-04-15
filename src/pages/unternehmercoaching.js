@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
+import {MDBContainer, MDBRow, MDBCol, MDBView, MDBMask} from "mdbreact"
 /*components */
 import Description from "../components/sharedComponents/description"
 import ServiceShort from "../components/sharedComponents/serviceShort"
@@ -15,10 +15,50 @@ import IconThree from "../images/icon3.svg"
 import IconFour from "../images/icon4.svg"
 
 import LongImg from "../images/longImg.svg"
+import {Col, Nav, Row, Tab} from "react-bootstrap";
+import Avatar from "../images/avatar.svg";
 class unternehmercoaching extends React.Component {
+
+    createServiceLong = (array) => {
+        let createServiceLong = []
+        for (let i = 0; i < array.length; i++) {
+            createServiceLong.push(
+                <ServiceLong
+                    img={array[i].image.fluid.src}
+                    icon={array[i].icon.fluid.src}
+                    title={array[i].title}
+                    shortDescription={array[i].subtitle}
+                    contentOne={array[i].content1Title}
+                    contentOneText={array[i].content1Text}
+                    contentTwo={array[i].content2Title}
+                    contentTwoText={array[i].content2Text}
+                    contentThree={array[i].content3Title}
+                    contentThreeText={array[i].content3Text}
+                    left = {array[i].imageleft}         />
+            )
+        }
+        return createServiceLong
+    }
+    createServiceShort = (array) => {
+        let createServiceShort = []
+        for (let i = 0; i < array.length; i++) {
+            createServiceShort.push(
+                <MDBCol md={6} sm={12}>
+                    <ServiceShort
+                        icon={array[i].icon.fluid.src}
+                        title={array[i].title}
+                        desciption={array[i].subtitle}
+                    />
+                </MDBCol>
+            )
+        }
+        return createServiceShort
+    }
+
   render() {
     const graphData = this.props.data
-    console.log(graphData.allContentfulServicePage)
+    console.log(graphData.allContentfulServicePage);
+      console.log(graphData.allContentfulServicePage.edges[1].node)
     return (
       <Layout>
         <SEO title="unternehmercoaching" />
@@ -32,62 +72,11 @@ class unternehmercoaching extends React.Component {
 
         <MDBContainer size="lg">
           <MDBRow>
-            <MDBCol md={6} sm={12}>
-              <ServiceShort
-                icon={IconOne}
-                title="Bewerbercoaching"
-                desciption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. "
-              />
-            </MDBCol>
-            <MDBCol md={6} sm={12}>
-              <ServiceShort
-                icon={IconTwo}
-                title="Bewerbercoaching"
-                desciption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. "
-              />
-            </MDBCol>
-            <MDBCol md={6} sm={12}>
-              <ServiceShort
-                icon={IconThree}
-                title="Bewerbercoaching"
-                desciption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. "
-              />
-            </MDBCol>
-            <MDBCol md={6} sm={12}>
-              <ServiceShort
-                icon={IconFour}
-                title="Bewerbercoaching"
-                desciption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. "
-              />
-            </MDBCol>
+              {this.createServiceShort(graphData.allContentfulServicePage.edges[1].node.serviceShort)}
           </MDBRow>
         </MDBContainer>
         <MDBContainer fluid className="bggray">
-          <ServiceLong
-            img={LongImg}
-            icon={IconOne}
-            title="Existenzgründercoaching"
-            shortDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            contentOne="content1"
-            contentOneText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            contentTwo="content1"
-            contentTwoText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            contentThree="content1"
-            contentThreeText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            left = {true}         />
-           <ServiceLong
-            img={LongImg}
-            icon={IconOne}
-            title="Existenzgründercoaching"
-            shortDescription="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            contentOne="content1"
-            contentOneText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            contentTwo="content1"
-            contentTwoText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            contentThree="content1"
-            contentThreeText="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-            left = {false}
-         />
+            {this.createServiceLong(graphData.allContentfulServicePage.edges[1].node.serviceLong)}
         </MDBContainer>
       </Layout>
     )
@@ -96,16 +85,44 @@ class unternehmercoaching extends React.Component {
 export default unternehmercoaching
 
 export const query = graphql`
-  query {
-    allContentfulServicePage {
-      edges {
-        node {
+{
+  allContentfulServicePage {
+    edges {
+      node {
+        title
+        text{text}
+        serviceShort {
           title
-          text {
-            text
+          icon {
+            fluid {
+              src
+            }
+          }
+        }
+        serviceLong {
+          ... on ContentfulServiceLong {
+            title
+            imageleft
+            image {
+              fluid {
+                src
+              }
+            }
+            icon {
+              fluid {
+                src
+              }
+            }
+            content1Title
+            content1Text
+            content2Title
+            content2Text
+            content3Title
+            content3Text
           }
         }
       }
     }
   }
+}
 `

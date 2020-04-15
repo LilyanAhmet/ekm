@@ -7,95 +7,73 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 /*components */
 import ReferenceBox from "../components/sharedComponents/referenceBox"
 import img from "../images/oval.png"
-const referenzen = () => {
-  return (
-    <Layout>
-      <SEO title="unternehmercoaching" />
-      <div className="reference-block">
-        <MDBContainer size="lg">
-          <MDBRow>
-            <MDBCol md={12}>
-              <h1 className="borderimg">Du bist in einer guten Hand</h1>
-            </MDBCol>
-            <MDBCol md={12}>
-              <p>
-                Millionen von Menschen auf der ganzen Welt haben EKM bereits als
-                Ort gewählt, an dem ihr Traum wahr wird.
-              </p>
-            </MDBCol>
-          </MDBRow>
-          <MDBRow>
-            <MDBCol md={4} sm={12}>
-              <ReferenceBox
-                name="lilyan ahmetoglu"
-                title="CEO, PrettyDopeDesigns"
-                img={img}
-                description="There’s no way we could have hired these many people and gotten so
-                much business had we not had all of those back-office systems
-                figured out. It’s been easier growing our company with a system
-                that is so easy and scalable."
-              />
-            </MDBCol>
-            <MDBCol md={4} sm={12}>
-              <ReferenceBox
-                name="lilyan ahmetoglu"
-                title="CEO, PrettyDopeDesigns"
-                img={img}
-                description="There’s no way we could have hired these many people and gotten so
-                much business had we not had all of those back-office systems
-                figured out. It’s been easier growing our company with a system
-                that is so easy and scalable."
-              />
-            </MDBCol>
-            <MDBCol md={4} sm={12}>
-              <ReferenceBox
-                name="lilyan ahmetoglu"
-                title="CEO, PrettyDopeDesigns"
-                img={img}
-                description="There’s no way we could have hired these many people and gotten so
-                much business had we not had all of those back-office systems
-                figured out. It’s been easier growing our company with a system
-                that is so easy and scalable."
-              />
-            </MDBCol>
-            <MDBCol md={4} sm={12}>
-              <ReferenceBox
-                name="lilyan ahmetoglu"
-                title="CEO, PrettyDopeDesigns"
-                img={img}
-                description="There’s no way we could have hired these many people and gotten so
-                much business had we not had all of those back-office systems
-                figured out. It’s been easier growing our company with a system
-                that is so easy and scalable."
-              />
-            </MDBCol>
-            <MDBCol md={4} sm={12}>
-              <ReferenceBox
-                name="lilyan ahmetoglu"
-                title="CEO, PrettyDopeDesigns"
-                img={img}
-                description="There’s no way we could have hired these many people and gotten so
-                much business had we not had all of those back-office systems
-                figured out. It’s been easier growing our company with a system
-                that is so easy and scalable."
-              />
-            </MDBCol>
-            <MDBCol md={4} sm={12}>
-              <ReferenceBox
-                name="lilyan ahmetoglu"
-                title="CEO, PrettyDopeDesigns"
-                img={img}
-                description="There’s no way we could have hired these many people and gotten so
-                much business had we not had all of those back-office systems
-                figured out. It’s been easier growing our company with a system
-                that is so easy and scalable."
-              />
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </div>
-    </Layout>
-  )
+import ServiceShort from "../components/sharedComponents/serviceShort";
+class referenzen extends React.Component {
+  createRefenceBox = (array) => {
+    let createRefenceBox = []
+    for (let i = 0; i < array.length; i++) {
+      createRefenceBox.push(
+          <MDBCol md={4} sm={12}>
+            <ReferenceBox
+                name={array[i].node.name}
+                title={array[i].node.titleAndCompany}
+                img={array[i].node.image.fluid.src}
+                description={array[i].node.text.text}
+            />
+          </MDBCol>
+      )
+    }
+    return createRefenceBox
+  }
+  render() {
+    const graphData = this.props.data;
+    console.log(graphData);
+    return (
+        <Layout>
+          <SEO title="unternehmercoaching"/>
+          <div className="reference-block">
+            <MDBContainer size="lg">
+              <MDBRow>
+                <MDBCol md={12}>
+                  <h1 className="borderimg">Du bist in einer guten Hand</h1>
+                </MDBCol>
+                <MDBCol md={12}>
+                  <p>
+                    Millionen von Menschen auf der ganzen Welt haben EKM bereits als
+                    Ort gewählt, an dem ihr Traum wahr wird.
+                  </p>
+                </MDBCol>
+              </MDBRow>
+              <MDBRow>
+                {this.createRefenceBox(graphData.allContentfulReferenzen.edges)}
+              </MDBRow>
+            </MDBContainer>
+          </div>
+        </Layout>
+    )
+  }
+}
+export default referenzen
+
+export const query = graphql`
+{
+  allContentfulReferenzen {
+    edges {
+      node {
+        name
+        titleAndCompany
+        text {
+          text
+        }
+        image {
+          fluid(maxWidth: 42, maxHeight: 46) {
+            src
+          }
+        }
+      }
+    }
+  }
 }
 
-export default referenzen
+
+`
