@@ -22,8 +22,13 @@ body {
   background: var(--mainWhite);
   line-height: 1.4;
   font-size: 1rem;
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff, rgb(204,228,255,.2) 43%, rgb(204,228,255,.2)  100%);
-
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff,
+    #ffffff,
+    rgb(204, 228, 255, 0.2) 43%,
+    rgb(204, 228, 255, 0.2) 100%
+  );
 }
 h1,
 h2,
@@ -102,8 +107,13 @@ ul {
   box-shadow: none !important;
 }
 .bggray {
-  background-image: linear-gradient(to top, #ffffff, #ffffff, rgb(204,228,255,.2) 43%, rgb(204,228,255,.2)  100%);
-
+  background-image: linear-gradient(
+    to top,
+    #ffffff,
+    #ffffff,
+    rgb(204, 228, 255, 0.2) 43%,
+    rgb(204, 228, 255, 0.2) 100%
+  );
 }
 #nav-bg {
   background-color: var(--main-color);
@@ -164,7 +174,7 @@ ul {
   color: var(--white-color);
 }
 /*intro*/
-.promo{
+.promo {
   background-color: #fff;
 }
 .promo .view .mask {
@@ -800,8 +810,8 @@ ul {
 .contact {
   padding-bottom: 10rem;
 }
-.contact .card-body{
-  padding: 0!important;
+.contact .card-body {
+  padding: 0 !important;
   border-radius: 30px;
 }
 .contact .card.card-cascade.wider {
@@ -866,13 +876,13 @@ ul {
   letter-spacing: normal;
 }
 
-.contact  .map {
+.contact .map {
   padding-bottom: 35px;
   width: 100%;
   border-radius: 10px;
   display: contents;
 }
-.contact  .map .mapouter {
+.contact .map .mapouter {
   position: relative;
   text-align: right;
   height: 350px;
@@ -903,7 +913,7 @@ ul {
 .contact .form {
   padding-top: 12rem;
 }
-.contact .form h1{
+.contact .form h1 {
   font-size: 30px;
   padding-bottom: 10px;
   font-weight: bold;
@@ -914,10 +924,10 @@ ul {
   text-align: center;
   color: var(--font-color);
 }
-.contact .sub-title{
+.contact .sub-title {
   margin-top: 60px;
 }
-.contact .sub-title h4{
+.contact .sub-title h4 {
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -927,7 +937,7 @@ ul {
   color: var(--font-color);
   text-align: center;
 }
-.contact .sub-title p{
+.contact .sub-title p {
   margin: auto;
   max-width: 500px;
   margin-top: 20px;
@@ -939,6 +949,57 @@ ul {
   letter-spacing: normal;
   text-align: center;
   text-align: center;
+}
+.contact form {
+  margin: 50px auto;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.contact form .md-form.md-outline {
+  background-color: var(--white-color);
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+.contact form .md-form.md-outline input:focus {
+  border-color: var(--light-turquoise-color) !important;
+  border-bottom: 1px solid var(--light-turquoise-color) !important;
+}
+.contact form .md-form input:focus {
+  border-color: var(--light-turquoise-color) !important;
+  border-bottom: 1px solid var(--light-turquoise-color) !important;
+}
+.contact form .custom-select:focus{
+  box-shadow: none;
+  border-color: var(--light-turquoise-color) !important;
+  border-bottom: 1px solid var(--light-turquoise-color) !important;
+}
+.contact form .md-form.md-outline label {
+  font-family: Gilroy;
+}
+.contact form .md-form input:focus + label {
+  color: var(--font-color) !important;
+  font-weight: 600;
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff,
+    #ffffff,
+    rgb(204, 228, 255, 0.2) 43%,
+    rgb(204, 228, 255, 0.2) 100%
+  );
+}
+.contact form button {
+  margin: 60px auto;
+  padding: 12px !important;;
+  color: #fff !important;
+  background-color: var(--main-color)!important;
+  object-fit: contain;
+  border-radius: 10px !important;
+}
+.contact form button i{
+  border-left: 1px #fff solid;
+  padding-left: 20px;
+  margin-left: 20px;
+  font-size: 18px;
 }
 /*Footer*/
 footer.page-footer {
