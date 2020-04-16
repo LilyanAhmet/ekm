@@ -439,6 +439,7 @@ ul {
 .ueber-ekm {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #fff;
 }
 .ueber-ekm h1 {
   font-size: 30px;
@@ -542,6 +543,7 @@ ul {
   color: var(--font-color);
 }
 .ekm .box {
+  background: #fff;
   border-radius: 16.7px;
   box-shadow: 0 24px 43px 0 rgba(73, 85, 136, 0.2);
 }
@@ -610,7 +612,9 @@ ul {
 .experience {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #fff;
 }
+
 .experience h1 {
   font-size: 30px;
   padding-bottom: 10px;
@@ -867,7 +871,7 @@ ul {
 
 /*Contact*/
 .contact {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 .contact .card-body {
   padding: 0 !important;
