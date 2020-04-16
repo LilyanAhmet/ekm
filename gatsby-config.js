@@ -42,7 +42,16 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/ekm-logo.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Gilroy"],
+          urls: ["/static/fonts/fonts.css"],
+        },
       },
     },
     {
@@ -51,6 +60,21 @@ module.exports = {
           process.env.NODE_ENV === 'development'
               ? contentfulConfig.development
               : contentfulConfig.production,
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
     },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
