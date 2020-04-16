@@ -75,10 +75,11 @@ class HeaderTrans extends React.Component {
                 </Link>
               </MDBNavItem>
             </MDBNavbarNav>
-            <MDBNavbarNav right>
+            {!this.props.contact && (
+              <MDBNavbarNav right>
               <MDBNavItem>
                 <Link className="nav-link waves-effect waves-light" to="#!">
-                  <MDBIcon fas icon="phone" /> +49 2 21 5796 7940
+                  <MDBIcon fas icon="phone" />  +49 2 21 5796 7940
                 </Link>
               </MDBNavItem>
               <MDBNavItem>
@@ -87,6 +88,8 @@ class HeaderTrans extends React.Component {
                 </Link>
               </MDBNavItem>
             </MDBNavbarNav>
+            )}
+            
           </MDBCollapse>
         </MDBNavbar>
       </header>

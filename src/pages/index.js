@@ -121,7 +121,7 @@ export default class index extends Component {
             </MDBContainer>
            
           </div>
-          <MDBContainer fluid className="bggray">
+          <MDBContainer fluid>
                 <Newsletter />
             </MDBContainer>
         </Layout>

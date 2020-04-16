@@ -9,6 +9,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css"
 import "bootstrap-css-only/css/bootstrap.min.css"
 import "mdbreact/dist/css/mdb.css"
 
+
 class Layout extends React.Component {
   render() {
     return (
@@ -17,7 +18,7 @@ class Layout extends React.Component {
         <Header />
       )}
          {this.props.trans && (
-        <HeaderTrans />
+        <HeaderTrans contact={this.props.contact} />
       )}
         
         <main>{this.props.children}</main>

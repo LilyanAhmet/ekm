@@ -22,6 +22,8 @@ body {
   background: var(--mainWhite);
   line-height: 1.4;
   font-size: 1rem;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff, rgb(204,228,255,.2) 43%, rgb(204,228,255,.2)  100%);
+
 }
 h1,
 h2,
@@ -52,6 +54,14 @@ ul {
   height: 2px;
   border-radius: 1.5px;
   background-color: var(--main-color);
+}
+.rectangle {
+  width: 5px;
+  height: 50px;
+  margin-right: 20px;
+  margin-top: -10px;
+  border-radius: 4px;
+  background-image: linear-gradient(5deg, #2ccccc, #0cefa5);
 }
 .btn {
   font-family: Gilroy !important;
@@ -92,7 +102,8 @@ ul {
   box-shadow: none !important;
 }
 .bggray {
-  background-color: var(--grey-color);
+  background-image: linear-gradient(to top, #ffffff, #ffffff, rgb(204,228,255,.2) 43%, rgb(204,228,255,.2)  100%);
+
 }
 #nav-bg {
   background-color: var(--main-color);
@@ -153,9 +164,11 @@ ul {
   color: var(--white-color);
 }
 /*intro*/
-
+.promo{
+  background-color: #fff;
+}
 .promo .view .mask {
-  background-image: url("../../images/bg.svg");
+  background-image: url("../../images/bg-index.svg");
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover;
@@ -215,6 +228,7 @@ ul {
 }
 .home {
   padding-top: 60px;
+  background-color: #fff;
   padding-bottom: 60px;
 }
 .home h1 {
@@ -781,9 +795,154 @@ ul {
   text-align: justify;
   color: var(--font-color);
 }
+
+/*Contact*/
+.contact {
+  padding-bottom: 10rem;
+}
+.contact .card-body{
+  padding: 0!important;
+  border-radius: 30px;
+}
+.contact .card.card-cascade.wider {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.contact .peach-gradient {
+  background: var(--main-color) !important;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.contact .card.card-cascade .view.view-cascade {
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+    0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.contact .card.card-cascade.wider .view.view-cascade {
+  z-index: 2;
+}
+.contact .card.card-cascade.wider .card-body.card-body-cascade {
+  z-index: 1;
+  margin-right: 4%;
+  margin-left: 4%;
+  background: #fff;
+  border-radius: 0 0 0.25rem 0.25rem;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.contact .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+  z-index: 3;
+  width: 80%;
+  margin: -7rem auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+    0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.contact .right {
+  padding-left: 40%;
+}
+.contact .right .box {
+  display: flex;
+  margin-top: 80px;
+}
+.contact .right .box img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.contact .right .box h3 {
+  display: -webkit-inline-box;
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+.contact  .map {
+  padding-bottom: 35px;
+  width: 100%;
+  border-radius: 10px;
+  display: contents;
+}
+.contact  .map .mapouter {
+  position: relative;
+  text-align: right;
+  height: 350px;
+  border-radius: 30px;
+  width: 100%;
+}
+.contact.map .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 350px;
+  width: 100%;
+  border-radius: 10px;
+}
+.contact .map .gmap_canvas iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+.contact hr {
+  margin-top: 40px;
+  color: var(--line-color);
+  height: 1px;
+  text-align: center;
+  width: 90%;
+  background-color: var(--line-color);
+  border: solid 1px var(--line-color);
+  margin-bottom: 30px;
+}
+.contact .form {
+  padding-top: 12rem;
+}
+.contact .form h1{
+  font-size: 30px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--font-color);
+}
+.contact .sub-title{
+  margin-top: 60px;
+}
+.contact .sub-title h4{
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--font-color);
+  text-align: center;
+}
+.contact .sub-title p{
+  margin: auto;
+  max-width: 500px;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-align: center;
+}
 /*Footer*/
 footer.page-footer {
-  background-color: var(--grey-color);
+  background-color: transparent;
 }
 footer.page-footer a {
   font-size: 14px;
@@ -808,7 +967,7 @@ footer .img-fluid {
   width: 130px;
 }
 footer.page-footer .footer-copyright {
-  background-color: var(--grey-color) !important;
+  background-color: transparent !important;
   overflow: hidden;
   font-size: 14px;
   font-weight: bold;
