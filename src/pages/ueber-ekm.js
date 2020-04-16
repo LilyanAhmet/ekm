@@ -5,41 +5,61 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 
 /* resources */
 import Map from "../images/map.png"
-const ueberEkm = () => {
-  return (
-    <Layout>
-      <SEO title="ueberEkm" />
-      <div className="ueber-ekm">
-        <MDBContainer size="lg">
-          <MDBRow className="margin-p-40">
-            <MDBCol md={7} sm={12}>
-              <MDBRow>
-                <MDBCol>
-                  <h1 className="borderimg"> Über Uns</h1>
+import {graphql} from "gatsby";
+class ueberEkm extends React.Component {
+  render() {
+    const graphData = this.props.data
+    return (
+        <Layout>
+          <SEO title="ueberEkm"/>
+          <div className="ueber-ekm">
+            <MDBContainer size="lg">
+              <MDBRow className="margin-p-40">
+                <MDBCol md={7} sm={12}>
+                  <MDBRow>
+                    <MDBCol>
+                      <h1 className="borderimg"> {graphData.allContentfulSinglePage.edges[1].node.title}</h1>
+                    </MDBCol>
+                  </MDBRow>
+                  <p>
+                    {graphData.allContentfulSinglePage.edges[1].node.text.text}
+                  </p>
+                </MDBCol>
+                <MDBCol md={5} sm={12}>
+                  <img className="img-fluid" src={graphData.allContentfulSinglePage.edges[1].node.image.fluid.src}/>
                 </MDBCol>
               </MDBRow>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                penatibus et magnis dis parturient montes, nascetur ridiculus
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                <br /> <br /> <br />
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus
-              </p>
-            </MDBCol>
-            <MDBCol md={5} sm={12}>
-              <img className="img-fluid" src={Map} />
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </div>
-    </Layout>
-  )
+            </MDBContainer>
+          </div>
+        </Layout>
+    )
+  }
 }
 
 export default ueberEkm
+export const query = graphql`
+{
+  allContentfulSinglePage {
+    edges {
+      node {
+        title
+        text {
+          text
+          childMarkdownRemark {
+            html
+          }
+        }
+        image {
+          fluid {
+            src
+            base64
+            srcSet
+            srcWebp
+          }
+        }
+      }
+    }
+  }
+}
+
+`

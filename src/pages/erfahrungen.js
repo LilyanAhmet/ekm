@@ -19,15 +19,15 @@ class erfahrungen extends React.Component {
           <MDBContainer size="lg">
             <MDBRow>
               <MDBCol>
-                <h1 className="borderimg"> Erfahrungen</h1>
+                <h1 className="borderimg"> {graphData.allContentfulSinglePage.edges[0].node.title}</h1>
               </MDBCol>
             </MDBRow>
             <MDBRow className="margin-p-40">
               <MDBCol md={6} sm={12}>
-                <p>{graphData.allContentfulErfahrungen.nodes[0].text.text}</p>
+                <p>{graphData.allContentfulSinglePage.edges[0].node.text.text}</p>
               </MDBCol>
               <MDBCol md={6} sm={12}>
-                <img className="img-fluid" src={Image} />
+                <img className="img-fluid" src={graphData.allContentfulSinglePage.edges[0].node.image.fluid.src} />
               </MDBCol>
             </MDBRow>
           </MDBContainer>
@@ -39,13 +39,29 @@ class erfahrungen extends React.Component {
 export default erfahrungen
 
 export const query = graphql`
-  query {
-    allContentfulErfahrungen {
-      nodes {
+{
+  allContentfulSinglePage {
+    edges {
+      node {
+        title
         text {
           text
+          childMarkdownRemark {
+            excerpt(format: MARKDOWN, pruneLength: 9999)
+          }
+        }
+        image {
+          fluid {
+            src
+            base64
+            srcSet
+            srcWebp
+          }
         }
       }
     }
   }
+}
+
+
 `

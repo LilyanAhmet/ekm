@@ -47,7 +47,7 @@ class unternehmercoaching extends React.Component {
                     <ServiceShort
                         icon={array[i].icon.fluid.src}
                         title={array[i].title}
-                        desciption={array[i].subtitle}
+                        desciption={array[i].description}
                     />
                 </MDBCol>
             )

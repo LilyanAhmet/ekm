@@ -122,6 +122,7 @@ export default class kontakt extends Component {
                 data-netlify="true"
                 onSubmit={this.submitHandler}
                 noValidate
+                data-netlify="true"
               >
                 <MDBRow>
                   <MDBCol md={6} sm={12}>
