@@ -260,7 +260,7 @@ export default class kontakt extends Component {
                   </MDBCol>
                 </MDBRow>
                 <MDBRow>
-                  <MDBBtn color="default">
+                  <MDBBtn color="default" type="submit">
                   Senden Sie Ihre Nachricht <MDBIcon icon="paper-plane" />
                   </MDBBtn>
                 </MDBRow>
