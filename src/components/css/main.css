@@ -543,7 +543,7 @@ ul {
   font-size: 16px;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.2;
+  line-height: 1.4;
   letter-spacing: normal;
   text-align: justify;
   color: var(--font-color);
@@ -589,11 +589,11 @@ ul {
   margin-left: -20px;
 }
 .services .service-short h3 {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 0.65;
+  line-height: 1;
   letter-spacing: normal;
   color: var(--font-color);
   margin-bottom: 32px;

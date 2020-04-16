@@ -75,7 +75,7 @@ class Header extends React.Component {
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <Link className="nav-link waves-effect waves-light" to="#!">
+                <Link className="nav-link waves-effect waves-light"  to="#!">
                   <MDBIcon fas icon="phone" /> +49 2 21 5796 7940
                 </Link>
               </MDBNavItem>
