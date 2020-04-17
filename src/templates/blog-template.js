@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Blog = () => {
+const Blog = ({pageContext}) => {
     return (
         <div>
-            
+            Name: {pageContext.house}
         </div>
     );
 };

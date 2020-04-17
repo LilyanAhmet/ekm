@@ -24,9 +24,12 @@ import RefTwo from "../images/2.png"
 import RefThree from "../images/3.png"
 import RefFour from "../images/4.png"
 import RefFive from "../images/5.png"
+import {graphql} from "gatsby";
 
 export default class index extends Component {
   render() {
+    const graphData = this.props.data
+    console.log(graphData);
     return (
       <div>
         <Layout trans={true}>
@@ -55,20 +58,18 @@ export default class index extends Component {
                         color="white"
                         gradient="aqua"
                         rounded
+                        href={graphData.allContentfulPost.edges[0].node.slug}
                       >
                         NEU
                       </MDBBtn>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                      <p>{graphData.allContentfulPost.edges[0].node.title}</p>
                     </MDBBox>
                     <MDBAnimation type="fadeInLeft" delay=".3s">
                       <h1 className="h1-responsive font-weight-bold mt-sm-5">
-                        <span>EKM</span> hilft Ihrer Karriere
+                        {graphData.contentfulHomePage.title}
                       </h1>
                       <h6 className="mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Rem repellendus quasi fuga nesciunt dolorum nulla
-                        magnam veniam sapiente, fugiat! Commodi sequi non animi
-                        ea dolor molestiae iste.
+                        {graphData.contentfulHomePage.subtitle}
                       </h6>
                       <MDBBtn color="white" gradient="aqua">
                         Mehr Erfahren
@@ -89,37 +90,32 @@ export default class index extends Component {
             <MDBContainer size="lg">
               <MDBRow>
                 <MDBCol>
-                  <h1 className="borderimg"> Dienstleistungen</h1>
+                  <h1 className="borderimg"> {graphData.contentfulHomePage.section1Title}</h1>
                 </MDBCol>
               </MDBRow>
               <MDBRow className="details">
                 <MDBCol md={7} sm={12}>
-                  <h2>Mit EKM stärker werden</h2>
+                  <h2>{graphData.contentfulHomePage.section1title2}</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                    natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus
+                    {graphData.contentfulHomePage.section1title2subtitle}
                   </p>
                   <MDBRow>
                     <MDBCol>
                       <div className="bottom">
-                        <img className="img-fluid " src={IconOne} />
-                        <h3>Unternehmercoaching</h3>
+                        <img className="img-fluid " src={graphData.contentfulHomePage.service1icon.fluid.src} />
+                        <h3>{graphData.contentfulHomePage.service1title}</h3>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit. Aenean commodo ligula eget dolor.{" "}
+                          {graphData.contentfulHomePage.service1subtitle}{" "}
                         </p>
                         <a>DIENSTE DURCHSUCHEN →</a>
                       </div>
                     </MDBCol>
                     <MDBCol>
                       <div className="bottom">
-                        <img className="img-fluid " src={IconOne} />
-                        <h3>Unternehmercoaching</h3>
+                        <img className="img-fluid " src={graphData.contentfulHomePage.service2icon.fluid.src} />
+                        <h3>{graphData.contentfulHomePage.service2title}</h3>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit. Aenean commodo ligula eget dolor.{" "}
+                          {graphData.contentfulHomePage.service2subtitle}{" "}
                         </p>
                         <a>DIENSTE DURCHSUCHEN →</a>
                       </div>
@@ -136,7 +132,7 @@ export default class index extends Component {
             <MDBContainer>
               <MDBRow>
                 <MDBCol md={12}>
-                  <h1 className="borderimg">Referenzen</h1>
+                  <h1 className="borderimg">{graphData.contentfulHomePage.referencentitle}</h1>
                 </MDBCol>
               </MDBRow>
               <div className="d-flex justify-content-end">
@@ -158,10 +154,9 @@ export default class index extends Component {
               <div className="d-flex justify-content-center">
                 <div className="p-2 col-example text-left">
                   <div className="center">
-                    <h4>Wachsen Sie mit EKM in Ihrer Zukunft</h4>
+                    <h4>{graphData.contentfulHomePage.referencentitle2}</h4>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      Aenean commodo ligula eget dolor.{" "}
+                      {graphData.contentfulHomePage.referencentitle2subtitle}{" "}
                     </p>
                     <MDBBtn color="white">Mehr Erfahren</MDBBtn>
                   </div>
@@ -189,3 +184,64 @@ export default class index extends Component {
     )
   }
 }
+export const query = graphql`
+{
+  contentfulHomePage {
+    title
+    subtitle
+    mainimage {
+      fluid {
+        src
+        base64
+        sizes
+      }
+    }
+    section1Title
+    section1title2
+    section1title2subtitle
+    service1title
+    service1subtitle
+    service1icon {
+      fluid {
+        src
+        base64
+        sizes
+      }
+    }
+    service2title
+    service2subtitle
+    service2icon {
+      fluid {
+        src
+        sizes
+        base64
+      }
+    }
+    referencentitle
+    referencentitle2
+    referencentitle2subtitle
+    referenzen {
+      text {
+        text
+      }
+      image {
+        fluid {
+          src
+          srcSet
+          sizes
+          base64
+        }
+      }
+    }
+  }
+  allContentfulPost(sort: {order: DESC, fields: createdAt}, limit: 1) {
+    edges {
+      node {
+        title
+        slug
+      }
+    }
+  }
+}
+
+`
