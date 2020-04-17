@@ -155,7 +155,6 @@ export default class index extends Component {
                   <img className="img-fluid" src={RefFive} />
                 </div>
               </div>
-
               <div className="d-flex justify-content-center">
                 <div className="p-2 col-example text-left">
                   <div className="center">

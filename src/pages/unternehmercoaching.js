@@ -9,14 +9,7 @@ import ServiceShort from "../components/sharedComponents/serviceShort"
 import ServiceLong from "../components/sharedComponents/serviceLong"
 /* resources */
 import DescImage from "../images/Unternehmercoaching.svg"
-import IconOne from "../images/icon1.svg"
-import IconTwo from "../images/icon2.svg"
-import IconThree from "../images/icon3.svg"
-import IconFour from "../images/icon4.svg"
 
-import LongImg from "../images/longImg.svg"
-import {Col, Nav, Row, Tab} from "react-bootstrap";
-import Avatar from "../images/avatar.svg";
 class unternehmercoaching extends React.Component {
 
     createServiceLong = (array) => {
