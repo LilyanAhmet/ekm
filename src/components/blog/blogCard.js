@@ -29,12 +29,10 @@ export default class blogCard extends Component {
           <MDBCol lg="7">
             <div className="text">
               <a href="#!">
-                <h6 className="font-weight-bold mb-3">Content.1</h6>
+                <h6 className="font-weight-bold mb-3">{this.props.cat}</h6>
               </a>
-              <h3 className="font-weight-bold mb-3 p-0">
-                Home vs Office. Remotely Working. Which is the best? #1
-              </h3>
-              <p>19/08/2018</p>
+              <h3 className="font-weight-bold mb-3 p-0">{this.props.title}</h3>
+              <p>{this.props.date}</p>
             </div>
             <MDBBtn size="md" className="waves-light ">
               Read more

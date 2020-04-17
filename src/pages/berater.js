@@ -20,112 +20,136 @@ export default class berater extends Component {
       })
     }
   }
-  createNavItems = (array) => {
-    let numbersth = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth'];
+  createNavItems = array => {
+    let numbersth = [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "sixth",
+      "seventh",
+      "eighth",
+    ]
     let navItems = []
     let children = []
     for (let i = 0; i < array.length; i++) {
-      children.push(<Nav.Link  eventKey={numbersth[i]}
-                                     className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">{array[i].node.name}</Nav.Link>)
+      children.push(
+        <Nav.Link
+          eventKey={numbersth[i]}
+          className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg"
+        >
+          {array[i].node.name}
+        </Nav.Link>
+      )
       navItems.push(<Nav.Item>{children[i]}</Nav.Item>)
     }
     return navItems
-    }
-  createTabPanes = (array) => {
-    let numbersth = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth'];
+  }
+  createTabPanes = array => {
+    let numbersth = [
+      "first",
+      "second",
+      "third",
+      "fourth",
+      "fifth",
+      "sixth",
+      "seventh",
+      "eighth",
+    ]
     let navItems = []
     for (let i = 0; i < array.length; i++) {
-      navItems.push(<Tab.Pane eventKey={numbersth[i]}>
-        <Row>
-          <Col md={3} sm={12}>
-            <img className="img-fluid" src={Avatar} />
-          </Col>
-          <Col md={9} sm={12}>
-            <p>
-              {array[i].node.description.description}
-            </p>
-          </Col>
-        </Row>
-        <Row className="margin-p-40">
-          <Col md={12}>
-            <div className="box ">
-              <div className="title">
-                <h2>Business Development</h2> <hr />
+      navItems.push(
+        <Tab.Pane eventKey={numbersth[i]}>
+          <Row>
+            <Col md={3} sm={12}>
+              <img className="img-fluid" src={Avatar} />
+            </Col>
+            <Col md={9} sm={12}>
+              <p>{array[i].node.description.description}</p>
+            </Col>
+          </Row>
+          <Row className="margin-p-40">
+            <Col md={12}>
+              <div className="box ">
+                <div className="title">
+                  <h2>Business Development</h2> <hr />
+                </div>
+                <div className="text">
+                  <p>{array[i].node.businessDevelopment.businessDevelopment}</p>
+                </div>
               </div>
-              <div className="text">
-                <p>
-                  {array[i].node.businessDevelopment.businessDevelopment}
-                </p>
+            </Col>
+          </Row>
+          <Row className="margin-p-40">
+            <Col md={12}>
+              <div className="box">
+                <div className="title">
+                  <h2>Existenzgründungsberatung</h2> <hr />
+                </div>
+                <div className="text">
+                  <p>
+                    {
+                      array[i].node.existenzgrndungsberatung
+                        .existenzgrndungsberatung
+                    }
+                  </p>
+                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-        <Row className="margin-p-40">
-          <Col md={12}>
-            <div className="box">
-              <div className="title">
-                <h2>Existenzgründungsberatung</h2> <hr />
-              </div>
-              <div className="text">
-                <p>
-                  {array[i].node.existenzgrndungsberatung.existenzgrndungsberatung}
-                </p>
-              </div>
-            </div>
-          </Col>
-        </Row>
-        <Row className="margin-p-40">
-          <Col md={12}>
-            <div className="certificate ">
-              <div className="title">
-                <h2>Zertifizierungen</h2> <hr />
-              </div>
-              <Row className="margin-p-40">
-                <Col md={4} sm={12}>
-                  <MDBView hover zoom>
-                    <img
+            </Col>
+          </Row>
+          <Row className="margin-p-40">
+            <Col md={12}>
+              <div className="certificate ">
+                <div className="title">
+                  <h2>Zertifizierungen</h2> <hr />
+                </div>
+                <Row className="margin-p-40">
+                  <Col md={4} sm={12}>
+                    <MDBView hover zoom>
+                      <img
                         src={array[i].node.zertifizierungen[0].fluid.src}
                         className="img-fluid"
                         alt=""
-                    />
-                    <MDBMask className="flex-center">
-                      <p className="white-text">Zoom effect</p>
-                    </MDBMask>
-                  </MDBView>
-                </Col>
-                <Col md={4} sm={12}>
-                  <MDBView hover zoom>
-                    <img
+                      />
+                      <MDBMask className="flex-center">
+                        <p className="white-text">Zoom effect</p>
+                      </MDBMask>
+                    </MDBView>
+                  </Col>
+                  <Col md={4} sm={12}>
+                    <MDBView hover zoom>
+                      <img
                         src={array[i].node.zertifizierungen[1].fluid.src}
                         className="img-fluid"
                         alt=""
-                    />
-                    <MDBMask className="flex-center">
-                      <p className="white-text">Zoom effect</p>
-                    </MDBMask>
-                  </MDBView>
-                </Col>
-                <Col md={4} sm={12}>
-                  <MDBView hover zoom>
-                    <img
+                      />
+                      <MDBMask className="flex-center">
+                        <p className="white-text">Zoom effect</p>
+                      </MDBMask>
+                    </MDBView>
+                  </Col>
+                  <Col md={4} sm={12}>
+                    <MDBView hover zoom>
+                      <img
                         src={array[i].node.zertifizierungen[2].fluid.src}
                         className="img-fluid"
                         alt=""
-                    />
-                    <MDBMask className="flex-center">
-                      <p className="white-text">Zoom effect</p>
-                    </MDBMask>
-                  </MDBView>
-                </Col>
-              </Row>
-            </div>
-          </Col>
-        </Row>
-      </Tab.Pane>)
+                      />
+                      <MDBMask className="flex-center">
+                        <p className="white-text">Zoom effect</p>
+                      </MDBMask>
+                    </MDBView>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+          </Row>
+        </Tab.Pane>
+      )
     }
     return navItems
   }
-
 
   render() {
     const graphData = this.props.data
@@ -146,12 +170,16 @@ export default class berater extends Component {
               <Row>
                 <Col sm={12}>
                   <Nav variant="pills" className="col-xs-12">
-                    {this.createNavItems(graphData.allContentfulConsultant.edges)}
+                    {this.createNavItems(
+                      graphData.allContentfulConsultant.edges
+                    )}
                   </Nav>
                 </Col>
                 <Col sm={12}>
                   <Tab.Content>
-                    {this.createTabPanes(graphData.allContentfulConsultant.edges)}
+                    {this.createTabPanes(
+                      graphData.allContentfulConsultant.edges
+                    )}
                   </Tab.Content>
                 </Col>
               </Row>

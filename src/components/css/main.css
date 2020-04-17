@@ -99,6 +99,9 @@ ul {
 .margin-m-bottom-50 {
   margin-bottom: -50px;
 }
+.margin-p-bottom-50{
+  margin-bottom: 50px;
+}
 .padding-p-bottom-10 {
   padding-bottom: 10rem;
 }
@@ -944,6 +947,36 @@ ul {
   float: left;
   background-size: auto !important;
 }
+
+.blog-list .tab-section .nav-pills .nav-link {
+  color: #919eab;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-size: 20px;
+  letter-spacing: normal;
+  text-align: center;
+  margin: auto;
+}
+.blog-list .tab-section .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--font-color);
+  background-color: transparent;
+  box-shadow: none;
+  background-image: url("../../images/path-7.svg") !important;
+  background-position: bottom !important;
+  background-repeat: no-repeat !important;
+  background-size:contain !important;
+}
+
 .blog-card {
   margin-bottom: 20px;
   object-fit: contain;
