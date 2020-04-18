@@ -1295,9 +1295,13 @@ footer .social li {
 
 .not-found {
   height: 100vh;
+  padding: 5rem 10rem;
+
 }
 .not-found h1 {
-  font-size: 40px;
+ 
+  margin: auto;
+  font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -1307,7 +1311,9 @@ footer .social li {
   color: #1b435e;
 }
 .not-found p {
-  font-size: 40px;
+  font-size: 30px;
+  margin: auto;
+  padding-top: 10px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -1317,6 +1323,7 @@ footer .social li {
   color: #1b435e;
 }
 .not-found button {
+  margin: 5rem auto;
   width: 299px;
   height: 38px;
   border-radius: 19px;
@@ -1324,6 +1331,7 @@ footer .social li {
   background-image: linear-gradient(83deg, #2ccccc, #0cefa5);
 }
 .not-found img {
+  max-width: 600px;
   display: block;
   margin: auto;
 }
