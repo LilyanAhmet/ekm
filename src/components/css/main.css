@@ -99,7 +99,7 @@ ul {
 .margin-m-bottom-50 {
   margin-bottom: -50px;
 }
-.margin-p-bottom-50{
+.margin-p-bottom-50 {
   margin-bottom: 50px;
 }
 .padding-p-bottom-10 {
@@ -974,7 +974,7 @@ ul {
   background-image: url("../../images/path-7.svg") !important;
   background-position: bottom !important;
   background-repeat: no-repeat !important;
-  background-size:contain !important;
+  background-size: contain !important;
 }
 
 .blog-card {
@@ -984,8 +984,8 @@ ul {
   box-shadow: 0 0 40px 0 rgba(22, 55, 78, 0.14);
   background-color: #f9fafb;
 }
-.blog-list .right button{
-  position:absolute;
+.blog-list .right button {
+  position: absolute;
   bottom: 10%;
   left: 22%;
   margin: auto;
@@ -994,8 +994,8 @@ ul {
   color: var(--white-color) !important;
   background-color: #1b435e !important;
   display: block;
-  min-width: 200px ;
-  padding: 8px  !important;
+  min-width: 200px;
+  padding: 8px !important;
 }
 .blog-card .text {
   padding: 15px 15px 0 15px;
@@ -1010,7 +1010,7 @@ ul {
   color: var(--font-color);
 }
 .blog-card .text a h6 {
-  margin-bottom: 5px!important;
+  margin-bottom: 5px !important;
   font-size: 12px;
   font-weight: bold;
   font-stretch: normal;
@@ -1036,8 +1036,11 @@ ul {
   color: var(--white-color) !important;
   background-color: #1b435e !important;
   display: block;
-  min-width: 122px ;
-  padding: 8px  !important;
+  min-width: 122px;
+  padding: 8px !important;
+}
+
+.blog-template {
 }
 /*Contact*/
 .contact {
@@ -1288,4 +1291,39 @@ footer .social {
 footer .social li {
   display: inline-flex;
   padding-right: 30px;
+}
+
+.not-found {
+  height: 100vh;
+}
+.not-found h1 {
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1b435e;
+}
+.not-found p {
+  font-size: 40px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1b435e;
+}
+.not-found button {
+  width: 299px;
+  height: 38px;
+  border-radius: 19px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(83deg, #2ccccc, #0cefa5);
+}
+.not-found img {
+  display: block;
+  margin: auto;
 }
