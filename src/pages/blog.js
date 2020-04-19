@@ -70,7 +70,7 @@ export const query = graphql`
         blogPosts {
           title
           slug
-          createdAt
+          createdAt(formatString: "Do MMMM YYYY")
         }
       }
     }

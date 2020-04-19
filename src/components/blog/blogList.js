@@ -23,6 +23,8 @@ export default class blogList extends Component {
     }
   }
   render() {
+    console.log(this.props.blogContent)
+    let content1 = this.props.blogContent[0].node.content;
     return (
       <div className="blog-list">
         <MDBContainer className="tab-section">
@@ -31,7 +33,7 @@ export default class blogList extends Component {
               <Col sm={12}>
                 <Nav variant="pills" className="col-xs-12">
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="first">{this.props.blogContent[0].node.content}</Nav.Link>
+                    <Nav.Link eventKey="first">{content1}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
                     <Nav.Link eventKey="second">{this.props.blogContent[1].node.content}</Nav.Link>
@@ -56,55 +58,31 @@ export default class blogList extends Component {
               <MDBCol md={8} sm={12}>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
-                    <BlogCard
-                      cat="content 1"
-                      title="Home vs Office. Remotely Working. Which is the best? #1"
-                      date="12 Jul 2020"
-                    />
-                    <BlogCard
-                      cat="content 1"
-                      title="Home vs Office. Remotely Working. Which is the best? #1"
-                      date="12 Jul 2020"
-                    />
-                    <BlogCard
-                      cat="content 1"
-                      title="Home vs Office. Remotely Working. Which is the best? #1"
-                      date="12 Jul 2020"
-                    />
+                    {this.props.blogContent[0].node.blogPosts.map(function(blogPost){
+                      return <BlogCard
+                          cat={content1}
+                          title={blogPost.title}
+                          date={blogPost.createdAt}
+                      />;
+                    })}
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
-                    <BlogCard
-                      cat="content 2"
-                      title="Home vs Office. Remotely Working. Which is the best? #1"
-                      date="12 Jul 2020"
-                    />
-                    <BlogCard
-                      cat="content 2"
-                      title="Home vs Office. Remotely Working. Which is the best? #1"
-                      date="12 Jul 2020"
-                    />
-                    <BlogCard
-                      cat="content 3"
-                      title="Home vs Office. Remotely Working. Which is the best? #1"
-                      date="12 Jul 2020"
-                    />
+                    {this.props.blogContent[1].node.blogPosts.map(function(blogPost){
+                      return <BlogCard
+                          cat={content1}
+                          title={blogPost.title}
+                          date={blogPost.createdAt}
+                      />;
+                    })}
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
-                    <BlogCard
-                      cat="content 3"
-                      title="Home vs Office. Remotely Working. Which is the best? #1"
-                      date="12 Jul 2020"
-                    />
-                    <BlogCard
-                      cat="content 3"
-                      title="Home vs Office. Remotely Working. Which is the best? #1"
-                      date="12 Jul 2020"
-                    />
-                    <BlogCard
-                      cat="content 3"
-                      title="Home vs Office. Remotely Working. Which is the best? #1"
-                      date="12 Jul 2020"
-                    />
+                    {this.props.blogContent[2].node.blogPosts.map(function(blogPost){
+                      return <BlogCard
+                          cat={content1}
+                          title={blogPost.title}
+                          date={blogPost.createdAt}
+                      />;
+                    })}
                   </Tab.Pane>
                 </Tab.Content>
               </MDBCol>
