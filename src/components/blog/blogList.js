@@ -31,22 +31,22 @@ export default class blogList extends Component {
               <Col sm={12}>
                 <Nav variant="pills" className="col-xs-12">
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="first"> content 1</Nav.Link>
+                    <Nav.Link eventKey="first">{this.props.blogContent[0].node.content}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="second"> content 2</Nav.Link>
+                    <Nav.Link eventKey="second">{this.props.blogContent[1].node.content}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="third"> content 3</Nav.Link>
+                    <Nav.Link eventKey="third"> {this.props.blogContent[2].node.content}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="four"> content 4</Nav.Link>
+                    <Nav.Link eventKey="four">{this.props.blogContent[3].node.content}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="five"> content 5</Nav.Link>
+                    <Nav.Link eventKey="five">{this.props.blogContent[4].node.content}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="six"> content 6</Nav.Link>
+                    <Nav.Link eventKey="six"> {this.props.blogContent[5].node.content}</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>
