@@ -139,7 +139,7 @@ export default class index extends Component {
                 <div className="p-2 col-example text-left">
                   <img
                     className="img-fluid margin-m-bottom-50"
-                    src={RefThree}
+                    src={graphData.allContentfulReferenzenHomepage.edges[1].node.photo.fluid.src}
                   />
                 </div>
                 <div className="p-2 col-example text-left">
@@ -148,7 +148,7 @@ export default class index extends Component {
               </div>
               <div className="d-flex justify-content-start">
                 <div className="p-2 col-example text-left">
-                  <img className="img-fluid" src={RefFive} />
+                  <img className="img-fluid" src={graphData.allContentfulReferenzenHomepage.edges[0].node.photo.fluid.src} />
                 </div>
               </div>
               <div className="d-flex justify-content-center">
@@ -164,16 +164,16 @@ export default class index extends Component {
               </div>
               <div className="d-flex justify-content-between">
                 <div className="p-2 col-example text-left">
-                  <img className="img-fluid" src={RefTwo} />
+                  <img className="img-fluid" src={graphData.allContentfulReferenzenHomepage.edges[2].node.photo.fluid.src} />
                 </div>
 
                 <div className="p-2 col-example text-left">
-                  <img className="img-fluid" src={RefFour} />
+                  <img className="img-fluid" src={graphData.allContentfulReferenzenHomepage.edges[3].node.photo.fluid.src} />
                 </div>
               </div>
               <div className="d-flex justify-content-around">
                 <div className="p-2 col-example text-left">
-                  <img className="img-fluid" src={RefOne} />
+                  <img className="img-fluid" src={graphData.allContentfulReferenzenHomepage.edges[4].node.photo.fluid.src} />
                 </div>
               </div>
             </MDBContainer>
@@ -220,19 +220,6 @@ export const query = graphql`
     referencentitle
     referencentitle2
     referencentitle2subtitle
-    referenzen {
-      text {
-        text
-      }
-      image {
-        fluid {
-          src
-          srcSet
-          sizes
-          base64
-        }
-      }
-    }
   }
   allContentfulPost(sort: {order: DESC, fields: createdAt}, limit: 1) {
     edges {
@@ -242,6 +229,19 @@ export const query = graphql`
       }
     }
   }
+  allContentfulReferenzenHomepage {
+    edges {
+      node {
+        text
+        photo {
+          fluid {
+            src
+          }
+        }
+      }
+    }
+  }
 }
+
 
 `
