@@ -25,6 +25,11 @@ export default class blogList extends Component {
   render() {
     console.log(this.props.blogContent)
     let content1 = this.props.blogContent[0].node.content;
+    let content2 = this.props.blogContent[1].node.content;
+    let content3 = this.props.blogContent[2].node.content;
+    let content4 = this.props.blogContent[3].node.content;
+    let content5 = this.props.blogContent[4].node.content;
+    let content6 = this.props.blogContent[5].node.content;
     return (
       <div className="blog-list">
         <MDBContainer className="tab-section">
@@ -36,19 +41,19 @@ export default class blogList extends Component {
                     <Nav.Link eventKey="first">{content1}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="second">{this.props.blogContent[1].node.content}</Nav.Link>
+                    <Nav.Link eventKey="second">{content2}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="third"> {this.props.blogContent[2].node.content}</Nav.Link>
+                    <Nav.Link eventKey="third"> {content3}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="four">{this.props.blogContent[3].node.content}</Nav.Link>
+                    <Nav.Link eventKey="four">{content4}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="five">{this.props.blogContent[4].node.content}</Nav.Link>
+                    <Nav.Link eventKey="five">{content5}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="col-12 col-xs-12 col-sm-12 col-md-12 col-lg">
-                    <Nav.Link eventKey="six"> {this.props.blogContent[5].node.content}</Nav.Link>
+                    <Nav.Link eventKey="six"> {content6}</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>
@@ -63,24 +68,27 @@ export default class blogList extends Component {
                           cat={content1}
                           title={blogPost.title}
                           date={blogPost.createdAt}
+                          slug={blogPost.slug}
                       />;
                     })}
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
                     {this.props.blogContent[1].node.blogPosts.map(function(blogPost){
                       return <BlogCard
-                          cat={content1}
+                          cat={content2}
                           title={blogPost.title}
                           date={blogPost.createdAt}
+                          slug={blogPost.slug}
                       />;
                     })}
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
                     {this.props.blogContent[2].node.blogPosts.map(function(blogPost){
                       return <BlogCard
-                          cat={content1}
+                          cat={content3}
                           title={blogPost.title}
                           date={blogPost.createdAt}
+                          slug={blogPost.slug}
                       />;
                     })}
                   </Tab.Pane>
