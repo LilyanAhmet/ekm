@@ -63,7 +63,7 @@ export default class berater extends Component {
         <Tab.Pane eventKey={numbersth[i]}>
           <Row>
             <Col md={3} sm={12}>
-              <img className="img-fluid" src={Avatar} />
+              <img className="img-fluid brater-img" src={Avatar} />
             </Col>
             <Col md={9} sm={12}>
               <p>{array[i].node.description.description}</p>
@@ -150,7 +150,6 @@ export default class berater extends Component {
     }
     return navItems
   }
-
   render() {
     const graphData = this.props.data
     console.log(graphData)

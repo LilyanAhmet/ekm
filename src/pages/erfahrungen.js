@@ -4,10 +4,10 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
 import { Nav, Tab, Col, Row, Container } from "react-bootstrap"
-import { MDBContainer, MDBRow, MDBCol} from "mdbreact"
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 
 /* resources */
-import Image from '../images/experience.svg'
+import Image from "../images/experience.svg"
 class erfahrungen extends React.Component {
   render() {
     const graphData = this.props.data
@@ -15,19 +15,59 @@ class erfahrungen extends React.Component {
     return (
       <Layout>
         <SEO title="erfahrungen" />
-        <div className="experience">
+        <div className="experience desktop">
           <MDBContainer size="lg">
             <MDBRow>
               <MDBCol>
-                <h1 className="borderimg"> {graphData.allContentfulSinglePage.edges[0].node.title}</h1>
+                <h1 className="borderimg">
+                  {" "}
+                  {graphData.allContentfulSinglePage.edges[0].node.title}
+                </h1>
               </MDBCol>
             </MDBRow>
             <MDBRow className="margin-p-40">
               <MDBCol md={6} sm={12}>
-                <p>{graphData.allContentfulSinglePage.edges[0].node.text.text}</p>
+                <p>
+                  {graphData.allContentfulSinglePage.edges[0].node.text.text}
+                </p>
               </MDBCol>
               <MDBCol md={6} sm={12}>
-                <img className="img-fluid" src={graphData.allContentfulSinglePage.edges[0].node.image.fluid.src} />
+                <img
+                  className="img-fluid"
+                  src={
+                    graphData.allContentfulSinglePage.edges[0].node.image.fluid
+                      .src
+                  }
+                />
+              </MDBCol>
+            </MDBRow>
+          </MDBContainer>
+        </div>
+        <div className="experience mobile">
+          <MDBContainer size="lg">
+            <MDBRow>
+              <MDBCol>
+                <h1 className="borderimg">
+                  {" "}
+                  {graphData.allContentfulSinglePage.edges[0].node.title}
+                </h1>
+              </MDBCol>
+            </MDBRow>
+            <MDBRow className="margin-p-40">
+             
+              <MDBCol md={6} sm={12}>
+                <img
+                  className="img-fluid"
+                  src={
+                    graphData.allContentfulSinglePage.edges[0].node.image.fluid
+                      .src
+                  }
+                />
+              </MDBCol>
+              <MDBCol md={6} sm={12}>
+                <p>
+                  {graphData.allContentfulSinglePage.edges[0].node.text.text}
+                </p>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
@@ -39,28 +79,29 @@ class erfahrungen extends React.Component {
 export default erfahrungen
 
 export const query = graphql`
-{
-  allContentfulSinglePage(filter: {id: {eq: "a8f28c02-dbb4-56c1-b960-83f36a4dbe49"}}) {
-    edges {
-      node {
-        title
-        text {
-          text
-          childMarkdownRemark {
-            html
+  {
+    allContentfulSinglePage(
+      filter: { id: { eq: "a8f28c02-dbb4-56c1-b960-83f36a4dbe49" } }
+    ) {
+      edges {
+        node {
+          title
+          text {
+            text
+            childMarkdownRemark {
+              html
+            }
           }
-        }
-        image {
-          fluid {
-            src
-            base64
-            srcSet
-            srcWebp
+          image {
+            fluid {
+              src
+              base64
+              srcSet
+              srcWebp
+            }
           }
         }
       }
     }
   }
-}
-
 `
