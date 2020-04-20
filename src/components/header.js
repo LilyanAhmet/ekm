@@ -28,7 +28,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <MDBNavbar expand="md" id="nav-bg">
+        <MDBNavbar expand="lg" id="nav-bg">
           <MDBNavbarBrand>
            <a href="/"><img src={Logo} className="white-text" /></a>  
           </MDBNavbarBrand>
