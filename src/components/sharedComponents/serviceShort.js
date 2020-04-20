@@ -7,8 +7,10 @@ export default class serviceShort extends Component {
       <div className="services">
         <div className="service-short">
           <img className="img-fluid " src={this.props.icon} />
-          <h3>{this.props.title}</h3>
-          <p>{this.props.desciption}</p>
+          <div className="text">
+            <h3>{this.props.title}</h3>
+            <p>{this.props.desciption}</p>
+          </div>
         </div>
       </div>
     )

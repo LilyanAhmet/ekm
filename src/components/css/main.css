@@ -121,6 +121,17 @@ ul {
 .navbar-toggler-icon {
   background-image: url("../../images/hamburger-menu.svg") !important;
 }
+.carousel-indicators {
+  top: 105%;
+}
+.carousel-indicators li {
+  background-color: var(--main-color) !important;
+  opacity: 1 !important;
+}
+.carousel-indicators .active {
+  background-color: var(--dark-turquoise-color) !important;
+  opacity: 1;
+}
 .bggray {
   background-image: linear-gradient(
     to top,
@@ -1621,6 +1632,47 @@ footer .social li {
     margin: 50px auto;
     padding-left: 25px;
     padding-right: 25px;
+  }
+  .services {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .services .borderimg {
+    float: unset;
+    background-size: contain !important;
+    width: min-content;
+  }
+  .services h1 {
+    font-family: Gilroy Ebold;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+  }
+  .services p {
+    margin-top: 30px;
+    padding-right: 0;
+    font-size: 14px;
+  }
+  .services .service-short {
+    display: inline-flex;
+  }
+  .services .service-short img {
+    margin-top: -60px;
+  }
+  .services .service-short h3 {
+    font-family: Gilroy Ebold;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: var(--font-color);
+    margin-bottom: 10px;
+  }
+  .services .service-short p {
+    font-size: 14px;
+    margin-top: 0;
   }
 }
 
