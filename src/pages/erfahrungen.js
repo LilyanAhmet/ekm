@@ -40,14 +40,14 @@ export default erfahrungen
 
 export const query = graphql`
 {
-  allContentfulSinglePage {
+  allContentfulSinglePage(filter: {id: {eq: "a8f28c02-dbb4-56c1-b960-83f36a4dbe49"}}) {
     edges {
       node {
         title
         text {
           text
           childMarkdownRemark {
-            excerpt(format: MARKDOWN, pruneLength: 9999)
+            html
           }
         }
         image {
@@ -62,6 +62,5 @@ export const query = graphql`
     }
   }
 }
-
 
 `

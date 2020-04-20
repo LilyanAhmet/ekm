@@ -18,15 +18,15 @@ class ueberEkm extends React.Component {
                 <MDBCol md={7} sm={12}>
                   <MDBRow>
                     <MDBCol>
-                      <h1 className="borderimg"> {graphData.allContentfulSinglePage.edges[1].node.title}</h1>
+                      <h1 className="borderimg"> {graphData.allContentfulSinglePage.edges[0].node.title}</h1>
                     </MDBCol>
                   </MDBRow>
                   <p>
-                    {graphData.allContentfulSinglePage.edges[1].node.text.text}
+                    {graphData.allContentfulSinglePage.edges[0].node.text.text}
                   </p>
                 </MDBCol>
                 <MDBCol md={5} sm={12}>
-                  <img className="img-fluid" src={graphData.allContentfulSinglePage.edges[1].node.image.fluid.src}/>
+                  <img className="img-fluid" src={graphData.allContentfulSinglePage.edges[0].node.image.fluid.src}/>
                 </MDBCol>
               </MDBRow>
             </MDBContainer>
@@ -39,9 +39,10 @@ class ueberEkm extends React.Component {
 export default ueberEkm
 export const query = graphql`
 {
-  allContentfulSinglePage {
+  allContentfulSinglePage(filter: {id: {eq: "a2332606-59a5-5e89-9921-361285392ba6"}}) {
     edges {
       node {
+        id
         title
         text {
           text
