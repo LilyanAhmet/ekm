@@ -26,7 +26,7 @@ exports.createPages = async ({ actions, graphql }) => {
     result.data.allContentfulPost.edges.forEach(({node}) => {
         console.log(node);
         createPage({
-            path: node.slug,
+            path: "blog/"+node.slug,
             component: blogTemplate,
             context: {
                 house: `Gryffindor`,
