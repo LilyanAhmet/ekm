@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
+import {MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBContainer, MDBRow, MDBCol } from "mdbreact"
 
 /*components */
 import ReferenceBox from "../components/sharedComponents/referenceBox"
@@ -26,6 +26,23 @@ class referenzen extends React.Component {
     }
     return createRefenceBox
   }
+
+  createRefenceBoxResponsive = array => {
+    let createRefenceBox = []
+    for (let i = 0; i < array.length; i++) {
+      createRefenceBox.push(
+        <MDBCarouselItem itemId={i+1}>
+          <ReferenceBox
+            name={array[i].node.name}
+            title={array[i].node.titleAndCompany}
+            img={array[i].node.image.fluid.src}
+            description={array[i].node.text.text}
+          />
+        </MDBCarouselItem>
+      )
+    }
+    return createRefenceBox
+  }
   render() {
     const graphData = this.props.data
     console.log(graphData)
@@ -36,35 +53,54 @@ class referenzen extends React.Component {
           <MDBContainer size="lg">
             <MDBRow>
               <MDBCol md={12}>
-                <h1 className="borderimg">Du bist in einer guten Hand</h1>
+                <h1 className="borderimg">Referenzen</h1>
               </MDBCol>
               <MDBCol md={12}>
+              <h2 >Du bist in einer guten Hand</h2>
                 <p>
                   Millionen von Menschen auf der ganzen Welt haben EKM bereits
                   als Ort gewählt, an dem ihr Traum wahr wird.
                 </p>
               </MDBCol>
             </MDBRow>
-            <MDBRow>
-              {this.createRefenceBox(graphData.allContentfulReferenzen.edges)}
-            </MDBRow>
-            <MDBRow className="padding-p-top-10">
-              <MDBCol>
+            <div className="desktop">
+              <MDBRow>
+                {this.createRefenceBox(graphData.allContentfulReferenzen.edges)}
+              </MDBRow>
+            </div>
+            <div className="mobile">
+         
+                <MDBCarousel
+                  activeItem={1}
+                  length={6}
+                  slide={true}
+                  showControls={false}
+                  showIndicators={true}
+                  multiItem
+                >
+                  <MDBCarouselInner>
+                    {this.createRefenceBoxResponsive(
+                      graphData.allContentfulReferenzen.edges
+                    )}
+                  </MDBCarouselInner>
+                </MDBCarousel>
+             
+            </div>
+
+            <div className="padding-p-top-10 scrolly">
+             
                 <img className="img-fluid" src={Logo} />
-              </MDBCol>
-              <MDBCol>
+            
                 <img className="img-fluid" src={Logo} />
-              </MDBCol>
-              <MDBCol>
+              
                 <img className="img-fluid" src={Logo} />
-              </MDBCol>
-              <MDBCol>
+             
                 <img className="img-fluid" src={Logo} />
-              </MDBCol>
-              <MDBCol>
+             
+            
                 <img className="img-fluid" src={Logo} />
-              </MDBCol>
-            </MDBRow>
+              
+           </div>
           </MDBContainer>
         </div>
       </Layout>

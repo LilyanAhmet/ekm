@@ -20,10 +20,13 @@ import Phone from "../images/phone.svg"
 import Mail from "../images/mail.svg"
 import Address from "../images/address.svg"
 
-export default class kontakt extends Component {
+export default class kontakt extends React.Component {
   submitHandler = event => {
     event.preventDefault()
     event.target.className += " was-validated"
+    if (event.target.checkValidity()) {
+      console.log("test")
+    }
   }
 
   changeHandler = event => {
