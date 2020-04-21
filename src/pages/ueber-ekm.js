@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 
 /* resources */
-import Map from "../images/map.png"
+import Line from "../images/time-line.png"
 import { graphql } from "gatsby"
 class ueberEkm extends React.Component {
   render() {
@@ -19,7 +19,6 @@ class ueberEkm extends React.Component {
                 <MDBRow>
                   <MDBCol>
                     <h1 className="borderimg">
-                      {" "}
                       {graphData.allContentfulSinglePage.edges[0].node.title}
                     </h1>
                   </MDBCol>
@@ -38,6 +37,74 @@ class ueberEkm extends React.Component {
                 />
               </MDBCol>
             </MDBRow>
+          </MDBContainer>
+          <MDBContainer fluid className="bggray geschichte">
+            <MDBContainer>
+            <MDBRow>
+              <MDBCol md={12}>
+                <h1 className="borderimg">Geschichte</h1>
+              </MDBCol>
+            </MDBRow>
+              <MDBRow className="margin-p-60">
+                <MDBCol md={4} className="time">
+                  <div className="box">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in
+                      some form, by injected humour, or randomised words which
+                      don't look even slightly believable.
+                    </p>
+                  </div>
+                </MDBCol>
+                <MDBCol md={4} className="time">
+                  <div className="box">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in
+                      some form, by injected humour, or randomised words which
+                      don't look even slightly believable.
+                    </p>
+                  </div>
+                </MDBCol>
+              </MDBRow>
+              <MDBRow>
+                <MDBCol>
+                  <img style={{ width: "100%" }} src={Line} />
+                </MDBCol>
+              </MDBRow>
+              <MDBRow>
+                <MDBCol md={4} className="time">
+                  <div className="box">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in
+                      some form, by injected humour, or randomised words which
+                      don't look even slightly believable.
+                    </p>
+                  </div>
+                </MDBCol>
+                <MDBCol md={4} className="time">
+                  <div className="box">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in
+                      some form, by injected humour, or randomised words which
+                      don't look even slightly believable.
+                    </p>
+                  </div>
+                </MDBCol>
+                <MDBCol md={4} className="time">
+                  <div className="box">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in
+                      some form, by injected humour, or randomised words which
+                      don't look even slightly believable.
+                    </p>
+                  </div>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
           </MDBContainer>
         </div>
         <div className="ueber-ekm mobile">
