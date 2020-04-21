@@ -2,7 +2,15 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import { MDBContainer, MDBRow, MDBCol, MDBView, MDBMask } from "mdbreact"
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCarousel,
+  MDBCarouselInner,
+  MDBCarouselItem
+  
+} from "mdbreact"
 /*components */
 import Description from "../components/sharedComponents/description"
 import ServiceShort from "../components/sharedComponents/serviceShort"
@@ -36,19 +44,21 @@ class unternehmercoaching extends React.Component {
     let createServiceLong = []
     for (let i = 0; i < array.length; i++) {
       createServiceLong.push(
-        <ServiceLong
-          img={array[i].image.fluid.src}
-          icon={array[i].icon.fluid.src}
-          title={array[i].title}
-          shortDescription={array[i].description}
-          contentOne={array[i].content1Title}
-          contentOneText={array[i].content1Text}
-          contentTwo={array[i].content2Title}
-          contentTwoText={array[i].content2Text}
-          contentThree={array[i].content3Title}
-          contentThreeText={array[i].content3Text}
-          left={array[i].imageleft}
-        />
+        <MDBCarouselItem itemId={i + 1}>
+          <ServiceLong
+            img={array[i].image.fluid.src}
+            icon={array[i].icon.fluid.src}
+            title={array[i].title}
+            shortDescription={array[i].description}
+            contentOne={array[i].content1Title}
+            contentOneText={array[i].content1Text}
+            contentTwo={array[i].content2Title}
+            contentTwoText={array[i].content2Text}
+            contentThree={array[i].content3Title}
+            contentThreeText={array[i].content3Text}
+            left={true}
+          />
+        </MDBCarouselItem>
       )
     }
     return createServiceLong
@@ -97,9 +107,18 @@ class unternehmercoaching extends React.Component {
             )}
           </div>
           <div className="mobile">
-            {this.createServiceLongResponsive(
-              graphData.allContentfulServicePage.edges[0].node.serviceLong
-            )}
+            <MDBCarousel
+              activeItem={1}
+              length={4}
+              showControls={true}
+              showIndicators={false}
+            >
+              <MDBCarouselInner>
+                {this.createServiceLongResponsive(
+                  graphData.allContentfulServicePage.edges[0].node.serviceLong
+                )}
+              </MDBCarouselInner>
+            </MDBCarousel>
           </div>
         </MDBContainer>
       </Layout>

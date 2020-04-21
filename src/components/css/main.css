@@ -162,6 +162,9 @@ ul {
   background-position: left bottom !important;
   background-repeat: no-repeat !important;
 }
+.navbar-brand {
+  margin-left: 1rem;
+}
 .navbar-nav .dropdown-menu.show {
   display: table;
   width: 100%;
@@ -1081,7 +1084,57 @@ ul {
   padding: 8px !important;
 }
 
-.blog-template {
+.blog-detail {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.blog-detail .box {
+  margin-top: 10px;
+  position: relative;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 40px 0 rgba(22, 55, 78, 0.14);
+  background-color: #ffffff;
+}
+.blog-detail .box .top h1 {
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #212b36;
+}
+.blog-detail .box .top p {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.96;
+  letter-spacing: normal;
+  color: #919eab;
+}
+.blog-detail .box .cat p {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #919eab;
+}
+.blog-detail .description {
+  margin-top: 50px;
+}
+.blog-detail .box .auth  {
+  padding-top: 10px;
+  display: flex;
+}
+.blog-detail .box .auth span {
+  color: var(--font-color);
+  font-weight: bold;
 }
 /*Contact*/
 .contact {
@@ -1640,11 +1693,15 @@ footer .social li {
     display: flex;
     margin-top: 30px;
   }
+  .contact .right .box h3 {
+    font-size: 18px;
+  }
   .contact form {
     margin: 50px auto;
     padding-left: 25px;
     padding-right: 25px;
   }
+
   .services {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1774,4 +1831,19 @@ footer .social li {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+}
+
+.carousel-control-next {
+  background-image: url("../../images/right-arrow.svg");
+  background-repeat: no-repeat;
+  top: -200px;
+  background-position: right;
+  opacity: 1;
+}
+.carousel-control-prev {
+  background-image: url("../../images/left-arrow.svg");
+  top: -200px;
+  background-repeat: no-repeat;
+  background-position: left;
+  opacity: 1;
 }

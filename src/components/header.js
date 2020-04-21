@@ -47,15 +47,16 @@ class Header extends React.Component {
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
-              <MDBNavItem active>
-                <Link className="nav-link waves-effect waves-light" to="/unternehmercoaching">
-                  Unternehmercoaching
-                </Link>
-              </MDBNavItem>
               <MDBNavItem>
-                <Link className="nav-link waves-effect waves-light" to="/karrieremanagament">
-                  Karrieremanagament
-                </Link>
+                <MDBDropdown>
+                  <MDBDropdownToggle nav caret>
+                    <span className="mr-2">Dienstleistungen</span>
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem href="/unternehmercoaching">Unternehmercoaching</MDBDropdownItem>
+                    <MDBDropdownItem href="/karrieremanagament">Karrieremanagament </MDBDropdownItem>
+                 </MDBDropdownMenu>
+                </MDBDropdown>
               </MDBNavItem>
               <MDBNavItem>
                 <Link className="nav-link waves-effect waves-light" to="/referenzen">

@@ -7,7 +7,7 @@ import {
   MDBMask,
   MDBIcon,
   MDBView,
-  MDBBtn,
+  MDBBtn
 } from "mdbreact"
 export default class blogCard extends Component {
   render() {
