@@ -174,10 +174,7 @@ class ueberEkm extends React.Component {
                       <img src={LineOne} />
                       <div className="box ">
                         <p>
-                          One are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          {graphData.contentfulHighlights.textbox1}
                         </p>
                       </div>
                     </MDBCarouselItem>
@@ -185,10 +182,7 @@ class ueberEkm extends React.Component {
                       <img src={LineTwo} />
                       <div className="box">
                         <p>
-                          Two are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          {graphData.contentfulHighlights.textbox2}
                         </p>
                       </div>
                     </MDBCarouselItem>
@@ -196,10 +190,7 @@ class ueberEkm extends React.Component {
                       <img src={LineThree} />
                       <div className="box">
                         <p>
-                          Three are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          {graphData.contentfulHighlights.textbox3}
                         </p>
                       </div>
                     </MDBCarouselItem>
@@ -207,10 +198,7 @@ class ueberEkm extends React.Component {
                       <img src={LineFour} />
                       <div className="box">
                         <p>
-                          Four are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          {graphData.contentfulHighlights.textbox4}
                         </p>
                       </div>
                     </MDBCarouselItem>
@@ -219,10 +207,7 @@ class ueberEkm extends React.Component {
                       <img src={LineSix} />
                       <div className="box">
                         <p>
-                          Five are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          {graphData.contentfulHighlights.textbox5}
                         </p>
                       </div>
                     </MDBCarouselItem>
@@ -239,30 +224,36 @@ class ueberEkm extends React.Component {
 
 export default ueberEkm
 export const query = graphql`
-  {
-    allContentfulSinglePage(
-      filter: { id: { eq: "a2332606-59a5-5e89-9921-361285392ba6" } }
-    ) {
-      edges {
-        node {
-          id
-          title
-          image {
-            fluid {
-              src
-              base64
-              srcSet
-              srcWebp
-            }
+{
+  allContentfulSinglePage(filter: {id: {eq: "a2332606-59a5-5e89-9921-361285392ba6"}}) {
+    edges {
+      node {
+        id
+        title
+        image {
+          fluid {
+            src
+            base64
+            srcSet
+            srcWebp
           }
-          text1 {
-            text1
-          }
-          text2 {
-            text2
-          }
+        }
+        text1 {
+          text1
+        }
+        text2 {
+          text2
         }
       }
     }
   }
+  contentfulHighlights {
+    textbox1
+    textbox2
+    textbox3
+    textbox4
+    textbox5
+  }
+}
+
 `
