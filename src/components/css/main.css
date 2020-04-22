@@ -541,8 +541,10 @@ ul {
   position: relative;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0 0 40px 0 rgba(22, 55, 78, 0.14);
+  box-shadow: 0 0 20px 0 rgba(22, 55, 78, 0.14);
   background-color: #ffffff;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .ueber-ekm .time .box p {
   padding-right: 0;
@@ -1811,6 +1813,11 @@ footer .social li {
     font-size: 16px;
     margin: 30px auto;
   }
+  .ueber-ekm .geschichte {
+    padding-top: 50px;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

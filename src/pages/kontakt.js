@@ -19,12 +19,27 @@ import Bg from "../images/bg-contact.svg"
 import Phone from "../images/phone.svg"
 import Mail from "../images/mail.svg"
 import Address from "../images/address.svg"
-
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 export default class kontakt extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { forname: "", nachname: "", telefon: "" ,mail:"",addresse:""};
+  }
   submitHandler = event => {
     event.preventDefault()
     event.target.className += " was-validated"
     if (event.target.checkValidity()) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...this.state })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
       console.log("test")
     }
   }
@@ -34,6 +49,7 @@ export default class kontakt extends React.Component {
   }
 
   render() {
+    const { forname, nachname, telefon,mail } = this.state;
     return (
       <Layout trans={true} contact={true}>
         <SEO title="kontakt" />
@@ -121,12 +137,9 @@ export default class kontakt extends React.Component {
             <MDBRow>
               <form
                 className="needs-validation"
-                name="contact"
-                method="POST"
-                data-netlify="true"
+                name="kontakt"
                 onSubmit={this.submitHandler}
                 noValidate
-                data-netlify="true"
               >
                 <MDBRow>
                   <MDBCol md={6} sm={12}>
@@ -135,6 +148,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="forname"
+                      value={forname}
                       onChange={this.changeHandler}
                     />
                     <div className="valid-tooltip">Looks good!</div>
@@ -145,6 +159,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="nachname"
+                      value={nachname}
                       onChange={this.changeHandler}
                     />
                   </MDBCol>
@@ -154,6 +169,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="telefon"
+                      value={telefon}
                       onChange={this.changeHandler}
                     />
                   </MDBCol>
@@ -163,6 +179,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="mail"
+                      value={mail}
                       onChange={this.changeHandler}
                     />
                   </MDBCol>
