@@ -4,6 +4,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact"
 // resources
 import Logo from "../images/footer-logo.png"
 import Icon from "../images/ekm-icon.svg"
+import {graphql, StaticQuery} from "gatsby";
 const footer = () => {
   return (
     <div>
@@ -253,13 +254,12 @@ const footer = () => {
                           className="margin-p-right-10"
                           style={{ transform: "scaleX(-1)" }}
                         />{" "}
-                        +49 172 392 24 07
+                        {this.props.data.contentfulCompanyInfo.phoneNumber1}
                       </h5>
                     </a>
                     <a href="#!">
                       <h5 className="title">
-                        <MDBIcon className="margin-p-right-25" /> +49 151
-                        27052528
+                        <MDBIcon className="margin-p-right-25" /> {this.props.data.contentfulCompanyInfo.phoneNumber2}
                       </h5>
                     </a>
                   </li>
@@ -278,7 +278,7 @@ const footer = () => {
                           icon="envelope"
                           className="margin-p-right-10"
                         />{" "}
-                        info@ekm.de
+                        {this.props.data.contentfulCompanyInfo.eMailAddresse}
                       </h5>
                     </a>
                   </li>
@@ -301,3 +301,20 @@ const footer = () => {
 }
 
 export default footer
+export default () => (
+    <StaticQuery
+        query={graphql`
+      {
+  contentfulCompanyInfo {
+    eMailAddresse
+    phoneNumber1
+    phoneNumber2
+  }
+}
+
+    `}
+        render={(data) => (
+            <footer data={data}  />
+        )}
+    />
+)
