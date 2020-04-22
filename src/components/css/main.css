@@ -571,6 +571,8 @@ ul {
   margin-top: 50px;
 }
 .ekm .tab-section .nav-pills .nav-link {
+  font-family: "Gilroy Ebold";
+  max-width: 250px;
   padding: 10px 30px;
   border-radius: 11px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
@@ -579,7 +581,7 @@ ul {
     var(--dark-turquoise-color),
     #0cefa5 100%
   );
-  color: var(--white-color);
+  color: var(--font-color);
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -587,26 +589,9 @@ ul {
   font-size: 20px;
   letter-spacing: normal;
   text-align: center;
-  margin: auto;
+  margin-bottom: 40px;
 }
 
-.ekm .tab-section .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  font-size: 23px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: var(--font-color);
-  background-color: transparent;
-  box-shadow: none;
-  background-image: url("../../images/path-7.svg") !important;
-  background-position: bottom !important;
-  background-repeat: no-repeat !important;
-  background-size: 70% 4px !important;
-}
 .ekm .tab-section .nav-item {
   display: flex;
   margin: auto;
@@ -614,7 +599,7 @@ ul {
 .ekm .tab-section .tab-content {
   margin-top: 40px;
 }
-.ekm .tab-section .tab-content > .tab-pane p {
+.ekm .tab-section p {
   padding: 8%;
   font-size: 16px;
   font-weight: bold;
@@ -1692,14 +1677,7 @@ footer .social li {
     display: flex;
     margin: 0px auto;
   }
-  .ekm .tab-section .nav-pills .nav-link.active,
-  .nav-pills .show > .nav-link {
-    font-family: Gilroy Ebold;
-    margin-bottom: 20px;
-    font-size: 23px;
-    font-weight: bold;
-    background-size: 80% 4px !important;
-  }
+
   .ekm .box .title h2 {
     font-family: Gilroy Ebold;
     font-size: 20px;
@@ -1804,6 +1782,23 @@ footer .social li {
   }
   .blog-list {
     margin-bottom: 20px;
+  }
+  .blog-list .right button {
+    bottom: 5px;
+    left: 20%;
+  }
+  .blog-list .right .text {
+    padding-bottom: 30px;
+  }
+  .ekm .tab-section p {
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 0px;
+  }
+  .ekm .tab-section .nav-pills .nav-link {
+    max-width: 220px;
+    font-size: 16px;
+    margin: 30px auto;
   }
 }
 
