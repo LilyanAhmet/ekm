@@ -13,7 +13,7 @@ import {
   MDBDropdownItem,
   MDBIcon,
 } from "mdbreact"
-
+import { graphql, StaticQuery } from 'gatsby'
 import Logo from "../images/ekm-logo.png"
 
 class Header extends React.Component {
@@ -82,19 +82,19 @@ class Header extends React.Component {
                       icon="phone"
                       style={{ transform: "scaleX(-1)" }}
                     />
-                    +49 172 392 24 07
+                    {this.props.data.contentfulCompanyInfo.phoneNumber1}
                   </Link>
-                  <Link
+              <Link
                     className="nav-link waves-effect waves-light margin-m-10 "
                     to="#!"
                   >
                     <span style={{marginRight:"21px"}} />
-                    +49 151 27052528
+                    {this.props.data.contentfulCompanyInfo.phoneNumber2}
                   </Link>
-                </MDBNavItem>
+            </MDBNavItem>
               <MDBNavItem>
                 <Link className="nav-link waves-effect waves-light" to="#!">
-                  <MDBIcon fas icon="envelope" /> info@ekm.de
+                  <MDBIcon fas icon="envelope" /> {this.props.data.contentfulCompanyInfo.eMailAddresse}
                 </Link>
               </MDBNavItem>
             </MDBNavbarNav>
@@ -104,4 +104,21 @@ class Header extends React.Component {
     )
   }
 }
-export default Header
+
+export default () => (
+    <StaticQuery
+        query={graphql`
+      {
+  contentfulCompanyInfo {
+    eMailAddresse
+    phoneNumber1
+    phoneNumber2
+  }
+}
+
+    `}
+        render={(data) => (
+            <Header data={data}  />
+        )}
+    />
+)
