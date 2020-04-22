@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import {graphql, Link, StaticQuery} from "gatsby"
 import React from "react"
 import {
   MDBNavbar,
@@ -99,19 +99,19 @@ class HeaderTrans extends React.Component {
                       icon="phone"
                       style={{ transform: "scaleX(-1)" }}
                     />
-                    +49 172 392 24 07
+                    {this.props.data.contentfulCompanyInfo.phoneNumber1}
                   </Link>
                   <Link
                     className="nav-link waves-effect waves-light margin-m-10 "
                     to="#!"
                   >
-                      <span style={{marginRight:"21px"}} />
-                    +49 151 27052528
+                    <span style={{marginRight:"21px"}} />
+                    {this.props.data.contentfulCompanyInfo.phoneNumber2}
                   </Link>
                 </MDBNavItem>
                 <MDBNavItem>
                   <Link className="nav-link waves-effect waves-light" to="#!">
-                    <MDBIcon fas icon="envelope" /> info@ekm.de
+                    <MDBIcon fas icon="envelope" /> {this.props.data.contentfulCompanyInfo.eMailAddresse}
                   </Link>
                 </MDBNavItem>
               </MDBNavbarNav>
@@ -122,4 +122,20 @@ class HeaderTrans extends React.Component {
     )
   }
 }
-export default HeaderTrans
+export default () => (
+    <StaticQuery
+        query={graphql`
+      {
+  contentfulCompanyInfo {
+    eMailAddresse
+    phoneNumber1
+    phoneNumber2
+  }
+}
+
+    `}
+        render={(data) => (
+            <HeaderTrans data={data}  />
+        )}
+    />
+)
