@@ -11,21 +11,21 @@ import "mdbreact/dist/css/mdb.css"
 
 
 class Layout extends React.Component {
-  render() {
-    return (
-      <>
-      {!this.props.trans && (
-        <Header />
-      )}
-         {this.props.trans && (
-        <HeaderTrans contact={this.props.contact} />
-      )}
-        
-        <main>{this.props.children}</main>
-        <Footer />
-      </>
-    )
-  }
+    render() {
+        return (
+            <>
+                {!this.props.trans && (
+                    <Header />
+                )}
+                {this.props.trans && (
+                    <HeaderTrans contact={this.props.contact} />
+                )}
+
+                <main>{this.props.children}</main>
+                <Footer />
+            </>
+        )
+    }
 }
 
 export default Layout
