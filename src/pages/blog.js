@@ -35,7 +35,7 @@ export default class blog extends Component {
                 <MDBCol>
                   <div className="sub-title">
                     <p>
-                      {graphData.allContentfulSinglePage.edges[0].node.text.text}
+                      {graphData.allContentfulSinglePage.edges[0].node.text1.text1}
                     </p>
                   </div>
                 </MDBCol>
@@ -57,9 +57,9 @@ export const query = graphql`
     edges {
       node {
         title
-        text {
-          text
-        }
+        text1 {
+          text1
+          }
       }
     }
   }

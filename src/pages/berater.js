@@ -147,17 +147,6 @@ export const query = graphql`
           description {
             description
           }
-          businessDevelopment {
-            businessDevelopment
-          }
-          existenzgrndungsberatung {
-            existenzgrndungsberatung
-          }
-          zertifizierungen {
-            fluid {
-              src
-            }
-          }
         }
       }
     }
