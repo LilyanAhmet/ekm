@@ -24,7 +24,10 @@ class ueberEkm extends React.Component {
                   </MDBCol>
                 </MDBRow>
                 <p>
-                  {graphData.allContentfulSinglePage.edges[0].node.text.text}
+                  {graphData.allContentfulSinglePage.edges[0].node.text1.text1}
+                </p>
+                <p>
+                  {graphData.allContentfulSinglePage.edges[0].node.text2.text2}
                 </p>
               </MDBCol>
               <MDBCol md={5} sm={12}>
@@ -129,7 +132,7 @@ class ueberEkm extends React.Component {
               </MDBCol>
               <MDBCol md={7} sm={12}>
                 <p>
-                  {graphData.allContentfulSinglePage.edges[0].node.text.text}
+                  {graphData.allContentfulSinglePage.edges[0].node.text1.text1}
                 </p>
               </MDBCol>
             </MDBRow>
@@ -142,30 +145,29 @@ class ueberEkm extends React.Component {
 
 export default ueberEkm
 export const query = graphql`
-  {
-    allContentfulSinglePage(
-      filter: { id: { eq: "a2332606-59a5-5e89-9921-361285392ba6" } }
-    ) {
-      edges {
-        node {
-          id
-          title
-          text {
-            text
-            childMarkdownRemark {
-              html
-            }
+{
+  allContentfulSinglePage(filter: {id: {eq: "a2332606-59a5-5e89-9921-361285392ba6"}}) {
+    edges {
+      node {
+        id
+        title
+        image {
+          fluid {
+            src
+            base64
+            srcSet
+            srcWebp
           }
-          image {
-            fluid {
-              src
-              base64
-              srcSet
-              srcWebp
-            }
-          }
+        }
+        text1 {
+          text1
+        }
+        text2 {
+          text2
         }
       }
     }
   }
+}
+
 `

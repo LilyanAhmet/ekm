@@ -399,7 +399,6 @@ export const query = graphql`
       }
       referencentitle
       referencentitle2
-      referencentitle2subtitle
     }
     allContentfulPost(sort: { order: DESC, fields: createdAt }, limit: 1) {
       edges {
