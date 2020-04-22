@@ -300,7 +300,6 @@ const footer = () => {
   )
 }
 
-export default footer
 export default () => (
     <StaticQuery
         query={graphql`

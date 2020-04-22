@@ -19,12 +19,13 @@ import Bg from "../images/bg-contact.svg"
 import Phone from "../images/phone.svg"
 import Mail from "../images/mail.svg"
 import Address from "../images/address.svg"
+import {graphql} from "gatsby";
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
-import {graphql} from "gatsby";
+
 
 export default class kontakt extends React.Component {
   constructor(props) {
