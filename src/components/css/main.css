@@ -1459,7 +1459,9 @@ footer .social li {
   display: block;
   margin: auto;
 }
-
+.not-found a {
+  margin: auto;
+}
 /*responsive queries*/
 
 /* Extra small devices (phones, 600px and down) */
@@ -1883,6 +1885,33 @@ footer .social li {
   .scrolly a {
     margin: 20px 10px;
     display: inline;
+  }
+  .not-found {
+    height: auto;
+    padding: 30px 30px;
+  }
+  .not-found h1 {
+    font-size: 22px;
+  }
+  .not-found p {
+    font-size: 22px;
+  }
+  .not-found button {
+    margin: 3rem auto;
+    width: 299px;
+    height: 38px;
+    border-radius: 19px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(83deg, #2ccccc, #0cefa5);
+  }
+  .not-found a {
+    margin: auto;
+  }
+  .not-found img {
+    width: 70%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */

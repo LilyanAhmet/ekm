@@ -59,9 +59,13 @@ class HeaderTrans extends React.Component {
                     <span className="mr-2">Dienstleistungen</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem href="/unternehmerberatung">Unternehmerberatung</MDBDropdownItem>
-                    <MDBDropdownItem href="/karrieremanagament">Karrieremanagament </MDBDropdownItem>
-                 </MDBDropdownMenu>
+                    <MDBDropdownItem href="/unternehmerberatung">
+                      Unternehmerberatung
+                    </MDBDropdownItem>
+                    <MDBDropdownItem href="/karrieremanagament">
+                      Karrieremanagament{" "}
+                    </MDBDropdownItem>
+                  </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
               <MDBNavItem>
@@ -90,7 +94,19 @@ class HeaderTrans extends React.Component {
               <MDBNavbarNav right>
                 <MDBNavItem>
                   <Link className="nav-link waves-effect waves-light" to="#!">
-                    <MDBIcon fas icon="phone" /> +49 2 21 5796 7940
+                    <MDBIcon
+                      fas
+                      icon="phone"
+                      style={{ transform: "scaleX(-1)" }}
+                    />
+                    +49 172 392 24 07
+                  </Link>
+                  <Link
+                    className="nav-link waves-effect waves-light margin-m-10 "
+                    to="#!"
+                  >
+                      <span style={{marginRight:"21px"}} />
+                    +49 151 27052528
                   </Link>
                 </MDBNavItem>
                 <MDBNavItem>

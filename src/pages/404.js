@@ -2,17 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import {
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBMask,
-  MDBIcon,
-  MDBView,
-  MDBBtn,
-  MDBContainer,
-} from "mdbreact"
+import { MDBRow, MDBBtn, MDBContainer } from "mdbreact"
 /* resources */
 import Img from "../images/NotFound.svg"
 const NotFoundPage = () => (
@@ -27,9 +17,11 @@ const NotFoundPage = () => (
           <p>Die gesuchte Seite existiert nicht.</p>
         </MDBRow>
         <MDBRow>
-          <MDBBtn size="md" className="waves-light ">
-            Gehen Sie zur Homepage
-          </MDBBtn>
+          <a href="/">
+            <MDBBtn size="md" className="waves-light ">
+              Gehen Sie zur Homepage
+            </MDBBtn>
+          </a>
         </MDBRow>
         <MDBRow>
           <img className="img-fluid" src={Img} />
