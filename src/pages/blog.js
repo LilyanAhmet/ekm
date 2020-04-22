@@ -43,7 +43,7 @@ export default class blog extends Component {
             </MDBContainer>
             <Bloglist blogContent={graphData.allContentfulBlogContent.edges}/>
             <MDBContainer>
-              <NewLetter/>
+             {/*<NewLetter/> */} 
             </MDBContainer>
           </div>
         </Layout>

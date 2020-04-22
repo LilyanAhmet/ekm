@@ -17,38 +17,38 @@ const footer = () => {
               <h5 className="title">Über Uns</h5>
               <ul>
                 <li className="list-unstyled">
-                  <a href="#!">Über EKM</a>
+                  <a href="/ueber-ekm">Über EKM</a>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">Berater</a>
+                  <a href="/berater">Berater</a>
                 </li>
-                <li className="list-unstyled">
+                {/*<li className="list-unstyled">
                   <a href="#!">Erfahrungen</a>
+                </li> */}
+              </ul>
+            </MDBCol>
+            <MDBCol>
+              <h5 className="title">Dienstleistungen</h5>
+              <ul>
+                <li className="list-unstyled">
+                  <a href="/unternehmerberatung">Unternehmerberatung</a>
+                </li>
+                <li className="list-unstyled">
+                  <a href="/karrieremanagament">Karrieremanagament</a>
                 </li>
               </ul>
             </MDBCol>
             <MDBCol>
-              <h5 className="title">Erfahrungen</h5>
+              <h5 className="title">Referenzen</h5>
               <ul>
                 <li className="list-unstyled">
-                  <a href="#!">Unternehmercoaching</a>
-                </li>
-                <li className="list-unstyled">
-                  <a href="#!">Karrieremanagament</a>
-                </li>
-              </ul>
-            </MDBCol>
-            <MDBCol>
-              <h5 className="title">Verweise</h5>
-              <ul>
-                <li className="list-unstyled">
-                  <a href="#!">
+                  <a href="/blog">
                     {" "}
                     <h5 className="title">Blog</h5>
                   </a>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">
+                  <a href="/kontakt">
                     {" "}
                     <h5 className="title">Kontakt</h5>
                   </a>
@@ -66,8 +66,18 @@ const footer = () => {
                 <li className="list-unstyled margin-p-10">
                   <a href="#!">
                     <h5 className="title">
-                      <MDBIcon fas icon="phone" className="margin-p-right-10" />{" "}
-                      +49 2 21 5796 7940
+                      <MDBIcon
+                        fas
+                        icon="phone"
+                        className="margin-p-right-10"
+                        style={{ transform: "scaleX(-1)" }}
+                      />{" "}
+                      +49 172 392 24 07
+                    </h5>
+                  </a>
+                  <a href="#!">
+                    <h5 className="title">
+                      <MDBIcon className="margin-p-right-25" /> +49 151 27052528
                     </h5>
                   </a>
                 </li>
@@ -179,38 +189,40 @@ const footer = () => {
               <h5 className="title">Über Uns</h5>
               <ul>
                 <li className="list-unstyled">
-                  <a href="#!">Über EKM</a>
+                  <a href="/ueber-ekm">Über EKM</a>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">Berater</a>
+                  <a href="/berater">Berater</a>
+                </li>
+                {/*<li className="list-unstyled">
+                  <a href="/erfahrungen">Erfahrungen</a>
+                </li> */}
+              </ul>
+            </MDBCol>
+            <MDBCol xs={4} className="margin-auto">
+              <a href="/erfahrungen">
+                <h5 className="title">Erfahrungen</h5>
+              </a>
+              <ul>
+                <li className="list-unstyled">
+                  <a href="/unternehmerberatung">Unternehmerberatung</a>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">Erfahrungen</a>
+                  <a href="/karrieremanagament">Karrieremanagament</a>
                 </li>
               </ul>
             </MDBCol>
             <MDBCol xs={4} className="margin-auto">
-              <h5 className="title">Erfahrungen</h5>
+              <h5 className="title">Referenzen</h5>
               <ul>
                 <li className="list-unstyled">
-                  <a href="#!">Unternehmercoaching</a>
-                </li>
-                <li className="list-unstyled">
-                  <a href="#!">Karrieremanagament</a>
-                </li>
-              </ul>
-            </MDBCol>
-            <MDBCol xs={4} className="margin-auto">
-              <h5 className="title">Verweise</h5>
-              <ul>
-                <li className="list-unstyled">
-                  <a href="#!">
+                  <a href="/blog">
                     {" "}
                     <h5 className="title">Blog</h5>
                   </a>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">
+                  <a href="/kontakt">
                     {" "}
                     <h5 className="title">Kontakt</h5>
                   </a>
@@ -239,15 +251,21 @@ const footer = () => {
                           fas
                           icon="phone"
                           className="margin-p-right-10"
-                          style={{ transform: "scaleX(-1)"}}
+                          style={{ transform: "scaleX(-1)" }}
                         />{" "}
-                        +49 2 21 5796 7940
+                        +49 172 392 24 07
+                      </h5>
+                    </a>
+                    <a href="#!">
+                      <h5 className="title">
+                        <MDBIcon className="margin-p-right-25" /> +49 151
+                        27052528
                       </h5>
                     </a>
                   </li>
                 </ul>
               </MDBCol>
-              <MDBCol  xs={4} className="margin-auto">
+              <MDBCol xs={4} className="margin-auto">
                 <img className="margin-m-10" src={Icon} />
               </MDBCol>
               <MDBCol xs={4} className="margin-auto">

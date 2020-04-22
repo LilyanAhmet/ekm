@@ -53,7 +53,7 @@ class Header extends React.Component {
                     <span className="mr-2">Dienstleistungen</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem href="/unternehmercoaching">Unternehmercoaching</MDBDropdownItem>
+                    <MDBDropdownItem href="/unternehmerberatung">Unternehmerberatung</MDBDropdownItem>
                     <MDBDropdownItem href="/karrieremanagament">Karrieremanagament </MDBDropdownItem>
                  </MDBDropdownMenu>
                 </MDBDropdown>

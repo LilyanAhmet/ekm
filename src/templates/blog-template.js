@@ -25,11 +25,19 @@ const Blog = ({ pageContext }) => {
                   </MDBRow>
                 </div>
                 <div className="cat">
-                  <p>Content.1 Content.2</p>
+                  <MDBRow>
+                    <MDBCol md={12} sm={12}>
+                      <p>Content.1 Content.2</p>
+                    </MDBCol>
+                  </MDBRow>
                 </div>
                 <div className="auth">
-                  <span>Writer:</span>
-                  <p>{pageContext.house}</p>
+                  <MDBRow>
+                    <MDBCol md={12} sm={12} style={{ display: "flex" }}>
+                      <span>Writer: </span>
+                      <p> {pageContext.house}</p>
+                    </MDBCol>
+                  </MDBRow>
                 </div>
               </div>
             </MDBCol>

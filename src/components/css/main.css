@@ -38,7 +38,7 @@ h5,
 h6 {
   font-family: Gilroy;
   margin-bottom: 1.25rem;
-  letter-spacing: var(--mainSpacing);
+  letter-spacing: 0.5px !important;
 }
 p {
   font-family: Gilroy;
@@ -47,6 +47,7 @@ p {
 a {
   font-family: Gilroy;
   text-decoration: none;
+  letter-spacing: 0.5px !important;
 }
 dl,
 ol,
@@ -98,6 +99,9 @@ ul {
 }
 .margin-p-right-30 {
   margin-right: 40px;
+}
+.margin-p-right-25 {
+  margin-right: 25px;
 }
 .margin-m-bottom-50 {
   margin-bottom: -50px;
@@ -1785,10 +1789,15 @@ footer .social li {
   }
   .blog-list .right button {
     bottom: 5px;
-    left: 20%;
+    left: 18%;
   }
   .blog-list .right .text {
     padding-bottom: 30px;
+  }
+  .blog-detail .box .top p {
+    text-align: left;
+    font-size: 14px;
+    float: left;
   }
   .ekm .tab-section p {
     font-size: 14px;
