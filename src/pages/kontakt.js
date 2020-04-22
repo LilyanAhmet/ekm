@@ -296,31 +296,3 @@ export default class kontakt extends React.Component {
     )
   }
 }
-
-export const query = graphql`
-  {
-    allContentfulSinglePage(
-      filter: { id: { eq: "a8f28c02-dbb4-56c1-b960-83f36a4dbe49" } }
-    ) {
-      edges {
-        node {
-          title
-         text1 {
-          text1
-          }
-           text2 {
-          text2
-          }
-          image {
-            fluid {
-              src
-              base64
-              srcSet
-              srcWebp
-            }
-          }
-        }
-      }
-    }
-  }
-`
