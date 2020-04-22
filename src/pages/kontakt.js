@@ -10,7 +10,7 @@ import {
   MDBContainer,
   MDBInput,
   MDBBtn,
-  MDBIcon
+  MDBIcon,
 } from "mdbreact"
 
 /* resouces */
@@ -55,7 +55,8 @@ export default class kontakt extends React.Component {
                         <img src={Phone} />
 
                         <h3>
-                          <div className="rectangle" /> +49 2 21 5796 7940
+                          <div className="rectangle" /> +49 172 392 24 07 <br />
+                          +49 151 27052528
                         </h3>
                       </div>
                       <div className="box">
@@ -265,7 +266,7 @@ export default class kontakt extends React.Component {
                 </MDBRow>
                 <MDBRow>
                   <MDBBtn color="default" type="submit">
-                  Senden Sie Ihre Nachricht <MDBIcon icon="paper-plane" />
+                    Senden Sie Ihre Nachricht <MDBIcon icon="paper-plane" />
                   </MDBBtn>
                 </MDBRow>
               </form>

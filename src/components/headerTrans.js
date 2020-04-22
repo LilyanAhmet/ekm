@@ -14,7 +14,7 @@ import {
   MDBIcon,
 } from "mdbreact"
 
-import Logo from "../images/ekm-logo.svg"
+import Logo from "../images/ekm-logo.png"
 
 class HeaderTrans extends React.Component {
   state = {
