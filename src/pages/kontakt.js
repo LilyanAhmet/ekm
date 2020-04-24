@@ -95,6 +95,8 @@ class kontakt extends React.Component {
   }
 
   render() {
+    const graphData = this.props.data
+    console.log(graphData);
     const {
       forname,
       nachname,
@@ -138,8 +140,8 @@ class kontakt extends React.Component {
                             className="rectangle"
                             style={{ height: "60px" }}
                           />{" "}
-                          +49 172 392 24 07 <br />
-                          +49 151 27052528
+                          {graphData.contactInfo.phoneNumber1}<br />
+                          {graphData.contactInfo.phoneNumber2}
                         </h3>
                       </div>
                       <div className="box">
@@ -149,7 +151,7 @@ class kontakt extends React.Component {
                             className="rectangle"
                             style={{ height: "40px" }}
                           />{" "}
-                          info@ekm.de
+                          {graphData.contactInfo.eMailAddresse}
                         </h3>
                       </div>
                       <div className="box">
@@ -161,9 +163,9 @@ class kontakt extends React.Component {
                             className="rectangle"
                             style={{ height: "130px" }}
                           />{" "}
-                          Bismarckstraße 73 10627 Berlin Germany
+                          {graphData.contactInfo.addressText1}
                           <br /> <br />
-                          Bismarckstraße 73 10627 Berlin Germany
+                          {graphData.contactInfo.addressText2}
                         </h3>
                       </div>
                     </div>
@@ -182,7 +184,7 @@ class kontakt extends React.Component {
                             title="mapfecbf7e5-9c67-5526-93c9-056ddc2c5c9d"
                             height="350"
                             id="gmap_canvas"
-                            src="https://maps.google.com/maps?q=50.9416612,6.934918799999991&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                            src={`https://maps.google.com/maps?q=${graphData.contactInfo.address1.lat},${graphData.contactInfo.address1.lon}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
                             frameborder="0"
                             scrolling="no"
                             marginheight="0"
@@ -200,7 +202,7 @@ class kontakt extends React.Component {
                             title="mapfecbf7e5-9c67-5526-93c9-056ddc2c5c9d"
                             height="350"
                             id="gmap_canvas"
-                            src="https://maps.google.com/maps?q=50.9416612,6.934918799999991&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                            src={`https://maps.google.com/maps?q=${graphData.contactInfo.address2.lat},${graphData.contactInfo.address2.lon}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
                             frameborder="0"
                             scrolling="no"
                             marginheight="0"
@@ -434,11 +436,22 @@ class kontakt extends React.Component {
 
 export default kontakt
 export const query = graphql`
-  query {
-    contactInfo: contentfulCompanyInfo {
-      phoneNumber1
-      phoneNumber2
-      eMailAddresse
+{
+  contactInfo: contentfulCompanyInfo {
+    phoneNumber1
+    phoneNumber2
+    eMailAddresse
+    addressText1
+    address1 {
+      lat
+      lon
     }
+    address2 {
+      lat
+      lon
+    }
+    addressText2
   }
+}
+
 `
