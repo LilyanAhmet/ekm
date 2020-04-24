@@ -10,7 +10,7 @@ import {
   MDBContainer,
   MDBInput,
   MDBBtn,
-  MDBIcon
+  MDBIcon,
 } from "mdbreact"
 
 /* resouces */
@@ -19,12 +19,30 @@ import Bg from "../images/bg-contact.svg"
 import Phone from "../images/phone.svg"
 import Mail from "../images/mail.svg"
 import Address from "../images/address.svg"
+import {graphql} from "gatsby";
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 
 export default class kontakt extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { forname: "", nachname: "", telefon: "" ,mail:"",addresse:""};
+  }
   submitHandler = event => {
     event.preventDefault()
     event.target.className += " was-validated"
     if (event.target.checkValidity()) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...this.state })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
       console.log("test")
     }
   }
@@ -34,6 +52,7 @@ export default class kontakt extends React.Component {
   }
 
   render() {
+    const { forname, nachname, telefon,mail } = this.state;
     return (
       <Layout trans={true} contact={true}>
         <SEO title="kontakt" />
@@ -55,7 +74,8 @@ export default class kontakt extends React.Component {
                         <img src={Phone} />
 
                         <h3>
-                          <div className="rectangle" /> +49 2 21 5796 7940
+                          <div className="rectangle" /> +49 172 392 24 07 <br />
+                          +49 151 27052528
                         </h3>
                       </div>
                       <div className="box">
@@ -120,12 +140,9 @@ export default class kontakt extends React.Component {
             <MDBRow>
               <form
                 className="needs-validation"
-                name="contact"
-                method="POST"
-                data-netlify="true"
+                name="kontakt"
                 onSubmit={this.submitHandler}
                 noValidate
-                data-netlify="true"
               >
                 <MDBRow>
                   <MDBCol md={6} sm={12}>
@@ -134,6 +151,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="forname"
+                      value={forname}
                       onChange={this.changeHandler}
                     />
                     <div className="valid-tooltip">Looks good!</div>
@@ -144,6 +162,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="nachname"
+                      value={nachname}
                       onChange={this.changeHandler}
                     />
                   </MDBCol>
@@ -153,6 +172,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="telefon"
+                      value={telefon}
                       onChange={this.changeHandler}
                     />
                   </MDBCol>
@@ -162,6 +182,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="mail"
+                      value={mail}
                       onChange={this.changeHandler}
                     />
                   </MDBCol>
@@ -265,7 +286,7 @@ export default class kontakt extends React.Component {
                 </MDBRow>
                 <MDBRow>
                   <MDBBtn color="default" type="submit">
-                  Senden Sie Ihre Nachricht <MDBIcon icon="paper-plane" />
+                    Senden Sie Ihre Nachricht <MDBIcon icon="paper-plane" />
                   </MDBBtn>
                 </MDBRow>
               </form>

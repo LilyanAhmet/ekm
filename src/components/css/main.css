@@ -38,7 +38,7 @@ h5,
 h6 {
   font-family: Gilroy;
   margin-bottom: 1.25rem;
-  letter-spacing: var(--mainSpacing);
+  letter-spacing: 0.5px !important;
 }
 p {
   font-family: Gilroy;
@@ -47,6 +47,7 @@ p {
 a {
   font-family: Gilroy;
   text-decoration: none;
+  letter-spacing: 0.5px !important;
 }
 dl,
 ol,
@@ -84,6 +85,9 @@ ul {
 .margin-p-40 {
   margin-top: 40px;
 }
+.margin-p-60 {
+  margin-top: 80px;
+}
 .margin-p-10 {
   margin-top: 10px;
 }
@@ -95,6 +99,9 @@ ul {
 }
 .margin-p-right-30 {
   margin-right: 40px;
+}
+.margin-p-right-25 {
+  margin-right: 25px;
 }
 .margin-m-bottom-50 {
   margin-bottom: -50px;
@@ -161,6 +168,9 @@ ul {
   background-image: url("../../images/border-dark.svg") !important;
   background-position: left bottom !important;
   background-repeat: no-repeat !important;
+}
+.navbar-brand {
+  margin-left: 1rem;
 }
 .navbar-nav .dropdown-menu.show {
   display: table;
@@ -505,6 +515,48 @@ ul {
   background-size: contain !important;
   width: 30%;
 }
+.ueber-ekm .geschichte {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.ueber-ekm .geschichte h1 {
+  float: none;
+  font-size: 25px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--font-color);
+  margin: auto;
+  background-size: 70% 4px !important;
+  width: unset;
+}
+.ueber-ekm .time {
+  margin: auto;
+}
+.ueber-ekm .time .box {
+  position: relative;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(22, 55, 78, 0.14);
+  background-color: #ffffff;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.ueber-ekm .time .box p {
+  padding-right: 0;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: justify;
+  color: #16374e;
+}
 /*ekm*/
 .ekm {
   padding-top: 60px;
@@ -525,6 +577,8 @@ ul {
   margin-top: 50px;
 }
 .ekm .tab-section .nav-pills .nav-link {
+  font-family: "Gilroy Ebold";
+  max-width: 250px;
   padding: 10px 30px;
   border-radius: 11px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
@@ -533,7 +587,7 @@ ul {
     var(--dark-turquoise-color),
     #0cefa5 100%
   );
-  color: var(--white-color);
+  color: var(--font-color);
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -541,26 +595,9 @@ ul {
   font-size: 20px;
   letter-spacing: normal;
   text-align: center;
-  margin: auto;
+  margin-bottom: 40px;
 }
 
-.ekm .tab-section .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  font-size: 23px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: var(--font-color);
-  background-color: transparent;
-  box-shadow: none;
-  background-image: url("../../images/path-7.svg") !important;
-  background-position: bottom !important;
-  background-repeat: no-repeat !important;
-  background-size: 70% 4px !important;
-}
 .ekm .tab-section .nav-item {
   display: flex;
   margin: auto;
@@ -568,7 +605,7 @@ ul {
 .ekm .tab-section .tab-content {
   margin-top: 40px;
 }
-.ekm .tab-section .tab-content > .tab-pane p {
+.ekm .tab-section p {
   padding: 8%;
   font-size: 16px;
   font-weight: bold;
@@ -764,7 +801,7 @@ ul {
 }
 .services .service-long .details .list .block h6 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.3;
@@ -1081,7 +1118,57 @@ ul {
   padding: 8px !important;
 }
 
-.blog-template {
+.blog-detail {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.blog-detail .box {
+  margin-top: 10px;
+  position: relative;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 40px 0 rgba(22, 55, 78, 0.14);
+  background-color: #ffffff;
+}
+.blog-detail .box .top h1 {
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #212b36;
+}
+.blog-detail .box .top p {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.96;
+  letter-spacing: normal;
+  color: #919eab;
+}
+.blog-detail .box .cat p {
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #919eab;
+}
+.blog-detail .description {
+  margin-top: 50px;
+}
+.blog-detail .box .auth {
+  padding-top: 10px;
+  display: flex;
+}
+.blog-detail .box .auth span {
+  color: var(--font-color);
+  font-weight: bold;
 }
 /*Contact*/
 .contact {
@@ -1374,7 +1461,9 @@ footer .social li {
   display: block;
   margin: auto;
 }
-
+.not-found a {
+  margin: auto;
+}
 /*responsive queries*/
 
 /* Extra small devices (phones, 600px and down) */
@@ -1582,6 +1671,7 @@ footer .social li {
     text-align: justify;
     color: var(--font-color);
   }
+
   .ekm {
     padding-top: 20px;
     padding-bottom: 60px;
@@ -1595,14 +1685,7 @@ footer .social li {
     display: flex;
     margin: 0px auto;
   }
-  .ekm .tab-section .nav-pills .nav-link.active,
-  .nav-pills .show > .nav-link {
-    font-family: Gilroy Ebold;
-    margin-bottom: 20px;
-    font-size: 23px;
-    font-weight: bold;
-    background-size: 80% 4px !important;
-  }
+
   .ekm .box .title h2 {
     font-family: Gilroy Ebold;
     font-size: 20px;
@@ -1640,11 +1723,15 @@ footer .social li {
     display: flex;
     margin-top: 30px;
   }
+  .contact .right .box h3 {
+    font-size: 18px;
+  }
   .contact form {
     margin: 50px auto;
     padding-left: 25px;
     padding-right: 25px;
   }
+
   .services {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1674,17 +1761,68 @@ footer .social li {
   .services .service-short h3 {
     font-family: Gilroy Ebold;
     font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1;
-    letter-spacing: normal;
-    color: var(--font-color);
     margin-bottom: 10px;
   }
   .services .service-short p {
     font-size: 14px;
     margin-top: 0;
+  }
+  .services .service-long .details {
+    margin-top: 30px;
+  }
+  .services .service-long .details .title h2 {
+    font-family: Gilroy Ebold;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+  }
+  .services .service-long .details p {
+    margin-top: 10px;
+  }
+  .services .service-long .details .title img {
+    height: 66px;
+  }
+  .blog h1 {
+    font-size: 20px;
+  }
+  .blog .sub-title p {
+    font-size: 14px;
+  }
+  .blog-list {
+    margin-bottom: 20px;
+  }
+  .blog-list .right button {
+    bottom: 5px;
+    left: 18%;
+  }
+  .blog-list .right .text {
+    padding-bottom: 30px;
+  }
+  .blog-detail .box .top p {
+    text-align: left;
+    font-size: 14px;
+    float: left;
+  }
+  .ekm .tab-section p {
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 0px;
+  }
+  .ekm .tab-section .nav-pills .nav-link {
+    max-width: 220px;
+    font-size: 16px;
+    margin: 30px auto;
+  }
+  .ueber-ekm .geschichte {
+    padding-top: 50px;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+  }
+  .ueber-ekm .carousel-indicators {
+    position: initial;
+  }
+  .rectangle {
+    margin-top: -5px;
   }
 }
 
@@ -1747,7 +1885,6 @@ footer .social li {
   }
   .scrolly {
     width: 100%;
-    height: 190px;
     overflow: auto;
     overflow-y: hidden;
     margin: 0 auto;
@@ -1755,9 +1892,43 @@ footer .social li {
   }
 
   .scrolly img {
-
     margin: 20px 10px;
     display: inline;
+  }
+  .scrolly a {
+    margin: 20px 10px;
+    display: inline;
+  }
+  .not-found {
+    height: auto;
+    padding: 30px 30px;
+  }
+  .not-found h1 {
+    font-size: 22px;
+  }
+  .not-found p {
+    font-size: 22px;
+  }
+  .not-found button {
+    margin: 3rem auto;
+    width: 299px;
+    height: 38px;
+    border-radius: 19px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(83deg, #2ccccc, #0cefa5);
+  }
+  .not-found a {
+    margin: auto;
+  }
+  .not-found img {
+    width: 70%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+  #nav-bg {
+    background-color: var(--main-color);
+    border-radius: unset;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -1766,4 +1937,19 @@ footer .social li {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+}
+
+.carousel-control-next {
+  background-image: url("../../images/right-arrow.svg");
+  background-repeat: no-repeat;
+  top: -200px;
+  background-position: right;
+  opacity: 1;
+}
+.carousel-control-prev {
+  background-image: url("../../images/left-arrow.svg");
+  top: -200px;
+  background-repeat: no-repeat;
+  background-position: left;
+  opacity: 1;
 }

@@ -34,7 +34,7 @@ export default class index extends Component {
                 style={{
                   height: "100%",
                   width: "100%",
-                  paddingTop: "8rem",
+                  paddingTop: "6rem",
                   paddingBottom: "12rem",
                 }}
                 className="d-flex justify-content-center white-text align-items-center padding-p-bottom-10"
@@ -44,7 +44,7 @@ export default class index extends Component {
                     md="5"
                     className="text-center text-md-left mt-xl-5 mb-5"
                   >
-                    <MDBBox className="box">
+                    {/*<MDBBox className="box">
                       <MDBBtn
                         rounded
                         floating
@@ -56,7 +56,7 @@ export default class index extends Component {
                         NEU
                       </MDBBtn>
                       <p>{graphData.allContentfulPost.edges[0].node.title}</p>
-                    </MDBBox>
+                    </MDBBox> */}
                     <MDBAnimation type="fadeInLeft" delay=".3s">
                       <h1 className="h1-responsive font-weight-bold mt-sm-5">
                         {graphData.contentfulHomePage.title}
@@ -112,7 +112,7 @@ export default class index extends Component {
                         Mehr Erfahren
                       </MDBBtn>
                     </MDBAnimation>
-                    <MDBBox className="box">
+                    {/* <MDBBox className="box">
                       <MDBBtn
                         rounded
                         floating
@@ -125,7 +125,7 @@ export default class index extends Component {
                       </MDBBtn>
                       <p>Lorem ipsum dolor sit amet…</p>
                       <a>Mehr erfahren hier →</a>
-                    </MDBBox>
+                    </MDBBox>*/}
                   </MDBCol>
                 </MDBRow>
               </MDBContainer>
@@ -275,9 +275,7 @@ export default class index extends Component {
                 <div className="p-2 col-example text-left">
                   <div className="center">
                     <h4>{graphData.contentfulHomePage.referencentitle2}</h4>
-                    <p>
-                      {graphData.contentfulHomePage.referencentitle2subtitle}{" "}
-                    </p>
+
                     <MDBBtn color="white">Mehr Erfahren</MDBBtn>
                   </div>
                 </div>
@@ -316,7 +314,7 @@ export default class index extends Component {
               </div>
             </MDBContainer>
 
-            <Newsletter />
+           {/* <Newsletter />*/}
           </MDBContainer>
           <MDBContainer fluid className="referenzen mobile">
             <MDBContainer>
@@ -353,16 +351,13 @@ export default class index extends Component {
                 <div className="p-2 col-example text-left">
                   <div className="center">
                     <h4>{graphData.contentfulHomePage.referencentitle2}</h4>
-                    <p>
-                      {graphData.contentfulHomePage.referencentitle2subtitle}{" "}
-                    </p>
+
                     <MDBBtn color="white">Mehr Erfahren</MDBBtn>
                   </div>
                 </div>
               </div>
-            
             </MDBContainer>
-            <Newsletter />
+            {/* <Newsletter />*/}
           </MDBContainer>
         </Layout>
       </div>
@@ -404,7 +399,6 @@ export const query = graphql`
       }
       referencentitle
       referencentitle2
-      referencentitle2subtitle
     }
     allContentfulPost(sort: { order: DESC, fields: createdAt }, limit: 1) {
       edges {

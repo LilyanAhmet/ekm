@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1443" height="31" viewBox="0 0 1443 31">
+    <defs>
+        <linearGradient id="prefix__a" x1="0%" x2="100%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#2CCCCC"/>
+            <stop offset="100%" stop-color="#0CEFA5"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="url(#prefix__a)" stroke-linecap="round" stroke-width="7" d="M0.5 14.841L1436.5 14.841" transform="translate(3)"/>
+        <g>
+            <path fill="#24D5C3" d="M15.5 29c-8.271 0-15-6.504-15-14.5S7.229 0 15.5 0s15 6.504 15 14.5S23.771 29 15.5 29" transform="translate(3) translate(249)"/>
+            <path fill="#FFF" d="M23.5 14.5c0 4.143-3.583 7.5-8 7.5-4.419 0-8-3.357-8-7.5s3.581-7.5 8-7.5c4.417 0 8 3.357 8 7.5" transform="translate(3) translate(249)"/>
+        </g>
+        <g>
+            <path fill="#1BDEB8" d="M15.5 29c-8.271 0-15-6.504-15-14.5S7.229 0 15.5 0s15 6.504 15 14.5S23.771 29 15.5 29" transform="translate(3) translate(701)"/>
+            <path fill="#FFF" d="M23.5 14.5c0 4.143-3.583 7.5-8 7.5-4.419 0-8-3.357-8-7.5s3.581-7.5 8-7.5c4.417 0 8 3.357 8 7.5" transform="translate(3) translate(701)"/>
+        </g>
+        <g>
+            <path fill="#17E3B2" d="M15.5 29c-8.271 0-15-6.504-15-14.5S7.229 0 15.5 0s15 6.504 15 14.5S23.771 29 15.5 29" transform="translate(3) translate(927)"/>
+            <path fill="#FFF" d="M23.5 14.5c0 4.143-3.583 7.5-8 7.5-4.419 0-8-3.357-8-7.5s3.581-7.5 8-7.5c4.417 0 8 3.357 8 7.5" transform="translate(3) translate(927)"/>
+        </g>
+        <g>
+            <path fill="#12E9AC" d="M15.5 29c-8.271 0-15-6.504-15-14.5S7.229 0 15.5 0s15 6.504 15 14.5S23.771 29 15.5 29" transform="translate(3) rotate(90 591 591)"/>
+            <path fill="#16374E" d="M23.5 14.5c0 4.143-3.583 7.5-8 7.5-4.419 0-8-3.357-8-7.5s3.581-7.5 8-7.5c4.417 0 8 3.357 8 7.5" transform="translate(3) rotate(90 591 591)"/>
+        </g>
+        <g>
+            <path fill="#24D5C3" d="M15.5 29c-8.271 0-15-6.504-15-14.5S7.229 0 15.5 0s15 6.504 15 14.5S23.771 29 15.5 29" transform="translate(3) translate(475)"/>
+            <path fill="#FFF" d="M23.5 14.5c0 4.143-3.583 7.5-8 7.5-4.419 0-8-3.357-8-7.5s3.581-7.5 8-7.5c4.417 0 8 3.357 8 7.5" transform="translate(3) translate(475)"/>
+        </g>
+    </g>
+</svg>

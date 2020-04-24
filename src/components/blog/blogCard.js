@@ -7,7 +7,7 @@ import {
   MDBMask,
   MDBIcon,
   MDBView,
-  MDBBtn,
+  MDBBtn
 } from "mdbreact"
 export default class blogCard extends Component {
   render() {
@@ -34,9 +34,12 @@ export default class blogCard extends Component {
               <h3 className="font-weight-bold mb-3 p-0">{this.props.title}</h3>
               <p>{this.props.date}</p>
             </div>
-            <MDBBtn size="md" className="waves-light ">
-              Read more
-            </MDBBtn>
+            <a href={this.props.slug}>
+              {" "}
+              <MDBBtn size="md" className="waves-light ">
+                Read more
+              </MDBBtn>
+            </a>
           </MDBCol>
         </MDBRow>
       </div>

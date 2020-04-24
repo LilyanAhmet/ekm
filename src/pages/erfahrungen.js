@@ -28,7 +28,10 @@ class erfahrungen extends React.Component {
             <MDBRow className="margin-p-40">
               <MDBCol md={6} sm={12}>
                 <p>
-                  {graphData.allContentfulSinglePage.edges[0].node.text.text}
+                  {graphData.allContentfulSinglePage.edges[0].node.text1.text1}
+                </p>
+                <p>
+                  {graphData.allContentfulSinglePage.edges[0].node.text2.text2}
                 </p>
               </MDBCol>
               <MDBCol md={6} sm={12}>
@@ -66,7 +69,7 @@ class erfahrungen extends React.Component {
               </MDBCol>
               <MDBCol md={6} sm={12}>
                 <p>
-                  {graphData.allContentfulSinglePage.edges[0].node.text.text}
+                  {graphData.allContentfulSinglePage.edges[0].node.text1.text1}
                 </p>
               </MDBCol>
             </MDBRow>
@@ -86,11 +89,11 @@ export const query = graphql`
       edges {
         node {
           title
-          text {
-            text
-            childMarkdownRemark {
-              html
-            }
+         text1 {
+          text1
+          }
+           text2 {
+          text2
           }
           image {
             fluid {
