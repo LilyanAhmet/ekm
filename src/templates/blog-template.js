@@ -15,19 +15,19 @@ const Blog = ({ pageContext }) => {
                   <MDBRow>
                     <MDBCol md={8} sm={12}>
                       <h1>
-                        Home vs Office. Remotely Working. Which is the best? #1
+                        {pageContext.title}
                       </h1>
                     </MDBCol>
                     <MDBCol md={4} sm={12}>
                       {" "}
-                      <p>12 Jul 2020</p>
+                      <p>{pageContext.createdAt}</p>
                     </MDBCol>
                   </MDBRow>
                 </div>
                 <div className="cat">
                   <MDBRow>
                     <MDBCol md={12} sm={12}>
-                      <p>Content.1 Content.2</p>
+                      <p>Content 1</p>
                     </MDBCol>
                   </MDBRow>
                 </div>
@@ -35,7 +35,7 @@ const Blog = ({ pageContext }) => {
                   <MDBRow>
                     <MDBCol md={12} sm={12} style={{ display: "flex" }}>
                       <span>Writer: </span>
-                      <p> {pageContext.house}</p>
+                      <p> {pageContext.author}</p>
                     </MDBCol>
                   </MDBRow>
                 </div>
