@@ -19,7 +19,7 @@ class Layout extends React.Component {
                     <Header contactData={contactData} />
                 )}
                 {this.props.trans && (
-                    <HeaderTrans contactData={contactData} />
+                    <HeaderTrans contactData={contactData} contact={this.props.contact} />
                 )}
 
                 <main>{this.props.children}</main>

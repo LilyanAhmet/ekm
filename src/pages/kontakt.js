@@ -59,8 +59,31 @@ class kontakt extends React.Component {
     }
   }
 
+  selectBoxShowHide(target,value){
+    if(target == "ekm_Service" && value == "Unternehmercoaching"){
+      document.getElementById("Unternehmercoaching").style.display = "block";
+    }else if(target == "ekm_Service" && value != "Unternehmercoaching"){
+      document.getElementById("Unternehmercoaching").style.display = "none";
+      this.setState({ ["Unternehmercoaching"]: "" })
+
+      document.getElementById("existenzgrundercoaching_service").style.display = "none";
+      this.setState({ ["existenzgründercoaching_service"]: "" })
+    }
+
+    if(target == "Unternehmercoaching" && value == "Existenzgründercoaching"){
+      document.getElementById("existenzgrundercoaching_service").style.display = "block";
+    }else if(target == "Unternehmercoaching" && value != "Existenzgründercoaching"){
+      document.getElementById("existenzgrundercoaching_service").style.display = "none";
+      this.setState({ ["existenzgründercoaching_service"]: "" })
+    }
+
+  }
+
   changeHandler = event => {
     this.setState({ [event.target.name]: event.target.value })
+    if(event.target.name == "ekm_Service"  || event.target.name == "Unternehmercoaching"){
+      this.selectBoxShowHide(event.target.name, event.target.value )
+    }
   }
 
   render() {
@@ -267,15 +290,16 @@ class kontakt extends React.Component {
                     </div>
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline">
+                    <div className="md-form md-outline" style={{display:"none"}} id="Unternehmercoaching">
                       <select
                         className="browser-default custom-select"
                         required
                         name="Unternehmercoaching"
+                        id="UnternehmercoachingInput"
                         value={Unternehmercoaching}
                         onChange={this.changeHandler}
                       >
-                        <option>Welcher Unternehmercoaching Service?</option>
+                        <option value="">Welcher Unternehmercoaching Service?</option>
                         <option value="Existenzgründercoaching">
                           Existenzgründercoaching
                         </option>
@@ -289,11 +313,12 @@ class kontakt extends React.Component {
                     </div>
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline">
+                    <div className="md-form md-outline" style={{display:"none"}} id="existenzgrundercoaching_service">
                       <select
                         className="browser-default custom-select"
                         required
                         name="existenzgründercoaching_service"
+                        id="existenzgrundercoaching_serviceInput"
                         value={existenzgründercoaching_service}
                         onChange={this.changeHandler}
                       >
