@@ -11,7 +11,6 @@ import Image from "../images/experience.svg"
 class erfahrungen extends React.Component {
   render() {
     const graphData = this.props.data
-    console.log(graphData)
     return (
       <Layout contactData={graphData.contactInfo}>
         <SEO title="erfahrungen" />

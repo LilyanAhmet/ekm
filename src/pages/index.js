@@ -63,7 +63,7 @@ export default class index extends Component {
                       <h6 className="mb-4">
                         {graphData.contentfulHomePage.subtitle}
                       </h6>
-                      <a href="/karrieremanagament">
+                      <a href="/ueber-ekm/">
                         <MDBBtn color="white" gradient="aqua">
                           Mehr Erfahren
                         </MDBBtn>
@@ -212,7 +212,7 @@ export default class index extends Component {
                           <p>
                             {graphData.contentfulHomePage.service1subtitle}{" "}
                           </p>
-                          <a>DIENSTE DURCHSUCHEN →</a>
+                          <a href="/unternehmerberatung">DIENSTE DURCHSUCHEN →</a>
                         </div>
                       </div>
                     </MDBCol>
@@ -229,7 +229,7 @@ export default class index extends Component {
                           <p>
                             {graphData.contentfulHomePage.service2subtitle}{" "}
                           </p>
-                          <a>DIENSTE DURCHSUCHEN →</a>
+                          <a href="/karrieremanagament">DIENSTE DURCHSUCHEN →</a>
                         </div>
                       </div>
                     </MDBCol>

@@ -26,7 +26,6 @@ const encode = data => {
     .join("&")
 }
 
-
 class kontakt extends React.Component {
   constructor(props) {
     super(props)
@@ -42,6 +41,7 @@ class kontakt extends React.Component {
       Unternehmercoaching: "",
       existenzgründercoaching_service: "",
       ihre_nachricht: "",
+      Bundesland:""
     }
   }
   submitHandler = event => {
@@ -53,40 +53,50 @@ class kontakt extends React.Component {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...this.state }),
       })
-        .then(() => alert("Success!"))
+        .then(() => window.location.pathname = '/erfolgreich')
         .catch(error => alert(error))
       console.log("test")
     }
   }
 
-  selectBoxShowHide(target,value){
-    if(target == "ekm_Service" && value == "Unternehmercoaching"){
-      document.getElementById("Unternehmercoaching").style.display = "block";
-    }else if(target == "ekm_Service" && value != "Unternehmercoaching"){
-      document.getElementById("Unternehmercoaching").style.display = "none";
+  selectBoxShowHide(target, value) {
+    if (target == "ekm_Service" && value == "Unternehmercoaching") {
+      document.getElementById("Unternehmercoaching").style.display = "block"
+    } else if (target == "ekm_Service" && value != "Unternehmercoaching") {
+      document.getElementById("Unternehmercoaching").style.display = "none"
       this.setState({ ["Unternehmercoaching"]: "" })
 
-      document.getElementById("existenzgrundercoaching_service").style.display = "none";
+      document.getElementById("existenzgrundercoaching_service").style.display =
+        "none"
       this.setState({ ["existenzgründercoaching_service"]: "" })
     }
 
-    if(target == "Unternehmercoaching" && value == "Existenzgründercoaching"){
-      document.getElementById("existenzgrundercoaching_service").style.display = "block";
-    }else if(target == "Unternehmercoaching" && value != "Existenzgründercoaching"){
-      document.getElementById("existenzgrundercoaching_service").style.display = "none";
+    if (target == "Unternehmercoaching" && value == "Existenzgründercoaching") {
+      document.getElementById("existenzgrundercoaching_service").style.display =
+        "block"
+    } else if (
+      target == "Unternehmercoaching" &&
+      value != "Existenzgründercoaching"
+    ) {
+      document.getElementById("existenzgrundercoaching_service").style.display =
+        "none"
       this.setState({ ["existenzgründercoaching_service"]: "" })
     }
-
   }
 
   changeHandler = event => {
     this.setState({ [event.target.name]: event.target.value })
-    if(event.target.name == "ekm_Service"  || event.target.name == "Unternehmercoaching"){
-      this.selectBoxShowHide(event.target.name, event.target.value )
+    if (
+      event.target.name == "ekm_Service" ||
+      event.target.name == "Unternehmercoaching"
+    ) {
+      this.selectBoxShowHide(event.target.name, event.target.value)
     }
   }
 
   render() {
+    const graphData = this.props.data
+    console.log(graphData);
     const {
       forname,
       nachname,
@@ -99,9 +109,14 @@ class kontakt extends React.Component {
       Unternehmercoaching,
       existenzgründercoaching_service,
       ihre_nachricht,
+      Bundesland
     } = this.state
     return (
-      <Layout trans={true} contact={true} contactData={this.props.data.contactInfo}>
+      <Layout
+        trans={true}
+        contact={true}
+        contactData={this.props.data.contactInfo}
+      >
         <SEO title="kontakt" />
         <div className="contact">
           <MDBCard reverse>
@@ -121,14 +136,22 @@ class kontakt extends React.Component {
                         <img src={Phone} />
 
                         <h3>
-                          <div className="rectangle" /> +49 172 392 24 07 <br />
-                          +49 151 27052528
+                          <div
+                            className="rectangle"
+                            style={{ height: "60px" }}
+                          />{" "}
+                          {graphData.contactInfo.phoneNumber1}<br />
+                          {graphData.contactInfo.phoneNumber2}
                         </h3>
                       </div>
                       <div className="box">
                         <img src={Mail} />
                         <h3>
-                          <div className="rectangle" /> info@ekm.de
+                          <div
+                            className="rectangle"
+                            style={{ height: "40px" }}
+                          />{" "}
+                          {graphData.contactInfo.eMailAddresse}
                         </h3>
                       </div>
                       <div className="box">
@@ -136,8 +159,13 @@ class kontakt extends React.Component {
 
                         <h3>
                           {" "}
-                          <div className="rectangle" /> Bismarckstraße 73 10627
-                          Berlin Germany
+                          <div
+                            className="rectangle"
+                            style={{ height: "130px" }}
+                          />{" "}
+                          {graphData.contactInfo.addressText1}
+                          <br /> <br />
+                          {graphData.contactInfo.addressText2}
                         </h3>
                       </div>
                     </div>
@@ -146,22 +174,46 @@ class kontakt extends React.Component {
               </MDBContainer>
             </MDBCardImage>
             <MDBCardBody cascade className="text-center">
-              <div class="map row">
-                <div class="mapouter">
-                  <div class="gmap_canvas">
-                    <iframe
-                      title="mapfecbf7e5-9c67-5526-93c9-056ddc2c5c9d"
-                      height="350"
-                      id="gmap_canvas"
-                      src="https://maps.google.com/maps?q=50.9416612,6.934918799999991&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                      frameborder="0"
-                      scrolling="no"
-                      marginheight="0"
-                      marginwidth="0"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
+              <MDBContainer>
+                <MDBRow>
+                  <MDBCol>
+                    <div class="map row">
+                      <div class="mapouter">
+                        <div class="gmap_canvas">
+                          <iframe
+                            title="mapfecbf7e5-9c67-5526-93c9-056ddc2c5c9d"
+                            height="350"
+                            id="gmap_canvas"
+                            src={`https://maps.google.com/maps?q=${graphData.contactInfo.address1.lat},${graphData.contactInfo.address1.lon}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </MDBCol>
+                  <MDBCol>
+                    <div class="map row">
+                      <div class="mapouter">
+                        <div class="gmap_canvas">
+                          <iframe
+                            title="mapfecbf7e5-9c67-5526-93c9-056ddc2c5c9d"
+                            height="350"
+                            id="gmap_canvas"
+                            src={`https://maps.google.com/maps?q=${graphData.contactInfo.address2.lat},${graphData.contactInfo.address2.lon}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </MDBCol>
+                </MDBRow>
+              </MDBContainer>
             </MDBCardBody>
           </MDBCard>
           <MDBContainer className="form">
@@ -255,18 +307,24 @@ class kontakt extends React.Component {
                     />
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline">
-                      <select
-                        className="browser-default custom-select"
+                    <MDBInput
+                        label="Stadt"
+                        outline
                         required
                         name="Stadt"
                         value={Stadt}
                         onChange={this.changeHandler}
-                      >
-                        <option>Stadt</option>
-                        <option value="Hanover">Hanover</option>
-                      </select>
-                    </div>
+                    />
+                  </MDBCol>
+                  <MDBCol md={6} sm={12}>
+                    <MDBInput
+                        label="Bundesland"
+                        outline
+                        required
+                        name="Bundesland"
+                        value={Bundesland}
+                        onChange={this.changeHandler}
+                    />
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
                     <div className="md-form md-outline">
@@ -290,7 +348,11 @@ class kontakt extends React.Component {
                     </div>
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline" style={{display:"none"}} id="Unternehmercoaching">
+                    <div
+                      className="md-form md-outline"
+                      style={{ display: "none" }}
+                      id="Unternehmercoaching"
+                    >
                       <select
                         className="browser-default custom-select"
                         required
@@ -299,7 +361,9 @@ class kontakt extends React.Component {
                         value={Unternehmercoaching}
                         onChange={this.changeHandler}
                       >
-                        <option value="">Welcher Unternehmercoaching Service?</option>
+                        <option value="">
+                          Welcher Unternehmercoaching Service?
+                        </option>
                         <option value="Existenzgründercoaching">
                           Existenzgründercoaching
                         </option>
@@ -313,7 +377,11 @@ class kontakt extends React.Component {
                     </div>
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline" style={{display:"none"}} id="existenzgrundercoaching_service">
+                    <div
+                      className="md-form md-outline"
+                      style={{ display: "none" }}
+                      id="existenzgrundercoaching_service"
+                    >
                       <select
                         className="browser-default custom-select"
                         required
@@ -360,11 +428,22 @@ class kontakt extends React.Component {
 
 export default kontakt
 export const query = graphql`
-query {
-    contactInfo:contentfulCompanyInfo {
-      phoneNumber1
-      phoneNumber2
-      eMailAddresse
+{
+  contactInfo: contentfulCompanyInfo {
+    phoneNumber1
+    phoneNumber2
+    eMailAddresse
+    addressText1
+    address1 {
+      lat
+      lon
     }
+    address2 {
+      lat
+      lon
+    }
+    addressText2
   }
+}
+
 `

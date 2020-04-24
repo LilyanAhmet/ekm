@@ -27,7 +27,7 @@ class ueberEkm extends React.Component {
       <Layout contactData={graphData.contactInfo}>
         <SEO title="ueberEkm" />
         <div className="ueber-ekm desktop">
-          <MDBContainer size="lg">
+          <MDBContainer size="md" style={{paddingBottom:"30px"}} >
             <MDBRow className="margin-p-40">
               <MDBCol md={7} sm={12}>
                 <MDBRow>

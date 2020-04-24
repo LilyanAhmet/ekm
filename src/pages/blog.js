@@ -66,6 +66,7 @@ export const query = graphql`
     edges {
       node {
         content
+        id
         blogPosts {
           title
           slug

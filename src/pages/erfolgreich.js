@@ -9,9 +9,11 @@ import {
 /* resources */
 import Img from "../images/success.svg"
 
-const erfolgreich = () => {
+  class erfolgreich extends React.Component {
+    render() {
+      const graphData = this.props.data
   return (
-    <Layout>
+    <Layout contactData={graphData.contactInfo}>
       <SEO title="erfolgreich:Danke, dass Sie uns kontaktiert haben!" />
       <div className="not-found">
         <MDBContainer>
@@ -39,5 +41,15 @@ const erfolgreich = () => {
     </Layout>
   )
 }
+  }
 
 export default erfolgreich
+export const query = graphql`
+  {
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
+    }
+  }
+`

@@ -1,7 +1,21 @@
 import React, { Component } from "react"
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
-export default class serviceLong extends Component {
+import {MDBContainer, MDBRow, MDBCol, MDBCarouselItem} from "mdbreact"
+export default class serviceLong extends React.Component {
+    createbulletPoints = array => {
+        console.log(array)
+        let bulletPoints = []
+        for (let i = 0; i < array.length; i++) {
+            bulletPoints.push(
+                <div className="block borderleft">
+                    <h6>{array[i].title}</h6>
+                    <p>{array[i].subtitle}</p>
+                </div>
+            )
+        }
+        return bulletPoints
+    }
   render() {
+
     return (
       <div className="services">
         <div className="service-long">
@@ -19,18 +33,7 @@ export default class serviceLong extends Component {
                   </div>
                   <p>{this.props.shortDescription}</p>
                   <div className="list">
-                    <div className="block borderleft">
-                      <h6>{this.props.contentOne}</h6>
-                      <p>{this.props.contentOneText}</p>
-                    </div>
-                    <div className="block borderleft">
-                      <h6>{this.props.contentTwo}</h6>
-                      <p>{this.props.contentTwoText}</p>
-                    </div>
-                    <div className="block borderleft">
-                      <h6>{this.props.contentThree}</h6>
-                      <p>{this.props.contentThreeText}</p>
-                    </div>
+                      {this.createbulletPoints(this.props.bulletPoints)}
                   </div>
                 </div>
               </MDBCol>
@@ -47,18 +50,7 @@ export default class serviceLong extends Component {
                   </div>
                   <p>{this.props.shortDescription}</p>
                   <div className="list">
-                    <div className="block borderleft">
-                      <h6>{this.props.contentOne}</h6>
-                      <p>{this.props.contentOneText}</p>
-                    </div>
-                    <div className="block borderleft">
-                      <h6>{this.props.contentTwo}</h6>
-                      <p>{this.props.contentTwoText}</p>
-                    </div>
-                    <div className="block borderleft">
-                      <h6>{this.props.contentThree}</h6>
-                      <p>{this.props.contentThreeText}</p>
-                    </div>
+                      {this.createbulletPoints(this.props.bulletPoints)}
                   </div>
                 </div>
               </MDBCol>
