@@ -13,7 +13,7 @@ class erfahrungen extends React.Component {
     const graphData = this.props.data
     console.log(graphData)
     return (
-      <Layout>
+      <Layout contactData={graphData.contactInfo}>
         <SEO title="erfahrungen" />
         <div className="experience desktop">
           <MDBContainer size="lg">
@@ -105,6 +105,11 @@ export const query = graphql`
           }
         }
       }
+    }
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
     }
   }
 `

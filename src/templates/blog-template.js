@@ -1,10 +1,22 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 const Blog = ({ pageContext }) => {
+
+  const data = useStaticQuery(graphql`
+    query {
+      contactInfo:contentfulCompanyInfo {
+        phoneNumber1
+        phoneNumber2
+        eMailAddresse
+      }
+    }
+  `)
+
   return (
-    <Layout>
+    <Layout contactData={data.contactInfo}>
       <SEO title="unternehmercoaching" />
       <div className="blog-detail">
         <MDBContainer>
@@ -44,15 +56,13 @@ const Blog = ({ pageContext }) => {
           </MDBRow>
           <MDBRow>
             <MDBCol>
-              <p className="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+            <div
+                  className="description"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                    pageContext.content,
+                  }}
+                />
             </MDBCol>
           </MDBRow>
         </MDBContainer>

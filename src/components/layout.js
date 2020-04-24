@@ -12,17 +12,18 @@ import "mdbreact/dist/css/mdb.css"
 
 class Layout extends React.Component {
     render() {
+        const contactData = this.props.contactData
         return (
             <>
                 {!this.props.trans && (
-                    <Header />
+                    <Header contactData={contactData} />
                 )}
                 {this.props.trans && (
-                    <HeaderTrans contact={this.props.contact} />
+                    <HeaderTrans contactData={contactData} contact={this.props.contact} />
                 )}
 
                 <main>{this.props.children}</main>
-                <Footer />
+                <Footer contactData={contactData}/>
             </>
         )
     }

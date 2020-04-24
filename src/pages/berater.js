@@ -20,47 +20,13 @@ export default class berater extends Component {
       })
     }
   }
-  createNavItems = array => {
-    let numbersth = [
-      "first",
-      "second",
-      "third",
-      "fourth",
-      "fifth",
-      "sixth",
-      "seventh",
-      "eighth",
-    ]
-    let navItems = []
-    let children = []
-    for (let i = 0; i < array.length; i++) {
-      children.push()
-      navItems.push(<Nav.Item>{children[i]}</Nav.Item>)
-    }
-    return navItems
-  }
-  createTabPanes = array => {
-    let numbersth = [
-      "first",
-      "second",
-      "third",
-      "fourth",
-      "fifth",
-      "sixth",
-      "seventh",
-      "eighth",
-    ]
-    let navItems = []
-    for (let i = 0; i < array.length; i++) {
-      navItems.push()
-    }
-    return navItems
-  }
+
+
   render() {
     const graphData = this.props.data
-    console.log(graphData)
+    console.log(graphData);
     return (
-      <Layout>
+      <Layout contactData={graphData.contactInfo}>
         <SEO title="berater" />
         <div className="ekm">
           <MDBContainer size="lg">
@@ -74,24 +40,17 @@ export default class berater extends Component {
             <Row>
               <Col sm={12} className="nav-pills">
                 <div className="nav-link">
-                    Michael Schroeder
+                  {graphData.allContentfulConsultant.edges[1].node.name}
                 </div>
               </Col>
               <Col sm={12}>
                 <Row>
                   <Col md={3} sm={12}>
-                    <img className="img-fluid brater-img" src={Avatar} />
+                    <img className="img-fluid brater-img" src={graphData.allContentfulConsultant.edges[1].node.photo.fluid.src} />
                   </Col>
                   <Col md={9} sm={12}>
                     <p>
-                      Michael Schroeder, Betriebswirt (VWA), seit über 30 Jahren
-                      im Finanzdienstleistungssektor tätig, davon 20 Jahre auf
-                      Executive Level bzw. in der Geschäftsführung.
-                      Schwerpunkttemen Kredit- und Aussenhandelsgeschäft,
-                      Finanzierung von Existenzgründern, Unternehmen, Projekten,
-                      privaten wie gewerblichen Bauvorhaben. Master Black-Belt
-                      im Rahmen der Prozeßoptimierung (SixSigma und Lean
-                      Management) und mehrjährige Projektmanagementerfahrung.{" "}
+                      {graphData.allContentfulConsultant.edges[1].node.description.description}{" "}
                     </p>
                   </Col>
                 </Row>
@@ -101,26 +60,17 @@ export default class berater extends Component {
             <Row className="margin-p-60">
               <Col sm={12} className="nav-pills">
                 <div className="nav-link">
-                  Dennis Klose
+                  {graphData.allContentfulConsultant.edges[0].node.name}{" "}
                 </div>
               </Col>
               <Col sm={12}>
                 <Row>
                   <Col md={3} sm={12}>
-                    <img className="img-fluid brater-img" src={Avatar} />
+                    <img className="img-fluid brater-img" src={graphData.allContentfulConsultant.edges[0].node.photo.fluid.src} />
                   </Col>
                   <Col md={9} sm={12}>
                     <p>
-                      Dennis Klose, gelernter Bankkaufmann, Bankfachwirt,
-                      Ausbilder (AdA mit Abschluß), Bankbetriebswirt und Dipl.
-                      Bankbetriebswirt arbeitet seit über 20 Jahren in der
-                      Kreditwirtschaft. Erfahrungen als Mitarbeiter und
-                      Führungskraft bei Sparkassen und privaten Banken in
-                      Betrieb und Vertrieb. Business Development und
-                      Projektarbeit für Kreditinstitute ebneten den Weg zum
-                      Unternehmensberater mit Schwerpunkt Kreditgeschäft,
-                      Prozesse, Migrationen. Langjähriger Prüfer der beruflichen
-                      Erstausbildung für Bankkaufleute
+                      {graphData.allContentfulConsultant.edges[0].node.description.description}{" "}
                     </p>
                   </Col>
                 </Row>
@@ -149,6 +99,11 @@ export const query = graphql`
           }
         }
       }
+    }
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
     }
   }
 `

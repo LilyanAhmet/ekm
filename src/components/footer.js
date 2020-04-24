@@ -4,7 +4,10 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact"
 // resources
 import Logo from "../images/footer-logo.png"
 import Icon from "../images/ekm-icon.svg"
-const footer = () => {
+
+class footer extends React.Component {
+  render() {
+  const contactData = this.props.contactData
   return (
       <div>
         <MDBFooter className="font-small pt-4 desktop">
@@ -64,7 +67,7 @@ const footer = () => {
               <MDBCol>
                 <ul className="margin-p-10">
                   <li className="list-unstyled margin-p-10">
-                    <a href="#!">
+                    <a href="tel:00491723922407">
                       <h5 className="title">
                         <MDBIcon
                             fas
@@ -72,24 +75,24 @@ const footer = () => {
                             className="margin-p-right-10"
                             style={{ transform: "scaleX(-1)" }}
                         />{" "}
-                        +49 172 392 24 07
+                        {contactData.phoneNumber1}
                       </h5>
                     </a>
-                    <a href="#!">
+                    <a href="tel:004915127052528">
                       <h5 className="title">
-                        <MDBIcon className="margin-p-right-25" /> +49 151 27052528
+                        <MDBIcon className="margin-p-right-25" /> {contactData.phoneNumber2}
                       </h5>
                     </a>
                   </li>
                   <li className="list-unstyled margin-p-20 ">
-                    <a href="#!">
+                    <a href="mailto:info@ekm.de">
                       <h5 className="title">
                         <MDBIcon
                             fas
                             icon="envelope"
                             className="margin-p-right-10"
                         />{" "}
-                        info@ekm.de
+                        {contactData.eMailAddresse}
                       </h5>
                     </a>
                   </li>
@@ -152,7 +155,7 @@ const footer = () => {
               <MDBCol>
                 <img className="img-fluid" src={Logo} />
               </MDBCol>
-              <MDBCol>
+              <MDBCol xs={8}> 
                 <ul className="social">
                   <li>
                     <a>
@@ -245,7 +248,7 @@ const footer = () => {
                 <MDBCol xs={4} className="margin-auto">
                   <ul className="margin-p-10">
                     <li className="list-unstyled margin-p-10">
-                      <a href="#!">
+                      <a href="tel:00491723922407">
                         <h5 className="title">
                           <MDBIcon
                               fas
@@ -253,13 +256,12 @@ const footer = () => {
                               className="margin-p-right-10"
                               style={{ transform: "scaleX(-1)" }}
                           />{" "}
-                          +49 172 392 24 07
+                          {contactData.phoneNumber1}
                         </h5>
                       </a>
-                      <a href="#!">
+                      <a  href="tel:004915127052528">
                         <h5 className="title">
-                          <MDBIcon className="margin-p-right-25" /> +49 151
-                          27052528
+                          <MDBIcon className="margin-p-right-25" /> {contactData.phoneNumber2}
                         </h5>
                       </a>
                     </li>
@@ -271,14 +273,14 @@ const footer = () => {
                 <MDBCol xs={4} className="margin-auto">
                   <ul className="margin-p-10">
                     <li className="list-unstyled margin-p-10 ">
-                      <a href="#!">
+                      <a href="mailto:info@ekm.de">
                         <h5 className="title">
                           <MDBIcon
                               fas
                               icon="envelope"
                               className="margin-p-right-10"
                           />{" "}
-                          info@ekm.de
+                          {contactData.eMailAddresse}
                         </h5>
                       </a>
                     </li>
@@ -298,6 +300,7 @@ const footer = () => {
         </MDBFooter>
       </div>
   )
+}
 }
 
 export default footer

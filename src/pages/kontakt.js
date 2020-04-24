@@ -19,7 +19,7 @@ import Bg from "../images/bg-contact.svg"
 import Phone from "../images/phone.svg"
 import Mail from "../images/mail.svg"
 import Address from "../images/address.svg"
-import {graphql} from "gatsby";
+import { graphql } from "gatsby"
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -27,10 +27,22 @@ const encode = data => {
 }
 
 
-export default class kontakt extends React.Component {
+class kontakt extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { forname: "", nachname: "", telefon: "" ,mail:"",addresse:""};
+    super(props)
+    this.state = {
+      forname: "",
+      nachname: "",
+      telefon: "",
+      mail: "",
+      addresse: "",
+      postleitzahl: "",
+      Stadt: "",
+      ekm_Service: "",
+      Unternehmercoaching: "",
+      existenzgründercoaching_service: "",
+      ihre_nachricht: "",
+    }
   }
   submitHandler = event => {
     event.preventDefault()
@@ -39,22 +51,57 @@ export default class kontakt extends React.Component {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.state })
+        body: encode({ "form-name": "contact", ...this.state }),
       })
         .then(() => alert("Success!"))
-        .catch(error => alert(error));
+        .catch(error => alert(error))
       console.log("test")
     }
   }
 
+  selectBoxShowHide(target,value){
+    if(target == "ekm_Service" && value == "Unternehmercoaching"){
+      document.getElementById("Unternehmercoaching").style.display = "block";
+    }else if(target == "ekm_Service" && value != "Unternehmercoaching"){
+      document.getElementById("Unternehmercoaching").style.display = "none";
+      this.setState({ ["Unternehmercoaching"]: "" })
+
+      document.getElementById("existenzgrundercoaching_service").style.display = "none";
+      this.setState({ ["existenzgründercoaching_service"]: "" })
+    }
+
+    if(target == "Unternehmercoaching" && value == "Existenzgründercoaching"){
+      document.getElementById("existenzgrundercoaching_service").style.display = "block";
+    }else if(target == "Unternehmercoaching" && value != "Existenzgründercoaching"){
+      document.getElementById("existenzgrundercoaching_service").style.display = "none";
+      this.setState({ ["existenzgründercoaching_service"]: "" })
+    }
+
+  }
+
   changeHandler = event => {
     this.setState({ [event.target.name]: event.target.value })
+    if(event.target.name == "ekm_Service"  || event.target.name == "Unternehmercoaching"){
+      this.selectBoxShowHide(event.target.name, event.target.value )
+    }
   }
 
   render() {
-    const { forname, nachname, telefon,mail } = this.state;
+    const {
+      forname,
+      nachname,
+      telefon,
+      mail,
+      addresse,
+      postleitzahl,
+      Stadt,
+      ekm_Service,
+      Unternehmercoaching,
+      existenzgründercoaching_service,
+      ihre_nachricht,
+    } = this.state
     return (
-      <Layout trans={true} contact={true}>
+      <Layout trans={true} contact={true} contactData={this.props.data.contactInfo}>
         <SEO title="kontakt" />
         <div className="contact">
           <MDBCard reverse>
@@ -180,6 +227,7 @@ export default class kontakt extends React.Component {
                     <MDBInput
                       label="E-Mail Addresse"
                       outline
+                      type="email"
                       required
                       name="mail"
                       value={mail}
@@ -192,6 +240,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="addresse"
+                      value={addresse}
                       onChange={this.changeHandler}
                     />
                   </MDBCol>
@@ -201,6 +250,7 @@ export default class kontakt extends React.Component {
                       outline
                       required
                       name="postleitzahl"
+                      value={postleitzahl}
                       onChange={this.changeHandler}
                     />
                   </MDBCol>
@@ -209,28 +259,12 @@ export default class kontakt extends React.Component {
                       <select
                         className="browser-default custom-select"
                         required
-                        name="land"
-                        onChange={this.changeHandler}
-                      >
-                        <option>land</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                    </div>
-                  </MDBCol>
-                  <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline">
-                      <select
-                        className="browser-default custom-select"
-                        required
                         name="Stadt"
+                        value={Stadt}
                         onChange={this.changeHandler}
                       >
                         <option>Stadt</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="Hanover">Hanover</option>
                       </select>
                     </div>
                   </MDBCol>
@@ -239,49 +273,75 @@ export default class kontakt extends React.Component {
                       <select
                         className="browser-default custom-select"
                         required
-                        name="welchen"
+                        name="ekm_Service"
+                        value={ekm_Service}
                         onChange={this.changeHandler}
                       >
                         <option>
                           Für welchen EKM-Service interessieren Sie sich?
                         </option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="Unternehmercoaching">
+                          Unternehmercoaching
+                        </option>
+                        <option value="Karrieremanagament">
+                          Karrieremanagament
+                        </option>
                       </select>
                     </div>
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline">
+                    <div className="md-form md-outline" style={{display:"none"}} id="Unternehmercoaching">
                       <select
                         className="browser-default custom-select"
                         required
-                        name="ss"
+                        name="Unternehmercoaching"
+                        id="UnternehmercoachingInput"
+                        value={Unternehmercoaching}
                         onChange={this.changeHandler}
                       >
-                        <option>Existenzgründercoaching</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="">Welcher Unternehmercoaching Service?</option>
+                        <option value="Existenzgründercoaching">
+                          Existenzgründercoaching
+                        </option>
+                        <option value="Coaching bei besonderen Herausforderungen">
+                          Coaching bei besonderen Herausforderungen{" "}
+                        </option>
+                        <option value="Beratung bei Fragen der Unternehmensnachfolge">
+                          Beratung bei Fragen der Unternehmensnachfolge
+                        </option>
                       </select>
                     </div>
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline">
+                    <div className="md-form md-outline" style={{display:"none"}} id="existenzgrundercoaching_service">
                       <select
                         className="browser-default custom-select"
                         required
-                        name="ss"
+                        name="existenzgründercoaching_service"
+                        id="existenzgrundercoaching_serviceInput"
+                        value={existenzgründercoaching_service}
                         onChange={this.changeHandler}
                       >
                         <option>
                           Welcher Existenzgründercoaching service?
                         </option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <option value="Freie Beratung">Freie Beratung</option>
+                        <option value="AVGS Beratung">AVGS Beratung</option>
                       </select>
                     </div>
+                  </MDBCol>
+                </MDBRow>
+                <MDBRow>
+                  <MDBCol sm={12}>
+                    <MDBInput
+                      type="textarea"
+                      label="Ihre Nachricht"
+                      outline
+                      rows="4"
+                      name="ihre_nachricht"
+                      value={ihre_nachricht}
+                      onChange={this.changeHandler}
+                    />
                   </MDBCol>
                 </MDBRow>
                 <MDBRow>
@@ -297,3 +357,14 @@ export default class kontakt extends React.Component {
     )
   }
 }
+
+export default kontakt
+export const query = graphql`
+query {
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
+    }
+  }
+`

@@ -61,6 +61,7 @@ module.exports = {
               ? contentfulConfig.development
               : contentfulConfig.production,
     },
+    `@contentful/gatsby-transformer-contentful-richtext`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

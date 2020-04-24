@@ -52,9 +52,8 @@ class referenzen extends React.Component {
   }
   render() {
     const graphData = this.props.data
-    console.log(graphData)
     return (
-      <Layout>
+      <Layout contactData={graphData.contactInfo}>
         <SEO title="unternehmercoaching" />
         <div className="reference-block">
           <MDBContainer size="lg">
@@ -147,6 +146,11 @@ export const query = graphql`
           }
         }
       }
+    }
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
     }
   }
 `

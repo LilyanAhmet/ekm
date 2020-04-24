@@ -20,9 +20,8 @@ import BlogCard from "../components/blog/blogCard";
 export default class blog extends Component {
   render() {
     const graphData = this.props.data
-    console.log(graphData)
     return (
-        <Layout>
+        <Layout contactData={graphData.contactInfo}>
           <SEO title="blog"/>
           <div className="blog">
             <MDBContainer>
@@ -74,6 +73,11 @@ export const query = graphql`
         }
       }
     }
+  }
+  contactInfo:contentfulCompanyInfo {
+    phoneNumber1
+    phoneNumber2
+    eMailAddresse
   }
 }
 

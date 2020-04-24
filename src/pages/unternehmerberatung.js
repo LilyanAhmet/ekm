@@ -81,9 +81,8 @@ class unternehmercoaching extends React.Component {
 
   render() {
     const graphData = this.props.data
-    console.log(graphData.allContentfulServicePage)
     return (
-      <Layout>
+      <Layout contactData={graphData.contactInfo}>
         <SEO title="unternehmercoaching" />
         <Description
           title={graphData.allContentfulServicePage.edges[0].node.title}
@@ -169,6 +168,11 @@ export const query = graphql`
           }
         }
       }
+    }
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
     }
   }
 `
