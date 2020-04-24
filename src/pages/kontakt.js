@@ -41,7 +41,7 @@ class kontakt extends React.Component {
       Unternehmercoaching: "",
       existenzgründercoaching_service: "",
       ihre_nachricht: "",
-      Eyalet:""
+      Bundesland:""
     }
   }
   submitHandler = event => {
@@ -109,7 +109,7 @@ class kontakt extends React.Component {
       Unternehmercoaching,
       existenzgründercoaching_service,
       ihre_nachricht,
-      Eyalet
+      Bundesland
     } = this.state
     return (
       <Layout
@@ -307,32 +307,24 @@ class kontakt extends React.Component {
                     />
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline">
-                      <select
-                        className="browser-default custom-select"
+                    <MDBInput
+                        label="Stadt"
+                        outline
                         required
                         name="Stadt"
                         value={Stadt}
                         onChange={this.changeHandler}
-                      >
-                        <option>Stadt</option>
-                        <option value="Hanover">Hanover</option>
-                      </select>
-                    </div>
+                    />
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline">
-                      <select
-                        className="browser-default custom-select"
+                    <MDBInput
+                        label="Bundesland"
+                        outline
                         required
-                        name="Eyalet"
-                        value={Eyalet}
+                        name="Bundesland"
+                        value={Bundesland}
                         onChange={this.changeHandler}
-                      >
-                        <option>Eyalet</option>
-                        <option value="Hanover">Hanover</option>
-                      </select>
-                    </div>
+                    />
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
                     <div className="md-form md-outline">
