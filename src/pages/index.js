@@ -22,10 +22,9 @@ import { graphql } from "gatsby"
 export default class index extends Component {
   render() {
     const graphData = this.props.data
-    console.log(graphData)
     return (
       <div>
-        <Layout trans={true}>
+        <Layout trans={true} contactData={graphData.contactInfo}>
           <SEO title="Home" />
           <div className="promo desktop">
             <MDBView>
@@ -423,6 +422,11 @@ export const query = graphql`
           }
         }
       }
+    }
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
     }
   }
 `

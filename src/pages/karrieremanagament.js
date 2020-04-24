@@ -86,7 +86,7 @@ class karrieremanagament extends React.Component {
     const graphData = this.props.data
     console.log(graphData)
     return (
-      <Layout>
+      <Layout contactData={graphData.contactInfo}>
         <SEO title="karrieremanagament" />
         <Description
           title={graphData.allContentfulServicePage.edges[1].node.title}
@@ -174,6 +174,11 @@ export const query = graphql`
           }
         }
       }
+    }
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
     }
   }
 `

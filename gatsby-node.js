@@ -16,6 +16,11 @@ exports.createPages = async ({ actions, graphql }) => {
         blog_content {
           content
         }
+        content {
+          childContentfulRichText {
+            html
+          }
+        }
       }
     }
   }
@@ -35,6 +40,7 @@ exports.createPages = async ({ actions, graphql }) => {
                 author: node.author,
                 title: node.title,
                 contents: node.blog_content,
+                content:node.content.childContentfulRichText.html,
                 createdAt: node.createdAt
             },
         })

@@ -26,7 +26,8 @@ const encode = data => {
     .join("&")
 }
 
-export default class kontakt extends React.Component {
+
+class kontakt extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -77,7 +78,7 @@ export default class kontakt extends React.Component {
       ihre_nachricht,
     } = this.state
     return (
-      <Layout trans={true} contact={true}>
+      <Layout trans={true} contact={true} contactData={this.props.data.contactInfo}>
         <SEO title="kontakt" />
         <div className="contact">
           <MDBCard reverse>
@@ -331,3 +332,14 @@ export default class kontakt extends React.Component {
     )
   }
 }
+
+export default kontakt
+export const query = graphql`
+query {
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
+    }
+  }
+`

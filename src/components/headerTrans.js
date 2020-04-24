@@ -26,6 +26,8 @@ class HeaderTrans extends React.Component {
   }
 
   render() {
+    const contactData = this.props.contactData
+
     return (
       <header>
         <MDBNavbar expand="lg" transparent fixed="top">
@@ -90,32 +92,30 @@ class HeaderTrans extends React.Component {
                 </Link>
               </MDBNavItem>
             </MDBNavbarNav>
+
             {!this.props.contact && (
               <MDBNavbarNav right>
                 <MDBNavItem>
-                  <a
-                    className="nav-link waves-effect waves-light"
-                    href="tel:00491723922407"
-                  >
+                  <Link className="nav-link waves-effect waves-light" to="#!">
                     <MDBIcon
                       fas
                       icon="phone"
                       style={{ transform: "scaleX(-1)" }}
                     />
-                    +49 172 392 24 07
-                  </a>
-                  <a
+                    {contactData.phoneNumber1}
+                  </Link>
+                  <Link
                     className="nav-link waves-effect waves-light margin-m-10 "
-                    href="tel:004915127052528"
+                    to="#!"
                   >
                     <span style={{ marginRight: "21px" }} />
-                    +49 151 27052528
-                  </a>
+                    {contactData.phoneNumber2}
+                  </Link>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <a className="nav-link waves-effect waves-light" href="mailto:info@ekm.de">
-                    <MDBIcon fas icon="envelope" /> info@ekm.de
-                  </a>
+                  <Link className="nav-link waves-effect waves-light" to="#!">
+                    <MDBIcon fas icon="envelope" /> {contactData.eMailAddresse}
+                  </Link>
                 </MDBNavItem>
               </MDBNavbarNav>
             )}
@@ -125,17 +125,4 @@ class HeaderTrans extends React.Component {
     )
   }
 }
-export default () => (
-  <StaticQuery
-    query={graphql`
-      {
-        contentfulCompanyInfo {
-          eMailAddresse
-          phoneNumber1
-          phoneNumber2
-        }
-      }
-    `}
-    render={data => <HeaderTrans data={data} />}
-  />
-)
+export default HeaderTrans

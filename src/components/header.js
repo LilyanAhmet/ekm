@@ -27,6 +27,7 @@ class Header extends React.Component {
   }
 
   render() {
+    const contactData = this.props.contactData
     return (
         <header>
           <MDBNavbar expand="lg" id="nav-bg">
@@ -83,21 +84,21 @@ class Header extends React.Component {
                         icon="phone"
                         style={{ transform: "scaleX(-1)" }}
                     />
-                    +49 172 392 24 07
+                    {contactData.phoneNumber1}
                   </a>
-                  <a
+                  <Link
                       className="nav-link waves-effect waves-light margin-m-10 "
 
                       href="tel:004915127052528"
                   >
                     <span style={{marginRight:"21px"}} />
-                    +49 151 27052528
-                  </a>
+                    {contactData.phoneNumber2}
+                  </Link>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <a className="nav-link waves-effect waves-light" href="mailto:info@ekm.de">
-                    <MDBIcon fas icon="envelope" /> info@ekm.de
-                  </a>
+                  <Link className="nav-link waves-effect waves-light" to="#!">
+                    <MDBIcon fas icon="envelope" /> {contactData.eMailAddresse}
+                  </Link>
                 </MDBNavItem>
               </MDBNavbarNav>
             </MDBCollapse>

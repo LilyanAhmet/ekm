@@ -24,7 +24,7 @@ class ueberEkm extends React.Component {
   render() {
     const graphData = this.props.data
     return (
-      <Layout>
+      <Layout contactData={graphData.contactInfo}>
         <SEO title="ueberEkm" />
         <div className="ueber-ekm desktop">
           <MDBContainer size="lg">
@@ -253,6 +253,11 @@ export const query = graphql`
     textbox3
     textbox4
     textbox5
+  }
+  contactInfo:contentfulCompanyInfo {
+    phoneNumber1
+    phoneNumber2
+    eMailAddresse
   }
 }
 

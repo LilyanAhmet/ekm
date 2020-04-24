@@ -58,9 +58,8 @@ export default class berater extends Component {
   }
   render() {
     const graphData = this.props.data
-    console.log(graphData)
     return (
-      <Layout>
+      <Layout contactData={graphData.contactInfo}>
         <SEO title="berater" />
         <div className="ekm">
           <MDBContainer size="lg">
@@ -149,6 +148,11 @@ export const query = graphql`
           }
         }
       }
+    }
+    contactInfo:contentfulCompanyInfo {
+      phoneNumber1
+      phoneNumber2
+      eMailAddresse
     }
   }
 `
