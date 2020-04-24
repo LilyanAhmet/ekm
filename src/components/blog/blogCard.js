@@ -12,7 +12,7 @@ import {
 export default class blogCard extends Component {
   render() {
     return (
-      <div className="blog-card">
+      <div className={`blog-card ${this.props.postPageNumber}`} style={{display:this.props.postDisplay}}>
         <MDBRow>
           <MDBCol lg="5">
             <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
