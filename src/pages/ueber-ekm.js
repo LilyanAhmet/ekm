@@ -171,7 +171,7 @@ class ueberEkm extends React.Component {
                 >
                   <MDBCarouselInner>
                     <MDBCarouselItem itemId={1} className="time">
-                      <img src={LineOne} />
+                      <img src={LineOne} className="img-fluid"/>
                       <div className="box ">
                         <p>
                           {graphData.contentfulHighlights.textbox1}
@@ -179,7 +179,7 @@ class ueberEkm extends React.Component {
                       </div>
                     </MDBCarouselItem>
                     <MDBCarouselItem itemId={2} className="time">
-                      <img src={LineTwo} />
+                      <img src={LineTwo} className="img-fluid"/>
                       <div className="box">
                         <p>
                           {graphData.contentfulHighlights.textbox2}
@@ -187,7 +187,7 @@ class ueberEkm extends React.Component {
                       </div>
                     </MDBCarouselItem>
                     <MDBCarouselItem itemId={3} className="time">
-                      <img src={LineThree} />
+                      <img src={LineThree} className="img-fluid"/>
                       <div className="box">
                         <p>
                           {graphData.contentfulHighlights.textbox3}
@@ -195,7 +195,7 @@ class ueberEkm extends React.Component {
                       </div>
                     </MDBCarouselItem>
                     <MDBCarouselItem itemId={4} className="time">
-                      <img src={LineFour} />
+                      <img src={LineFour} className="img-fluid" />
                       <div className="box">
                         <p>
                           {graphData.contentfulHighlights.textbox4}
@@ -204,7 +204,7 @@ class ueberEkm extends React.Component {
                     </MDBCarouselItem>
 
                     <MDBCarouselItem itemId={5} className="time">
-                      <img src={LineSix} />
+                      <img src={LineSix} className="img-fluid"/>
                       <div className="box">
                         <p>
                           {graphData.contentfulHighlights.textbox5}

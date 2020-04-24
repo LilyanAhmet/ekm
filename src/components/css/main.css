@@ -1817,7 +1817,13 @@ footer .social li {
     padding-top: 50px;
     padding-bottom: 0;
     margin-bottom: 50px;
-}
+  }
+  .ueber-ekm .carousel-indicators {
+    position: initial;
+  }
+  .rectangle {
+    margin-top: -5px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -1919,6 +1925,10 @@ footer .social li {
     max-width: 100%;
     display: block;
     margin: auto;
+  }
+  #nav-bg {
+    background-color: var(--main-color);
+    border-radius: unset;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
