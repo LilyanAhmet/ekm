@@ -66,20 +66,14 @@ class ueberEkm extends React.Component {
                 <MDBCol md={4} className="time">
                   <div className="box">
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable.
+                      {graphData.contentfulHighlights.textbox1}
                     </p>
                   </div>
                 </MDBCol>
                 <MDBCol md={4} className="time">
                   <div className="box">
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable.
+                      {graphData.contentfulHighlights.textbox2}
                     </p>
                   </div>
                 </MDBCol>
@@ -93,30 +87,21 @@ class ueberEkm extends React.Component {
                 <MDBCol md={4} className="time">
                   <div className="box">
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable.
+                      {graphData.contentfulHighlights.textbox3}
                     </p>
                   </div>
                 </MDBCol>
                 <MDBCol md={4} className="time">
                   <div className="box">
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable.
+                      {graphData.contentfulHighlights.textbox4}
                     </p>
                   </div>
                 </MDBCol>
                 <MDBCol md={4} className="time">
                   <div className="box">
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable.
+                      {graphData.contentfulHighlights.textbox5}
                     </p>
                   </div>
                 </MDBCol>
