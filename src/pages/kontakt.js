@@ -53,7 +53,7 @@ class kontakt extends React.Component {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...this.state }),
       })
-        .then(() => alert("Success!"))
+        .then(() => window.location.pathname = '/erfolgreich')
         .catch(error => alert(error))
       console.log("test")
     }
