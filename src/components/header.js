@@ -77,26 +77,27 @@ class Header extends React.Component {
               </MDBNavbarNav>
               <MDBNavbarNav right>
                 <MDBNavItem>
-                  <Link className="nav-link waves-effect waves-light" to="#!">
+                  <a className="nav-link waves-effect waves-light" href="tel:00491723922407">
                     <MDBIcon
                         fas
                         icon="phone"
                         style={{ transform: "scaleX(-1)" }}
                     />
                     +49 172 392 24 07
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                       className="nav-link waves-effect waves-light margin-m-10 "
-                      to="#!"
+
+                      href="tel:004915127052528"
                   >
                     <span style={{marginRight:"21px"}} />
                     +49 151 27052528
-                  </Link>
+                  </a>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <Link className="nav-link waves-effect waves-light" to="#!">
+                  <a className="nav-link waves-effect waves-light" href="mailto:info@ekm.de">
                     <MDBIcon fas icon="envelope" /> info@ekm.de
-                  </Link>
+                  </a>
                 </MDBNavItem>
               </MDBNavbarNav>
             </MDBCollapse>

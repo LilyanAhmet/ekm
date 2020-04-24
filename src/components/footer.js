@@ -64,7 +64,7 @@ const footer = () => {
               <MDBCol>
                 <ul className="margin-p-10">
                   <li className="list-unstyled margin-p-10">
-                    <a href="#!">
+                    <a href="tel:00491723922407">
                       <h5 className="title">
                         <MDBIcon
                             fas
@@ -75,14 +75,14 @@ const footer = () => {
                         +49 172 392 24 07
                       </h5>
                     </a>
-                    <a href="#!">
+                    <a href="tel:004915127052528">
                       <h5 className="title">
                         <MDBIcon className="margin-p-right-25" /> +49 151 27052528
                       </h5>
                     </a>
                   </li>
                   <li className="list-unstyled margin-p-20 ">
-                    <a href="#!">
+                    <a href="mailto:info@ekm.de">
                       <h5 className="title">
                         <MDBIcon
                             fas
@@ -152,7 +152,7 @@ const footer = () => {
               <MDBCol>
                 <img className="img-fluid" src={Logo} />
               </MDBCol>
-              <MDBCol>
+              <MDBCol xs={8}> 
                 <ul className="social">
                   <li>
                     <a>
@@ -245,7 +245,7 @@ const footer = () => {
                 <MDBCol xs={4} className="margin-auto">
                   <ul className="margin-p-10">
                     <li className="list-unstyled margin-p-10">
-                      <a href="#!">
+                      <a href="tel:00491723922407">
                         <h5 className="title">
                           <MDBIcon
                               fas
@@ -256,7 +256,7 @@ const footer = () => {
                           +49 172 392 24 07
                         </h5>
                       </a>
-                      <a href="#!">
+                      <a  href="tel:004915127052528">
                         <h5 className="title">
                           <MDBIcon className="margin-p-right-25" /> +49 151
                           27052528
@@ -271,7 +271,7 @@ const footer = () => {
                 <MDBCol xs={4} className="margin-auto">
                   <ul className="margin-p-10">
                     <li className="list-unstyled margin-p-10 ">
-                      <a href="#!">
+                      <a href="mailto:info@ekm.de">
                         <h5 className="title">
                           <MDBIcon
                               fas

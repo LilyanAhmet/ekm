@@ -64,9 +64,11 @@ export default class index extends Component {
                       <h6 className="mb-4">
                         {graphData.contentfulHomePage.subtitle}
                       </h6>
-                      <MDBBtn color="white" gradient="aqua">
-                        Mehr Erfahren
-                      </MDBBtn>
+                      <a href="/karrieremanagament">
+                        <MDBBtn color="white" gradient="aqua">
+                          Mehr Erfahren
+                        </MDBBtn>
+                      </a>
                     </MDBAnimation>
                   </MDBCol>
 
@@ -156,7 +158,7 @@ export default class index extends Component {
                         />
                         <h3>{graphData.contentfulHomePage.service1title}</h3>
                         <p>{graphData.contentfulHomePage.service1subtitle} </p>
-                        <a>DIENSTE DURCHSUCHEN →</a>
+                        <a href="/unternehmerberatung">DIENSTE DURCHSUCHEN →</a>
                       </div>
                     </MDBCol>
                     <MDBCol>
@@ -169,7 +171,7 @@ export default class index extends Component {
                         />
                         <h3>{graphData.contentfulHomePage.service2title}</h3>
                         <p>{graphData.contentfulHomePage.service2subtitle} </p>
-                        <a>DIENSTE DURCHSUCHEN →</a>
+                        <a href="/karrieremanagament">DIENSTE DURCHSUCHEN →</a>
                       </div>
                     </MDBCol>
                   </MDBRow>
@@ -275,8 +277,9 @@ export default class index extends Component {
                 <div className="p-2 col-example text-left">
                   <div className="center">
                     <h4>{graphData.contentfulHomePage.referencentitle2}</h4>
-
-                    <MDBBtn color="white">Mehr Erfahren</MDBBtn>
+                    <a href="/referenzen">
+                      <MDBBtn color="white">Mehr Erfahren</MDBBtn>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -314,7 +317,7 @@ export default class index extends Component {
               </div>
             </MDBContainer>
 
-           {/* <Newsletter />*/}
+            {/* <Newsletter />*/}
           </MDBContainer>
           <MDBContainer fluid className="referenzen mobile">
             <MDBContainer>
@@ -351,8 +354,9 @@ export default class index extends Component {
                 <div className="p-2 col-example text-left">
                   <div className="center">
                     <h4>{graphData.contentfulHomePage.referencentitle2}</h4>
-
-                    <MDBBtn color="white">Mehr Erfahren</MDBBtn>
+                    <a href="/referenzen">
+                      <MDBBtn color="white">Mehr Erfahren</MDBBtn>
+                    </a>
                   </div>
                 </div>
               </div>

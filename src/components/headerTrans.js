@@ -27,98 +27,101 @@ class HeaderTrans extends React.Component {
 
   render() {
     return (
-        <header>
-          <MDBNavbar expand="lg" transparent fixed="top">
-            <MDBNavbarBrand>
-              <a href="/">
-                <img src={Logo} className="white-text" />
-              </a>
-            </MDBNavbarBrand>
-            <MDBNavbarToggler onClick={this.toggleCollapse} />
-            <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-              <MDBNavbarNav left>
+      <header>
+        <MDBNavbar expand="lg" transparent fixed="top">
+          <MDBNavbarBrand>
+            <a href="/">
+              <img src={Logo} className="white-text" />
+            </a>
+          </MDBNavbarBrand>
+          <MDBNavbarToggler onClick={this.toggleCollapse} />
+          <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+            <MDBNavbarNav left>
+              <MDBNavItem>
+                <MDBDropdown>
+                  <MDBDropdownToggle nav caret>
+                    <span className="mr-2">Über Uns</span>
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem href="/ueber-ekm">
+                      Über EKM
+                    </MDBDropdownItem>
+                    <MDBDropdownItem href="/berater">Berater </MDBDropdownItem>
+                    <MDBDropdownItem href="/erfahrungen">
+                      Erfahrungen
+                    </MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </MDBNavItem>
+              <MDBNavItem>
+                <MDBDropdown>
+                  <MDBDropdownToggle nav caret>
+                    <span className="mr-2">Dienstleistungen</span>
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem href="/unternehmerberatung">
+                      Unternehmerberatung
+                    </MDBDropdownItem>
+                    <MDBDropdownItem href="/karrieremanagament">
+                      Karrieremanagament{" "}
+                    </MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </MDBNavItem>
+              <MDBNavItem>
+                <Link
+                  className="nav-link waves-effect waves-light"
+                  to="/referenzen"
+                >
+                  Referenzen
+                </Link>
+              </MDBNavItem>
+              <MDBNavItem>
+                <Link className="nav-link waves-effect waves-light" to="/blog">
+                  Blog
+                </Link>
+              </MDBNavItem>
+              <MDBNavItem>
+                <Link
+                  className="nav-link waves-effect waves-light"
+                  to="/kontakt"
+                >
+                  Kontakt
+                </Link>
+              </MDBNavItem>
+            </MDBNavbarNav>
+            {!this.props.contact && (
+              <MDBNavbarNav right>
                 <MDBNavItem>
-                  <MDBDropdown>
-                    <MDBDropdownToggle nav caret>
-                      <span className="mr-2">Über Uns</span>
-                    </MDBDropdownToggle>
-                    <MDBDropdownMenu>
-                      <MDBDropdownItem href="/ueber-ekm">
-                        Über EKM
-                      </MDBDropdownItem>
-                      <MDBDropdownItem href="/berater">Berater </MDBDropdownItem>
-                      <MDBDropdownItem href="/erfahrungen">
-                        Erfahrungen
-                      </MDBDropdownItem>
-                    </MDBDropdownMenu>
-                  </MDBDropdown>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBDropdown>
-                    <MDBDropdownToggle nav caret>
-                      <span className="mr-2">Dienstleistungen</span>
-                    </MDBDropdownToggle>
-                    <MDBDropdownMenu>
-                      <MDBDropdownItem href="/unternehmerberatung">
-                        Unternehmerberatung
-                      </MDBDropdownItem>
-                      <MDBDropdownItem href="/karrieremanagament">
-                        Karrieremanagament{" "}
-                      </MDBDropdownItem>
-                    </MDBDropdownMenu>
-                  </MDBDropdown>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <Link
-                      className="nav-link waves-effect waves-light"
-                      to="/referenzen"
+                  <a
+                    className="nav-link waves-effect waves-light"
+                    href="tel:00491723922407"
                   >
-                    Referenzen
-                  </Link>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <Link className="nav-link waves-effect waves-light" to="/blog">
-                    Blog
-                  </Link>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <Link
-                      className="nav-link waves-effect waves-light"
-                      to="/kontakt"
+                    <MDBIcon
+                      fas
+                      icon="phone"
+                      style={{ transform: "scaleX(-1)" }}
+                    />
+                    +49 172 392 24 07
+                  </a>
+                  <a
+                    className="nav-link waves-effect waves-light margin-m-10 "
+                    href="tel:004915127052528"
                   >
-                    Kontakt
-                  </Link>
+                    <span style={{ marginRight: "21px" }} />
+                    +49 151 27052528
+                  </a>
+                </MDBNavItem>
+                <MDBNavItem>
+                  <a className="nav-link waves-effect waves-light" href="mailto:info@ekm.de">
+                    <MDBIcon fas icon="envelope" /> info@ekm.de
+                  </a>
                 </MDBNavItem>
               </MDBNavbarNav>
-              {!this.props.contact && (
-                  <MDBNavbarNav right>
-                    <MDBNavItem>
-                      <Link className="nav-link waves-effect waves-light" to="#!">
-                        <MDBIcon
-                            fas
-                            icon="phone"
-                            style={{ transform: "scaleX(-1)" }}
-                        />
-                        +49 172 392 24 07
-                      </Link>
-                      <Link
-                          className="nav-link waves-effect waves-light margin-m-10 "
-                          to="#!"
-                      >
-                        <span style={{marginRight:"21px"}} />
-                        +49 151 27052528
-                      </Link>
-                    </MDBNavItem>
-                    <MDBNavItem>
-                      <Link className="nav-link waves-effect waves-light" to="#!">
-                        <MDBIcon fas icon="envelope" /> info@ekm.de
-                      </Link>
-                    </MDBNavItem>
-                  </MDBNavbarNav>
-              )}
-            </MDBCollapse>
-          </MDBNavbar>
-        </header>
+            )}
+          </MDBCollapse>
+        </MDBNavbar>
+      </header>
     )
   }
 }
@@ -133,6 +136,6 @@ export default () => (
         }
       }
     `}
-    render={data => <HeaderTrans data={data}/>}
+    render={data => <HeaderTrans data={data} />}
   />
 )
