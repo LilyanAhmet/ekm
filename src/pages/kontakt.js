@@ -26,7 +26,6 @@ const encode = data => {
     .join("&")
 }
 
-
 class kontakt extends React.Component {
   constructor(props) {
     super(props)
@@ -42,6 +41,7 @@ class kontakt extends React.Component {
       Unternehmercoaching: "",
       existenzgründercoaching_service: "",
       ihre_nachricht: "",
+      Eyalet:""
     }
   }
   submitHandler = event => {
@@ -59,30 +59,38 @@ class kontakt extends React.Component {
     }
   }
 
-  selectBoxShowHide(target,value){
-    if(target == "ekm_Service" && value == "Unternehmercoaching"){
-      document.getElementById("Unternehmercoaching").style.display = "block";
-    }else if(target == "ekm_Service" && value != "Unternehmercoaching"){
-      document.getElementById("Unternehmercoaching").style.display = "none";
+  selectBoxShowHide(target, value) {
+    if (target == "ekm_Service" && value == "Unternehmercoaching") {
+      document.getElementById("Unternehmercoaching").style.display = "block"
+    } else if (target == "ekm_Service" && value != "Unternehmercoaching") {
+      document.getElementById("Unternehmercoaching").style.display = "none"
       this.setState({ ["Unternehmercoaching"]: "" })
 
-      document.getElementById("existenzgrundercoaching_service").style.display = "none";
+      document.getElementById("existenzgrundercoaching_service").style.display =
+        "none"
       this.setState({ ["existenzgründercoaching_service"]: "" })
     }
 
-    if(target == "Unternehmercoaching" && value == "Existenzgründercoaching"){
-      document.getElementById("existenzgrundercoaching_service").style.display = "block";
-    }else if(target == "Unternehmercoaching" && value != "Existenzgründercoaching"){
-      document.getElementById("existenzgrundercoaching_service").style.display = "none";
+    if (target == "Unternehmercoaching" && value == "Existenzgründercoaching") {
+      document.getElementById("existenzgrundercoaching_service").style.display =
+        "block"
+    } else if (
+      target == "Unternehmercoaching" &&
+      value != "Existenzgründercoaching"
+    ) {
+      document.getElementById("existenzgrundercoaching_service").style.display =
+        "none"
       this.setState({ ["existenzgründercoaching_service"]: "" })
     }
-
   }
 
   changeHandler = event => {
     this.setState({ [event.target.name]: event.target.value })
-    if(event.target.name == "ekm_Service"  || event.target.name == "Unternehmercoaching"){
-      this.selectBoxShowHide(event.target.name, event.target.value )
+    if (
+      event.target.name == "ekm_Service" ||
+      event.target.name == "Unternehmercoaching"
+    ) {
+      this.selectBoxShowHide(event.target.name, event.target.value)
     }
   }
 
@@ -99,9 +107,14 @@ class kontakt extends React.Component {
       Unternehmercoaching,
       existenzgründercoaching_service,
       ihre_nachricht,
+      Eyalet
     } = this.state
     return (
-      <Layout trans={true} contact={true} contactData={this.props.data.contactInfo}>
+      <Layout
+        trans={true}
+        contact={true}
+        contactData={this.props.data.contactInfo}
+      >
         <SEO title="kontakt" />
         <div className="contact">
           <MDBCard reverse>
@@ -121,14 +134,22 @@ class kontakt extends React.Component {
                         <img src={Phone} />
 
                         <h3>
-                          <div className="rectangle" /> +49 172 392 24 07 <br />
+                          <div
+                            className="rectangle"
+                            style={{ height: "60px" }}
+                          />{" "}
+                          +49 172 392 24 07 <br />
                           +49 151 27052528
                         </h3>
                       </div>
                       <div className="box">
                         <img src={Mail} />
                         <h3>
-                          <div className="rectangle" /> info@ekm.de
+                          <div
+                            className="rectangle"
+                            style={{ height: "40px" }}
+                          />{" "}
+                          info@ekm.de
                         </h3>
                       </div>
                       <div className="box">
@@ -136,8 +157,13 @@ class kontakt extends React.Component {
 
                         <h3>
                           {" "}
-                          <div className="rectangle" /> Bismarckstraße 73 10627
-                          Berlin Germany
+                          <div
+                            className="rectangle"
+                            style={{ height: "130px" }}
+                          />{" "}
+                          Bismarckstraße 73 10627 Berlin Germany
+                          <br /> <br />
+                          Bismarckstraße 73 10627 Berlin Germany
                         </h3>
                       </div>
                     </div>
@@ -146,22 +172,46 @@ class kontakt extends React.Component {
               </MDBContainer>
             </MDBCardImage>
             <MDBCardBody cascade className="text-center">
-              <div class="map row">
-                <div class="mapouter">
-                  <div class="gmap_canvas">
-                    <iframe
-                      title="mapfecbf7e5-9c67-5526-93c9-056ddc2c5c9d"
-                      height="350"
-                      id="gmap_canvas"
-                      src="https://maps.google.com/maps?q=50.9416612,6.934918799999991&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                      frameborder="0"
-                      scrolling="no"
-                      marginheight="0"
-                      marginwidth="0"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
+              <MDBContainer>
+                <MDBRow>
+                  <MDBCol>
+                    <div class="map row">
+                      <div class="mapouter">
+                        <div class="gmap_canvas">
+                          <iframe
+                            title="mapfecbf7e5-9c67-5526-93c9-056ddc2c5c9d"
+                            height="350"
+                            id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=50.9416612,6.934918799999991&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </MDBCol>
+                  <MDBCol>
+                    <div class="map row">
+                      <div class="mapouter">
+                        <div class="gmap_canvas">
+                          <iframe
+                            title="mapfecbf7e5-9c67-5526-93c9-056ddc2c5c9d"
+                            height="350"
+                            id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=50.9416612,6.934918799999991&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </MDBCol>
+                </MDBRow>
+              </MDBContainer>
             </MDBCardBody>
           </MDBCard>
           <MDBContainer className="form">
@@ -273,6 +323,20 @@ class kontakt extends React.Component {
                       <select
                         className="browser-default custom-select"
                         required
+                        name="Eyalet"
+                        value={Eyalet}
+                        onChange={this.changeHandler}
+                      >
+                        <option>Eyalet</option>
+                        <option value="Hanover">Hanover</option>
+                      </select>
+                    </div>
+                  </MDBCol>
+                  <MDBCol md={6} sm={12}>
+                    <div className="md-form md-outline">
+                      <select
+                        className="browser-default custom-select"
+                        required
                         name="ekm_Service"
                         value={ekm_Service}
                         onChange={this.changeHandler}
@@ -290,7 +354,11 @@ class kontakt extends React.Component {
                     </div>
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline" style={{display:"none"}} id="Unternehmercoaching">
+                    <div
+                      className="md-form md-outline"
+                      style={{ display: "none" }}
+                      id="Unternehmercoaching"
+                    >
                       <select
                         className="browser-default custom-select"
                         required
@@ -299,7 +367,9 @@ class kontakt extends React.Component {
                         value={Unternehmercoaching}
                         onChange={this.changeHandler}
                       >
-                        <option value="">Welcher Unternehmercoaching Service?</option>
+                        <option value="">
+                          Welcher Unternehmercoaching Service?
+                        </option>
                         <option value="Existenzgründercoaching">
                           Existenzgründercoaching
                         </option>
@@ -313,7 +383,11 @@ class kontakt extends React.Component {
                     </div>
                   </MDBCol>
                   <MDBCol md={6} sm={12}>
-                    <div className="md-form md-outline" style={{display:"none"}} id="existenzgrundercoaching_service">
+                    <div
+                      className="md-form md-outline"
+                      style={{ display: "none" }}
+                      id="existenzgrundercoaching_service"
+                    >
                       <select
                         className="browser-default custom-select"
                         required
@@ -360,8 +434,8 @@ class kontakt extends React.Component {
 
 export default kontakt
 export const query = graphql`
-query {
-    contactInfo:contentfulCompanyInfo {
+  query {
+    contactInfo: contentfulCompanyInfo {
       phoneNumber1
       phoneNumber2
       eMailAddresse

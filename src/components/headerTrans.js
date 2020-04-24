@@ -100,7 +100,7 @@ class HeaderTrans extends React.Component {
                     <MDBIcon
                       fas
                       icon="phone"
-                      style={{ transform: "scaleX(-1)" }}
+                      style={{ transform: "scaleX(-1)",marginRight:"10px"  }}
                     />
                     {contactData.phoneNumber1}
                   </Link>
@@ -108,13 +108,13 @@ class HeaderTrans extends React.Component {
                     className="nav-link waves-effect waves-light margin-m-10 "
                     to="#!"
                   >
-                    <span style={{ marginRight: "21px" }} />
+                    <span style={{ marginRight: "31px" }} />
                     {contactData.phoneNumber2}
                   </Link>
                 </MDBNavItem>
                 <MDBNavItem>
                   <Link className="nav-link waves-effect waves-light" to="#!">
-                    <MDBIcon fas icon="envelope" /> {contactData.eMailAddresse}
+                    <MDBIcon fas icon="envelope" style={{marginRight:"10px" }} /> {contactData.eMailAddresse}
                   </Link>
                 </MDBNavItem>
               </MDBNavbarNav>
