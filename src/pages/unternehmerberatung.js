@@ -28,12 +28,7 @@ class unternehmercoaching extends React.Component {
           icon={array[i].icon.fluid.src}
           title={array[i].title}
           shortDescription={array[i].description}
-          contentOne={array[i].content1Title}
-          contentOneText={array[i].content1Text}
-          contentTwo={array[i].content2Title}
-          contentTwoText={array[i].content2Text}
-          contentThree={array[i].content3Title}
-          contentThreeText={array[i].content3Text}
+          bulletPoints={array[i].bulletPoints}
           left={array[i].imageleft}
         />
       )
@@ -50,12 +45,7 @@ class unternehmercoaching extends React.Component {
             icon={array[i].icon.fluid.src}
             title={array[i].title}
             shortDescription={array[i].description}
-            contentOne={array[i].content1Title}
-            contentOneText={array[i].content1Text}
-            contentTwo={array[i].content2Title}
-            contentTwoText={array[i].content2Text}
-            contentThree={array[i].content3Title}
-            contentThreeText={array[i].content3Text}
+            bulletPoints={array[i].bulletPoints}
             left={true}
           />
         </MDBCarouselItem>
@@ -127,52 +117,51 @@ class unternehmercoaching extends React.Component {
 export default unternehmercoaching
 
 export const query = graphql`
-  {
-    allContentfulServicePage {
-      edges {
-        node {
+{
+  allContentfulServicePage {
+    edges {
+      node {
+        title
+        text {
+          text
+        }
+        serviceShort {
           title
-          text {
-            text
+          description
+          icon {
+            fluid {
+              src
+            }
           }
-          serviceShort {
+        }
+        serviceLong {
+          ... on ContentfulServiceLong {
             title
-            description
+            imageleft
+            image {
+              fluid {
+                src
+              }
+            }
             icon {
               fluid {
                 src
               }
             }
           }
-          serviceLong {
-            ... on ContentfulServiceLong {
-              title
-              imageleft
-              image {
-                fluid {
-                  src
-                }
-              }
-              icon {
-                fluid {
-                  src
-                }
-              }
-              content1Title
-              content1Text
-              content2Title
-              content2Text
-              content3Title
-              content3Text
-            }
+          bulletPoints {
+            title
+            subtitle
           }
         }
       }
     }
-    contactInfo:contentfulCompanyInfo {
-      phoneNumber1
-      phoneNumber2
-      eMailAddresse
-    }
   }
+  contactInfo: contentfulCompanyInfo {
+    phoneNumber1
+    phoneNumber2
+    eMailAddresse
+  }
+}
+
 `
