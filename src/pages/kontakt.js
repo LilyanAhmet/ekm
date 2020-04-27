@@ -176,7 +176,7 @@ class kontakt extends React.Component {
             <MDBCardBody cascade className="text-center">
               <MDBContainer>
                 <MDBRow>
-                  <MDBCol>
+                  <MDBCol md={6} xs={12}>
                     <div class="map row">
                       <div class="mapouter">
                         <div class="gmap_canvas">
@@ -194,7 +194,7 @@ class kontakt extends React.Component {
                       </div>
                     </div>
                   </MDBCol>
-                  <MDBCol>
+                  <MDBCol  md={6} xs={12}>
                     <div class="map row">
                       <div class="mapouter">
                         <div class="gmap_canvas">

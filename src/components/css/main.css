@@ -1685,11 +1685,8 @@ footer .social li {
   .ueber-ekm p {
     padding-right: 0;
     font-size: 16px;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.5;
-    letter-spacing: normal;
-    text-align: justify;
+    text-align: center;
     color: var(--font-color);
   }
 
@@ -1844,6 +1841,16 @@ footer .social li {
   }
   .rectangle {
     margin-top: -5px;
+  }
+
+  .contact .map .mapouter {
+    margin-bottom: 30px;
+  }
+  .contact .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+    width: 100%;
+  }
+  .ekm .Rectangle {
+    display: none;
   }
 }
 
