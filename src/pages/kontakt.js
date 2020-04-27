@@ -240,6 +240,8 @@ class kontakt extends React.Component {
               <form
                 className="needs-validation"
                 name="contact"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
                 onSubmit={this.submitHandler}
                 noValidate
               >
