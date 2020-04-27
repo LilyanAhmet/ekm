@@ -756,8 +756,7 @@ ul {
 
 .services .service-short img {
   max-width: 100px;
-  margin-left: 0;
-  object-fit: contain;
+  max-height: 100px;
   margin-left: -20px;
 }
 .services .service-short h3 {
@@ -794,8 +793,7 @@ ul {
   display: flex;
 }
 .services .service-long .details .title h2 {
-  margin-top: 9px;
-  padding-left: 30px;
+  margin: auto 15px;
   font-size: 25px;
   font-weight: bold;
   font-stretch: normal;
@@ -806,6 +804,7 @@ ul {
 }
 .services .service-long .details .title img {
   max-width: 66px;
+  max-height: 66px;
   margin-left: -15px;
 }
 .services .service-long .details .list .block {
@@ -1076,7 +1075,7 @@ ul {
 }
 .blog-list .right button {
   position: absolute;
-  bottom: 10%;
+  bottom: 2%;
   left: 22%;
   margin: auto;
   border-radius: 19px !important;
@@ -1685,11 +1684,8 @@ footer .social li {
   .ueber-ekm p {
     padding-right: 0;
     font-size: 16px;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.5;
-    letter-spacing: normal;
-    text-align: justify;
+    text-align: center;
     color: var(--font-color);
   }
 
@@ -1777,7 +1773,6 @@ footer .social li {
     display: inline-flex;
   }
   .services .service-short img {
-    margin-top: -60px;
   }
   .services .service-short h3 {
     font-family: Gilroy Ebold;
@@ -1793,7 +1788,6 @@ footer .social li {
   }
   .services .service-long .details .title h2 {
     font-family: Gilroy Ebold;
-    padding-top: 10px;
     padding-left: 10px;
     font-size: 18px;
   }
@@ -1844,6 +1838,28 @@ footer .social li {
   }
   .rectangle {
     margin-top: -5px;
+  }
+
+  .contact .map .mapouter {
+    margin-bottom: 30px;
+  }
+  .contact .card.card-cascade.wider.reverse .card-body.card-body-cascade {
+    width: 100%;
+  }
+  .ekm .Rectangle {
+    display: none;
+  }
+  .services .service-short {
+    padding-left: 0px;
+  }
+  .services p {
+    padding-right: 0 !important;
+  }
+  footer .title {
+    font-size: 12px;
+  }
+  .footer-copyright img {
+    width: 70%;
   }
 }
 
@@ -1950,6 +1966,15 @@ footer .social li {
   #nav-bg {
     background-color: var(--main-color);
     border-radius: unset;
+  }
+  .services .service-long .details .title h2 {
+    font-size: 21px;
+  }
+  .services p {
+    padding-right: 10%;
+  }
+  .services .service-short {
+    padding-left: 30px;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */

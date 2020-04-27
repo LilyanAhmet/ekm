@@ -176,7 +176,7 @@ class kontakt extends React.Component {
             <MDBCardBody cascade className="text-center">
               <MDBContainer>
                 <MDBRow>
-                  <MDBCol>
+                  <MDBCol md={6} xs={12}>
                     <div class="map row">
                       <div class="mapouter">
                         <div class="gmap_canvas">
@@ -194,7 +194,7 @@ class kontakt extends React.Component {
                       </div>
                     </div>
                   </MDBCol>
-                  <MDBCol>
+                  <MDBCol  md={6} xs={12}>
                     <div class="map row">
                       <div class="mapouter">
                         <div class="gmap_canvas">
@@ -301,6 +301,7 @@ class kontakt extends React.Component {
                       label="Postleitzahl"
                       outline
                       required
+                      type="number"
                       name="postleitzahl"
                       value={postleitzahl}
                       onChange={this.changeHandler}
@@ -355,7 +356,7 @@ class kontakt extends React.Component {
                     >
                       <select
                         className="browser-default custom-select"
-                        required
+                        
                         name="Unternehmercoaching"
                         id="UnternehmercoachingInput"
                         value={Unternehmercoaching}
@@ -384,7 +385,7 @@ class kontakt extends React.Component {
                     >
                       <select
                         className="browser-default custom-select"
-                        required
+                        
                         name="existenzgründercoaching_service"
                         id="existenzgrundercoaching_serviceInput"
                         value={existenzgründercoaching_service}
