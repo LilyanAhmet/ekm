@@ -301,6 +301,7 @@ class kontakt extends React.Component {
                       label="Postleitzahl"
                       outline
                       required
+                      type="number"
                       name="postleitzahl"
                       value={postleitzahl}
                       onChange={this.changeHandler}
@@ -355,7 +356,7 @@ class kontakt extends React.Component {
                     >
                       <select
                         className="browser-default custom-select"
-                        required
+                        
                         name="Unternehmercoaching"
                         id="UnternehmercoachingInput"
                         value={Unternehmercoaching}
@@ -384,7 +385,7 @@ class kontakt extends React.Component {
                     >
                       <select
                         className="browser-default custom-select"
-                        required
+                        
                         name="existenzgründercoaching_service"
                         id="existenzgrundercoaching_serviceInput"
                         value={existenzgründercoaching_service}
