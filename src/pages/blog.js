@@ -62,7 +62,7 @@ export const query = graphql`
       }
     }
   }
-  allContentfulBlogContent(sort: {fields: content}) {
+  allContentfulBlogContent(sort: {fields: createdAt, order: DESC}) {
     edges {
       node {
         content

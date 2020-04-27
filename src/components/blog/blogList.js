@@ -19,39 +19,22 @@ export default class blogList extends Component {
   }
 
   pageChange(a, b) {
-    alert(a)
-  }
-
-  makePages(tabClass) {
-    if (
-      document.getElementsByClassName("paging-" + tabClass)[0] &&
-      document.getElementsByClassName(tabClass).length > 3
+    for (
+      let index = 0;
+      index < document.getElementsByClassName(a).length;
+      index++
     ) {
-      let pageNum = 1
-      for (
-        let index = 0;
-        index < document.getElementsByClassName(tabClass).length;
-        index++
-      ) {
-        if (index % 3 == 0) {
-          document.getElementsByClassName("paging-" + tabClass)[0].innerHTML =
-            document.getElementsByClassName("paging-" + tabClass)[0].innerHTML +
-            "<a href=\"javascript:pageChange('" +
-            tabClass +
-            "'," +
-            pageNum +
-            ')">' +
-            pageNum +
-            "</a>"
-          pageNum++
-        }
-      }
+      document.getElementsByClassName(a)[index].style.display = "none"
     }
-  }
 
-  componentDidMount() {
-    for (let index = 0; index < this.props.blogContent.length; index++) {
-      //this.makePages(this.props.blogContent[index].node.id)
+    for (
+      let index = 0;
+      index < document.getElementsByClassName("page" + b + "-" + a).length;
+      index++
+    ) {
+      document.getElementsByClassName("page" + b + "-" + a)[
+        index
+      ].style.display = "block"
     }
   }
 
@@ -117,7 +100,7 @@ export default class blogList extends Component {
                           return (
                             <BlogCard
                               postDisplay={postDisplay}
-                              postPageNumber={`${blogPost.node.id} page${pageNumber}`}
+                              postPageNumber={`${blogPost.node.id} page${pageNumber}-${blogPost.node.id}`}
                               cat={blogPost.node.title}
                               title={Content.title}
                               date={Content.createdAt}
@@ -125,7 +108,28 @@ export default class blogList extends Component {
                             />
                           )
                         })}
-                        <div className={`paging-${blogPost.node.id}`}></div>
+                        <div className={`paging-${blogPost.node.id}`}>
+                          {(() => {
+                            const options = []
+
+                            for (let i = 1; i <= pageNumber; i++) {
+                              options.push(
+                                <a
+                                  href="#"
+                                  style={{ display: "inline-block" }}
+                                  className={`page-link pageButton-${blogPost.node.id}-${i}`}
+                                  onClick={() =>
+                                    this.pageChange(blogPost.node.id, i)
+                                  }
+                                >
+                                  {i}
+                                </a>
+                              )
+                            }
+
+                            return options
+                          })()}
+                        </div>
                       </Tab.Pane>
                     )
                   })}
