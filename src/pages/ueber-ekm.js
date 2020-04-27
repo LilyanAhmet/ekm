@@ -133,6 +133,9 @@ class ueberEkm extends React.Component {
                 <p>
                   {graphData.allContentfulSinglePage.edges[0].node.text1.text1}
                 </p>
+                <p>
+                  {graphData.allContentfulSinglePage.edges[0].node.text2.text2}
+                </p>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
