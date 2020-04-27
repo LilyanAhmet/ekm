@@ -51,7 +51,7 @@ class kontakt extends React.Component {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "Kontakt", ...this.state }),
+        body: encode({ "form-name": "contact", ...this.state }),
       })
         .then(() => window.location.pathname = '/erfolgreich')
         .catch(error => alert(error))
@@ -239,7 +239,7 @@ class kontakt extends React.Component {
             <MDBRow>
               <form
                 className="needs-validation"
-                name="kontakt"
+                name="contact"
                 onSubmit={this.submitHandler}
                 noValidate
               >
