@@ -588,6 +588,46 @@ ul {
 .ekm .tab-section {
   margin-top: 50px;
 }
+.impressum .tab-section .nav-pills .nav-link.active {
+  font-family: "Gilroy Ebold";
+  max-width: 250px;
+  padding: 10px 30px;
+  border-radius: 11px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(
+    78deg,
+    var(--dark-turquoise-color),
+    #0cefa5 100%
+  ) !important;
+  color: var(--font-color);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-size: 20px;
+  letter-spacing: normal;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.impressum .tab-section .nav-pills .nav-link {
+  font-family: "Gilroy Ebold";
+  max-width: 250px;
+  padding: 10px 30px;
+  border-radius: 11px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: #f5faff !important;
+  background-image:none !important;
+  color: var(--font-color);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-size: 20px;
+  letter-spacing: normal;
+  text-align: center;
+  margin-bottom: 40px;
+}
 .ekm .tab-section .nav-pills .nav-link {
   font-family: "Gilroy Ebold";
   max-width: 250px;
@@ -609,13 +649,13 @@ ul {
   text-align: center;
   margin-bottom: 40px;
 }
-
 .ekm .tab-section .nav-item {
   display: flex;
   margin: auto;
 }
 .ekm .tab-section .tab-content {
   margin-top: 40px;
+  width: 100%;
 }
 .ekm .tab-section p {
   padding: 8%;
@@ -632,6 +672,22 @@ ul {
   background: #fff;
   border-radius: 16.7px;
   box-shadow: 0 24px 43px 0 rgba(73, 85, 136, 0.2);
+  margin-bottom: 30px;
+}
+.ekm .box .imp{
+  padding: 30px;
+}
+.ekm .box .imp p{
+  font-weight: lighter;
+  padding: 0;
+  font-family: Gilroy;
+  color: #16374e;
+  line-height: 1.4;
+}
+.ekm .box .imp h4{
+  font-weight: bold;
+  font-family: Gilroy;
+  color: #16374e;
 }
 .ekm .box .title {
   display: flex;
@@ -668,6 +724,7 @@ ul {
   color: var(--font-color);
   padding: 20px 30px;
 }
+
 .ekm .certificate .title {
   display: flex;
   padding: 15px 15px 0;

@@ -37,7 +37,7 @@ export default class berater extends Component {
             </MDBRow>
           </MDBContainer>
           <Container className="tab-section">
-            <Row>
+           {/* <Row>
               <Col sm={4} xs={12} className="nav-pills">
                 <div className="nav-link">
                   {graphData.allContentfulConsultant.edges[1].node.name}
@@ -59,7 +59,7 @@ export default class berater extends Component {
                 </Row>
               </Col>
             </Row>
-
+*/} 
             <Row className="margin-p-60">
               <Col sm={4} xs={12} className="nav-pills">
                 <div className="nav-link">

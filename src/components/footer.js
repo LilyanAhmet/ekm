@@ -57,7 +57,7 @@ class footer extends React.Component {
                     </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!">
+                    <a href="/impressum">
                       {" "}
                       <h5 className="title">Impressum</h5>
                     </a>
@@ -231,7 +231,7 @@ class footer extends React.Component {
                     </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!">
+                    <a href="/impressum">
                       {" "}
                       <h5 className="title">Impressum</h5>
                     </a>
