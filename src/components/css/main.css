@@ -2048,6 +2048,11 @@ footer .social li {
   .services .service-short {
     padding-left: 30px;
   }
+
+  .subtitle{
+    color:black !important;
+    text-align: left !important;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 993px) and (min-width: 1199px) {

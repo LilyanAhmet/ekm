@@ -60,8 +60,11 @@ export default class index extends Component {
                       <h1 className="h1-responsive font-weight-bold mt-sm-5">
                         {graphData.contentfulHomePage.title}
                       </h1>
-                      <h6 className="mb-4">
+                      <h2>
                         {graphData.contentfulHomePage.subtitle}
+                      </h2>
+                      <h6 className="mb-4">
+                        {graphData.contentfulHomePage.description}
                       </h6>
                       <a href="/ueber-ekm/">
                         <MDBBtn color="white" gradient="aqua">
@@ -106,8 +109,11 @@ export default class index extends Component {
                       <h1 className="h1-responsive font-weight-bold mt-sm-5">
                         {graphData.contentfulHomePage.title}
                       </h1>
-                      <h6 className="mb-4">
+                      <h2 className="subtitle">
                         {graphData.contentfulHomePage.subtitle}
+                      </h2>
+                      <h6 className="mb-4">
+                        {graphData.contentfulHomePage.description}
                       </h6>
                       <MDBBtn color="white" gradient="aqua">
                         Mehr Erfahren
@@ -238,130 +244,6 @@ export default class index extends Component {
               </MDBRow>
             </MDBContainer>
           </div>
-          <MDBContainer fluid className="referenzen desktop">
-            <MDBContainer>
-              <MDBRow>
-                <MDBCol md={12}>
-                  <h1 className="borderimg">
-                    {graphData.contentfulHomePage.referencentitle}
-                  </h1>
-                </MDBCol>
-              </MDBRow>
-              <div className="d-flex justify-content-end">
-                <div className="p-2 col-example text-left">
-                  <img
-                    className="img-fluid margin-m-bottom-50"
-                    src={
-                      graphData.allContentfulReferenzenHomepage.edges[1].node
-                        .photo.fluid.src
-                    }
-                  />
-                </div>
-                <div className="p-2 col-example text-left">
-                  <div className="margin-p-right-30"></div>
-                </div>
-              </div>
-              <div className="d-flex justify-content-start">
-                <div className="p-2 col-example text-left">
-                  <img
-                    className="img-fluid"
-                    src={
-                      graphData.allContentfulReferenzenHomepage.edges[0].node
-                        .photo.fluid.src
-                    }
-                  />
-                </div>
-              </div>
-              <div className="d-flex justify-content-center">
-                <div className="p-2 col-example text-left">
-                  <div className="center">
-                    <h4>{graphData.contentfulHomePage.referencentitle2}</h4>
-                    <a href="/referenzen">
-                      <MDBBtn color="white">Mehr Erfahren</MDBBtn>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="d-flex justify-content-between">
-                <div className="p-2 col-example text-left">
-                  <img
-                    className="img-fluid"
-                    src={
-                      graphData.allContentfulReferenzenHomepage.edges[2].node
-                        .photo.fluid.src
-                    }
-                  />
-                </div>
-
-                <div className="p-2 col-example text-left">
-                  <img
-                    className="img-fluid"
-                    src={
-                      graphData.allContentfulReferenzenHomepage.edges[3].node
-                        .photo.fluid.src
-                    }
-                  />
-                </div>
-              </div>
-              <div className="d-flex justify-content-around">
-                <div className="p-2 col-example text-left">
-                  <img
-                    className="img-fluid"
-                    src={
-                      graphData.allContentfulReferenzenHomepage.edges[4].node
-                        .photo.fluid.src
-                    }
-                  />
-                </div>
-              </div>
-            </MDBContainer>
-
-            {/* <Newsletter />*/}
-          </MDBContainer>
-          <MDBContainer fluid className="referenzen mobile">
-            <MDBContainer>
-              <MDBRow>
-                <MDBCol md={12}>
-                  <h1 className="borderimg">
-                    {graphData.contentfulHomePage.referencentitle}
-                  </h1>
-                </MDBCol>
-              </MDBRow>
-              <div className="d-flex justify-content-between">
-                <div className="p-2 col-example text-left">
-                  <img
-                    className="img-fluid"
-                    src={
-                      graphData.allContentfulReferenzenHomepage.edges[2].node
-                        .photo.fluid.src
-                    }
-                  />
-                </div>
-              </div>
-              <div className="d-flex justify-content-around">
-                <div className="p-2 col-example text-left">
-                  <img
-                    className="img-fluid"
-                    src={
-                      graphData.allContentfulReferenzenHomepage.edges[4].node
-                        .photo.fluid.src
-                    }
-                  />
-                </div>
-              </div>
-              <div className="d-flex justify-content-center">
-                <div className="p-2 col-example text-left">
-                  <div className="center">
-                    <h4>{graphData.contentfulHomePage.referencentitle2}</h4>
-                    <a href="/referenzen">
-                      <MDBBtn color="white">Mehr Erfahren</MDBBtn>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </MDBContainer>
-            {/* <Newsletter />*/}
-          </MDBContainer>
         </Layout>
       </div>
     )
@@ -372,6 +254,7 @@ export const query = graphql`
     contentfulHomePage {
       title
       subtitle
+      description
       mainimage {
         fluid {
           src

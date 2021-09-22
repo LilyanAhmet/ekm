@@ -80,11 +80,6 @@ class footer extends React.Component {
                         {contactData.phoneNumber1}
                       </h5>
                     </a>
-                    <a href="tel:004915127052528">
-                      <h5 className="title">
-                        <MDBIcon className="margin-p-right-25" /> {contactData.phoneNumber2}
-                      </h5>
-                    </a>
                   </li>
                   <li className="list-unstyled margin-p-20 ">
                     <a href="mailto:info@ekm.de">
@@ -263,11 +258,6 @@ class footer extends React.Component {
                               style={{ transform: "scaleX(-1)" }}
                           />{" "}
                           {contactData.phoneNumber1}
-                        </h5>
-                      </a>
-                      <a  href="tel:004915127052528">
-                        <h5 className="title">
-                          <MDBIcon className="margin-p-right-25" /> {contactData.phoneNumber2}
                         </h5>
                       </a>
                     </li>
