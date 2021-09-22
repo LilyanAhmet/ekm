@@ -27,7 +27,7 @@ class Unternehmerberatung extends React.Component {
           img={array[i].image.fluid.src}
           icon={array[i].icon.fluid.src}
           title={array[i].title}
-          shortDescription={array[i].desciption}
+          shortDescription={array[i].description}
           bulletPoints={array[i].bulletPoints}
           left={array[i].imageleft}
         />
@@ -44,7 +44,7 @@ class Unternehmerberatung extends React.Component {
             img={array[i].image.fluid.src}
             icon={array[i].icon.fluid.src}
             title={array[i].title}
-            shortDescription={array[i].subtitle}
+            shortDescription={array[i].description}
             bulletPoints={array[i].bulletPoints}
             left={true}
           />
@@ -75,23 +75,23 @@ class Unternehmerberatung extends React.Component {
       <Layout contactData={graphData.contactInfo}>
         <SEO title="unternehmercoaching" />
         <Description
-          title={graphData.allContentfulServicePage.edges[1].node.title}
+          title={graphData.allContentfulServicePage.edges[0].node.title}
           description={
-            graphData.allContentfulServicePage.edges[1].node.text.text
+            graphData.allContentfulServicePage.edges[0].node.text.text
           }
           img={karImage}
         />
         <MDBContainer size="lg">
           <MDBRow>
             {this.createServiceShort(
-              graphData.allContentfulServicePage.edges[1].node.serviceShort
+              graphData.allContentfulServicePage.edges[0].node.serviceShort
             )}
           </MDBRow>
         </MDBContainer>
         <MDBContainer fluid className="bggray">
           <div className="desktop">
             {this.createServiceLong(
-              graphData.allContentfulServicePage.edges[1].node.serviceLong
+              graphData.allContentfulServicePage.edges[0].node.serviceLong
             )}
           </div>
           <div className="mobile">
@@ -103,7 +103,7 @@ class Unternehmerberatung extends React.Component {
             >
               <MDBCarouselInner>
                 {this.createServiceLongResponsive(
-                  graphData.allContentfulServicePage.edges[1].node.serviceLong
+                  graphData.allContentfulServicePage.edges[0].node.serviceLong
                 )}
               </MDBCarouselInner>
             </MDBCarousel>
@@ -117,7 +117,7 @@ export default Unternehmerberatung
 
 export const query = graphql`
 {
-  allContentfulServicePage {
+  allContentfulServicePage(filter:  { title: { eq:"Unternehmerberatung" }  }) {
     edges {
       node {
         title

@@ -117,7 +117,7 @@ export default Karrieremanagement
 
 export const query = graphql`
 {
-  allContentfulServicePage {
+  allContentfulServicePage(filter:  { title: { eq:"Karrieremanagement" }  }) {
     edges {
       node {
         title
@@ -144,9 +144,12 @@ export const query = graphql`
             }
             icon {
               fluid {
+                base64
                 src
+                srcSet
               }
             }
+            subtitle
           }
           bulletPoints {
             title
