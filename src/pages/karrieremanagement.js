@@ -16,9 +16,9 @@ import Description from "../components/sharedComponents/description"
 import ServiceShort from "../components/sharedComponents/serviceShort"
 import ServiceLong from "../components/sharedComponents/serviceLong"
 /* resources */
-import DescImage from "../images/Unternehmercoaching.svg"
+import DescImage from "../images/karrieremanagament.svg"
 
-class unternehmercoaching extends React.Component {
+class Karrieremanagement extends React.Component {
   createServiceLong = array => {
     let createServiceLong = []
     for (let i = 0; i < array.length; i++) {
@@ -114,7 +114,7 @@ class unternehmercoaching extends React.Component {
     )
   }
 }
-export default unternehmercoaching
+export default Karrieremanagement
 
 export const query = graphql`
 {
