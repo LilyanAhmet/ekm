@@ -8,17 +8,21 @@ import {
   MDBCol,
   MDBCarousel,
   MDBCarouselInner,
-  MDBCarouselItem
-  
+  MDBCarouselItem,
 } from "mdbreact"
+
 /*components */
 import Description from "../components/sharedComponents/description"
 import ServiceShort from "../components/sharedComponents/serviceShort"
 import ServiceLong from "../components/sharedComponents/serviceLong"
 /* resources */
-import DescImage from "../images/Unternehmercoaching.svg"
-
-class unternehmercoaching extends React.Component {
+import karImage from "../images/karrieremanagament.svg"
+import IconOne from "../images/icon1.svg"
+import IconTwo from "../images/icon2.svg"
+import IconThree from "../images/icon3.svg"
+import IconFour from "../images/icon4.svg"
+import LongImg from "../images/longImg.svg"
+class karrieremanagament extends React.Component {
   createServiceLong = array => {
     let createServiceLong = []
     for (let i = 0; i < array.length; i++) {
@@ -27,7 +31,7 @@ class unternehmercoaching extends React.Component {
           img={array[i].image.fluid.src}
           icon={array[i].icon.fluid.src}
           title={array[i].title}
-          shortDescription={array[i].description}
+          shortDescription={array[i].subtitle}
           bulletPoints={array[i].bulletPoints}
           left={array[i].imageleft}
         />
@@ -44,7 +48,7 @@ class unternehmercoaching extends React.Component {
             img={array[i].image.fluid.src}
             icon={array[i].icon.fluid.src}
             title={array[i].title}
-            shortDescription={array[i].description}
+            shortDescription={array[i].subtitle}
             bulletPoints={array[i].bulletPoints}
             left={true}
           />
@@ -68,43 +72,42 @@ class unternehmercoaching extends React.Component {
     }
     return createServiceShort
   }
-
   render() {
     const graphData = this.props.data
+    console.log(graphData)
     return (
       <Layout contactData={graphData.contactInfo}>
         <SEO title="unternehmercoaching" />
         <Description
-          title={graphData.allContentfulServicePage.edges[0].node.title}
+          title={graphData.allContentfulServicePage.edges[1].node.title}
           description={
-            graphData.allContentfulServicePage.edges[0].node.text.text
+            graphData.allContentfulServicePage.edges[1].node.text.text
           }
-          img={DescImage}
+          img={karImage}
         />
-
         <MDBContainer size="lg">
           <MDBRow>
             {this.createServiceShort(
-              graphData.allContentfulServicePage.edges[0].node.serviceShort
+              graphData.allContentfulServicePage.edges[1].node.serviceShort
             )}
           </MDBRow>
         </MDBContainer>
         <MDBContainer fluid className="bggray">
           <div className="desktop">
             {this.createServiceLong(
-              graphData.allContentfulServicePage.edges[0].node.serviceLong
+              graphData.allContentfulServicePage.edges[1].node.serviceLong
             )}
           </div>
           <div className="mobile">
             <MDBCarousel
               activeItem={1}
-              length={4}
+              length={3}
               showControls={true}
               showIndicators={false}
             >
               <MDBCarouselInner>
                 {this.createServiceLongResponsive(
-                  graphData.allContentfulServicePage.edges[0].node.serviceLong
+                  graphData.allContentfulServicePage.edges[1].node.serviceLong
                 )}
               </MDBCarouselInner>
             </MDBCarousel>
@@ -114,7 +117,7 @@ class unternehmercoaching extends React.Component {
     )
   }
 }
-export default unternehmercoaching
+export default karrieremanagament
 
 export const query = graphql`
 {
@@ -145,9 +148,12 @@ export const query = graphql`
             }
             icon {
               fluid {
+                base64
                 src
+                srcSet
               }
             }
+            subtitle
           }
           bulletPoints {
             title

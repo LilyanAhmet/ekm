@@ -37,18 +37,12 @@ class Header extends React.Component {
             <MDBNavbarToggler onClick={this.toggleCollapse} />
             <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
               <MDBNavbarNav left>
-                <MDBNavItem>
-                  <MDBDropdown>
-                    <MDBDropdownToggle nav caret>
-                      <span className="mr-2">Über Uns</span>
-                    </MDBDropdownToggle>
-                    <MDBDropdownMenu>
-                      <MDBDropdownItem href="/ueber-ekm">Über EKM</MDBDropdownItem>
-                      <MDBDropdownItem href="/berater">Berater </MDBDropdownItem>
-                      <MDBDropdownItem href="/erfahrungen">Erfahrungen</MDBDropdownItem>
-                    </MDBDropdownMenu>
-                  </MDBDropdown>
-                </MDBNavItem>
+              <MDBNavItem>
+                  <Link className="nav-link waves-effect waves-light" to="/ueber-ekm">
+                    Über Uns
+                  </Link>
+              </MDBNavItem>
+                
                 <MDBNavItem>
                   <MDBDropdown>
                     <MDBDropdownToggle nav caret>
@@ -60,6 +54,7 @@ class Header extends React.Component {
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavItem>
+                {/* 
                 <MDBNavItem>
                   <Link className="nav-link waves-effect waves-light" to="/referenzen">
                     Referenzen
@@ -70,6 +65,7 @@ class Header extends React.Component {
                     Blog
                   </Link>
                 </MDBNavItem>
+                */}
                 <MDBNavItem>
                   <Link className="nav-link waves-effect waves-light" to="/kontakt">
                     Kontakt
@@ -87,7 +83,7 @@ class Header extends React.Component {
                     {contactData.phoneNumber1}
                   </a>
                   <Link
-                      className="nav-link waves-effect waves-light margin-m-10 "
+                      className="nav-link waves-effect waves-light margin-m-30"
 
                       href="tel:004915127052528"
                   >

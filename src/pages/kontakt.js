@@ -138,7 +138,7 @@ class kontakt extends React.Component {
                         <h3>
                           <div
                             className="rectangle"
-                            style={{ height: "60px" }}
+                            style={{ height: "40px" }}
                           />{" "}
                           {graphData.contactInfo.phoneNumber1}<br />
                           {graphData.contactInfo.phoneNumber2}
@@ -161,11 +161,10 @@ class kontakt extends React.Component {
                           {" "}
                           <div
                             className="rectangle"
-                            style={{ height: "130px" }}
+                            style={{ height: "60px" }}
                           />{" "}
                           {graphData.contactInfo.addressText1}
-                          <br /> <br />
-                          {graphData.contactInfo.addressText2}
+                          
                         </h3>
                       </div>
                     </div>
@@ -176,7 +175,7 @@ class kontakt extends React.Component {
             <MDBCardBody cascade className="text-center">
               <MDBContainer>
                 <MDBRow>
-                  <MDBCol md={6} xs={12}>
+                  <MDBCol md={12} xs={12}>
                     <div class="map row">
                       <div class="mapouter">
                         <div class="gmap_canvas">
@@ -185,24 +184,6 @@ class kontakt extends React.Component {
                             height="350"
                             id="gmap_canvas"
                             src={`https://maps.google.com/maps?q=${graphData.contactInfo.address1.lat},${graphData.contactInfo.address1.lon}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
-                            frameborder="0"
-                            scrolling="no"
-                            marginheight="0"
-                            marginwidth="0"
-                          ></iframe>
-                        </div>
-                      </div>
-                    </div>
-                  </MDBCol>
-                  <MDBCol  md={6} xs={12}>
-                    <div class="map row">
-                      <div class="mapouter">
-                        <div class="gmap_canvas">
-                          <iframe
-                            title="mapfecbf7e5-9c67-5526-93c9-056ddc2c5c9d"
-                            height="350"
-                            id="gmap_canvas"
-                            src={`https://maps.google.com/maps?q=${graphData.contactInfo.address2.lat},${graphData.contactInfo.address2.lon}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
                             frameborder="0"
                             scrolling="no"
                             marginheight="0"
@@ -342,10 +323,10 @@ class kontakt extends React.Component {
                           Für welchen EKM-Service interessieren Sie sich?
                         </option>
                         <option value="Unternehmercoaching">
-                          Unternehmercoaching
+                          Unternehmensberatung
                         </option>
                         <option value="Karrieremanagament">
-                          Karrieremanagament
+                          Karrieremanagement
                         </option>
                       </select>
                     </div>
@@ -365,7 +346,7 @@ class kontakt extends React.Component {
                         onChange={this.changeHandler}
                       >
                         <option value="">
-                          Welcher Unternehmercoaching Service?
+                          Welcher Unternehmensberatung Service?
                         </option>
                         <option value="Existenzgründercoaching">
                           Existenzgründercoaching
@@ -441,11 +422,6 @@ export const query = graphql`
       lat
       lon
     }
-    address2 {
-      lat
-      lon
-    }
-    addressText2
   }
 }
 

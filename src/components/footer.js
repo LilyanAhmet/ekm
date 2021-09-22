@@ -17,14 +17,13 @@ class footer extends React.Component {
                 <img className="img-fluid" src={Logo} />
               </MDBCol>
               <MDBCol>
-                <h5 className="title">Über Uns</h5>
                 <ul>
                   <li className="list-unstyled">
-                    <a href="/ueber-ekm">Über EKM</a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="/berater">Berater</a>
-                  </li>
+                        <a href="/ueber-ekm">
+                          {" "}
+                          <h5 className="title">Über Uns</h5>
+                        </a>
+                    </li>
                   {/*<li className="list-unstyled">
                   <a href="#!">Erfahrungen</a>
                 </li> */}
@@ -42,14 +41,17 @@ class footer extends React.Component {
                 </ul>
               </MDBCol>
               <MDBCol>
-                <h5 className="title">Referenzen</h5>
+                {//<h5 className="title">Referenzen</h5>
+                }
                 <ul>
+                  {/*
                   <li className="list-unstyled">
                     <a href="/blog">
                       {" "}
                       <h5 className="title">Blog</h5>
                     </a>
                   </li>
+                  */}
                   <li className="list-unstyled">
                     <a href="/kontakt">
                       {" "}
@@ -108,12 +110,13 @@ class footer extends React.Component {
                 <MDBCol md="4" sm="12">
                   <p>
                     &copy; {new Date().getFullYear()} Urheberrechte EKM
-                    Klose/Schroeder GbR
+                    GmbH
                   </p>
                 </MDBCol>
                 <MDBCol md="4" sm="12">
                   <img className="margin-m-10" src={Icon} />
                 </MDBCol>
+                {/*
                 <MDBCol md="4" sm="12">
                   <ul className="social">
                     <li>
@@ -145,6 +148,7 @@ class footer extends React.Component {
                     </li>
                   </ul>
                 </MDBCol>
+                */}
               </MDBRow>
             </MDBContainer>
           </div>
@@ -189,13 +193,12 @@ class footer extends React.Component {
             </MDBRow>
             <MDBRow className="margin-p-20">
               <MDBCol xs={4} className="margin-auto">
-                <h5 className="title">Über Uns</h5>
                 <ul>
                   <li className="list-unstyled">
-                    <a href="/ueber-ekm">Über EKM</a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="/berater">Berater</a>
+                      <a href="/ueber-ekm">
+                        {" "}
+                        <h5 className="title">Über Uns</h5>
+                      </a>
                   </li>
                   {/*<li className="list-unstyled">
                   <a href="/erfahrungen">Erfahrungen</a>
@@ -216,14 +219,17 @@ class footer extends React.Component {
                 </ul>
               </MDBCol>
               <MDBCol xs={4} className="margin-auto">
-                <h5 className="title">Referenzen</h5>
+                {//<h5 className="title">Referenzen</h5>
+                }
                 <ul>
+                  {/*
                   <li className="list-unstyled">
                     <a href="/blog">
                       {" "}
                       <h5 className="title">Blog</h5>
                     </a>
                   </li>
+                  */}
                   <li className="list-unstyled">
                     <a href="/kontakt">
                       {" "}
@@ -291,7 +297,7 @@ class footer extends React.Component {
                 <MDBCol sm={12} className="margin-auto">
                   <p className="text-center">
                     &copy; {new Date().getFullYear()} Urheberrechte EKM
-                    Klose/Schroeder GbR
+                    GmbH
                   </p>
                 </MDBCol>
               </MDBRow>

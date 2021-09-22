@@ -55,6 +55,7 @@ class ueberEkm extends React.Component {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
+          {/* 
           <MDBContainer fluid className="bggray geschichte">
             <MDBContainer>
               <MDBRow>
@@ -108,6 +109,7 @@ class ueberEkm extends React.Component {
               </MDBRow>
             </MDBContainer>
           </MDBContainer>
+          */}
         </div>
         <div className="ueber-ekm mobile">
           <MDBContainer size="lg">
@@ -139,6 +141,7 @@ class ueberEkm extends React.Component {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
+          {/* 
           <MDBContainer fluid className="bggray geschichte">
             <MDBContainer>
               <MDBRow>
@@ -204,6 +207,7 @@ class ueberEkm extends React.Component {
 
             </MDBRow>
           </MDBContainer>
+          */}
         </div>
       </Layout>
     )

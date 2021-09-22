@@ -54,24 +54,34 @@ export default class Impressum extends Component {
                           <div className="imp">
                             <p>
                               Informationspflicht laut § 5 TMG.
+                              <br /><br />
+                              <p>EKM - Existenzgründungs- und Karrieremanagement GmbH</p>
+                              
+                              <p>Geschäftsführer: Dennis Klose</p>
+                             
+                              <p>Geschäftssitz:<br />
+                              EKM GmbH
                               <br />
-                              EKM - Existenzgründungs- und Karrieremanagement
+                              Dragonenstr. 37
                               <br />
-                              Dennis Klose
+                              30163 Hannover,
                               <br />
-                              Königstr. 55 <br />
-                              30175 Hannover, Deutschland
-                              <br />
-                              <b>UID-Nummer:</b> DE322880499
+                              Deutschland
+                              </p>
+                              <p>Prokurist: Lennart Giesler</p>
+
+                              <p>
+                              <b>Ust-Id-Nr.:</b> DE345093433
                               <br />
                               <b>Tel.</b>: 0152 575 322 73
                               <br />
-                              <b>E-Mail:</b> dennis.klose@ekm-erfolg.de
+                              <b>E-Mail:</b> info@ekm-erfolg.de
                               <br />
                               <b>Berufsbezeichnung:</b> Unternehmensberater
                               <br />
                               Quelle: Erstellt mit dem Impressum Generator von
                               AdSimple in Kooperation mit justmed.de
+                              </p>
                             </p>
                           </div>
                         </Col>

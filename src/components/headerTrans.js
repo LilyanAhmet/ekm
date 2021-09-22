@@ -39,21 +39,10 @@ class HeaderTrans extends React.Component {
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
-              <MDBNavItem>
-                <MDBDropdown>
-                  <MDBDropdownToggle nav caret>
-                    <span className="mr-2">Über Uns</span>
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu>
-                    <MDBDropdownItem href="/ueber-ekm">
-                      Über EKM
-                    </MDBDropdownItem>
-                    <MDBDropdownItem href="/berater">Berater </MDBDropdownItem>
-                    <MDBDropdownItem href="/erfahrungen">
-                      Erfahrungen
-                    </MDBDropdownItem>
-                  </MDBDropdownMenu>
-                </MDBDropdown>
+            <MDBNavItem>
+                  <Link className="nav-link waves-effect waves-light" to="/ueber-ekm">
+                    Über Uns
+                  </Link>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBDropdown>
@@ -70,6 +59,7 @@ class HeaderTrans extends React.Component {
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
+              {/*
               <MDBNavItem>
                 <Link
                   className="nav-link waves-effect waves-light"
@@ -83,6 +73,7 @@ class HeaderTrans extends React.Component {
                   Blog
                 </Link>
               </MDBNavItem>
+              */}
               <MDBNavItem>
                 <Link
                   className="nav-link waves-effect waves-light"
@@ -100,12 +91,12 @@ class HeaderTrans extends React.Component {
                     <MDBIcon
                       fas
                       icon="phone"
-                      style={{ transform: "scaleX(-1)",marginRight:"10px"  }}
+                      style={{ transform: "scaleX(-1)", marginRight: "10px" }}
                     />
                     {contactData.phoneNumber1}
                   </Link>
                   <Link
-                    className="nav-link waves-effect waves-light margin-m-10 "
+                    className="nav-link waves-effect waves-light margin-m-30 "
                     to="#!"
                   >
                     <span style={{ marginRight: "31px" }} />
@@ -114,7 +105,7 @@ class HeaderTrans extends React.Component {
                 </MDBNavItem>
                 <MDBNavItem>
                   <Link className="nav-link waves-effect waves-light" to="#!">
-                    <MDBIcon fas icon="envelope" style={{marginRight:"10px" }} /> {contactData.eMailAddresse}
+                    <MDBIcon fas icon="envelope" style={{ marginRight: "10px" }} /> {contactData.eMailAddresse}
                   </Link>
                 </MDBNavItem>
               </MDBNavbarNav>

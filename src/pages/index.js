@@ -157,7 +157,7 @@ export default class index extends Component {
                         />
                         <h3>{graphData.contentfulHomePage.service1title}</h3>
                         <p>{graphData.contentfulHomePage.service1subtitle} </p>
-                        <a href="/unternehmerberatung">DIENSTE DURCHSUCHEN →</a>
+                        <a href="/unternehmerberatung">MEHR ERFAHREN →</a>
                       </div>
                     </MDBCol>
                     <MDBCol>
@@ -170,7 +170,7 @@ export default class index extends Component {
                         />
                         <h3>{graphData.contentfulHomePage.service2title}</h3>
                         <p>{graphData.contentfulHomePage.service2subtitle} </p>
-                        <a href="/karrieremanagament">DIENSTE DURCHSUCHEN →</a>
+                        <a href="/karrieremanagament">MEHR ERFAHREN →</a>
                       </div>
                     </MDBCol>
                   </MDBRow>
@@ -212,7 +212,7 @@ export default class index extends Component {
                           <p>
                             {graphData.contentfulHomePage.service1subtitle}{" "}
                           </p>
-                          <a href="/unternehmerberatung">DIENSTE DURCHSUCHEN →</a>
+                          <a href="/unternehmerberatung">MEHR ERFAHREN →</a>
                         </div>
                       </div>
                     </MDBCol>
@@ -229,7 +229,7 @@ export default class index extends Component {
                           <p>
                             {graphData.contentfulHomePage.service2subtitle}{" "}
                           </p>
-                          <a href="/karrieremanagament">DIENSTE DURCHSUCHEN →</a>
+                          <a href="/karrieremanagament">MEHR ERFAHREN →</a>
                         </div>
                       </div>
                     </MDBCol>
