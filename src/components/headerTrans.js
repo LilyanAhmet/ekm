@@ -54,7 +54,7 @@ class HeaderTrans extends React.Component {
                       Unternehmerberatung
                     </MDBDropdownItem>
                     <MDBDropdownItem href="/karrieremanagement">
-                      Karrieremanagament{" "}
+                      Karrieremanagement{" "}
                     </MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
