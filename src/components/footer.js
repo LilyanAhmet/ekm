@@ -36,7 +36,7 @@ class footer extends React.Component {
                     <a href="/unternehmerberatung">Unternehmerberatung</a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="/karrieremanagament">Karrieremanagament</a>
+                    <a href="/karrieremanagement">Karrieremanagement</a>
                   </li>
                 </ul>
               </MDBCol>
@@ -214,7 +214,7 @@ class footer extends React.Component {
                     <a href="/unternehmerberatung">Unternehmerberatung</a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="/karrieremanagament">Karrieremanagament</a>
+                    <a href="/karrieremanagement">Karrieremanagement</a>
                   </li>
                 </ul>
               </MDBCol>

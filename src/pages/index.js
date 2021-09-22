@@ -170,7 +170,7 @@ export default class index extends Component {
                         />
                         <h3>{graphData.contentfulHomePage.service2title}</h3>
                         <p>{graphData.contentfulHomePage.service2subtitle} </p>
-                        <a href="/karrieremanagament">MEHR ERFAHREN →</a>
+                        <a href="/karrieremanagement">MEHR ERFAHREN →</a>
                       </div>
                     </MDBCol>
                   </MDBRow>
@@ -229,7 +229,7 @@ export default class index extends Component {
                           <p>
                             {graphData.contentfulHomePage.service2subtitle}{" "}
                           </p>
-                          <a href="/karrieremanagament">MEHR ERFAHREN →</a>
+                          <a href="/karrieremanagement">MEHR ERFAHREN →</a>
                         </div>
                       </div>
                     </MDBCol>

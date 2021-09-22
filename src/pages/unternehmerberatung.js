@@ -17,11 +17,7 @@ import ServiceShort from "../components/sharedComponents/serviceShort"
 import ServiceLong from "../components/sharedComponents/serviceLong"
 /* resources */
 import karImage from "../images/Unternehmercoaching.svg"
-import IconOne from "../images/icon1.svg"
-import IconTwo from "../images/icon2.svg"
-import IconThree from "../images/icon3.svg"
-import IconFour from "../images/icon4.svg"
-import LongImg from "../images/longImg.svg"
+
 class Unternehmerberatung extends React.Component {
   createServiceLong = array => {
     let createServiceLong = []
@@ -31,7 +27,7 @@ class Unternehmerberatung extends React.Component {
           img={array[i].image.fluid.src}
           icon={array[i].icon.fluid.src}
           title={array[i].title}
-          shortDescription={array[i].subtitle}
+          shortDescription={array[i].desciption}
           bulletPoints={array[i].bulletPoints}
           left={array[i].imageleft}
         />

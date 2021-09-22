@@ -73,7 +73,7 @@ class Karrieremanagement extends React.Component {
     const graphData = this.props.data
     return (
       <Layout contactData={graphData.contactInfo}>
-        <SEO title="karrieremanagament" />
+        <SEO title="karrieremanagement" />
         <Description
           title={graphData.allContentfulServicePage.edges[0].node.title}
           description={
@@ -81,7 +81,6 @@ class Karrieremanagement extends React.Component {
           }
           img={DescImage}
         />
-test
         <MDBContainer size="lg">
           <MDBRow>
             {this.createServiceShort(
