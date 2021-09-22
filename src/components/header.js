@@ -50,7 +50,7 @@ class Header extends React.Component {
                     </MDBDropdownToggle>
                     <MDBDropdownMenu>
                       <MDBDropdownItem href="/unternehmerberatung">Unternehmerberatung</MDBDropdownItem>
-                      <MDBDropdownItem href="/karrieremanagement">Karrieremanagament </MDBDropdownItem>
+                      <MDBDropdownItem href="/karrieremanagement">Karrieremanagement </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavItem>
