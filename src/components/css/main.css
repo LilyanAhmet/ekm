@@ -836,6 +836,7 @@ ul {
   letter-spacing: normal;
   color: var(--font-color);
   margin-bottom: 32px;
+  min-height: 44px;
 }
 .services .service-short p {
   font-size: 18px;
