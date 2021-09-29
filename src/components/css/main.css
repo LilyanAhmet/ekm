@@ -401,8 +401,6 @@ ul {
 .referenzen img {
   max-width: 300px;
 }
-.referenzen .center {
-}
 .referenzen .center h4 {
   font-size: 23px;
   font-weight: bold;
@@ -694,11 +692,21 @@ ul {
   color: #16374e;
   line-height: 1.4;
 }
+
+.ekm .box .imp p .subpoint{
+  font-weight: bold;
+}
+
 .ekm .box .imp h4{
   font-weight: bold;
   font-family: Gilroy;
   color: #16374e;
 }
+
+.ekm .box .imp h6{
+  font-weight: bold;
+}
+
 .ekm .box .title {
   display: flex;
   padding: 15px 15px 0;
