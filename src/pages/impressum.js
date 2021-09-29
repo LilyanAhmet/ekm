@@ -69,14 +69,15 @@ export default class Impressum extends Component {
                               </p>
                               <p>Geschäftsführer: Dennis Klose</p>
                               <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE345093433 </p>
-                              <p>Plattform der EU-Kommission zur Online-Streitbeilegung: https://ec.europa.eu/odr </p>
+                              <p>Plattform der EU-Kommission zur Online-Streitbeilegung: <a href="https://ec.europa.eu/odr">https://ec.europa.eu/odr</a></p>
                               <p>Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.</p>
-
-                              <p>Prokurist: Lennart Giesler</p>
 
                               <p>
                                 Berufsbezeichnung: Unternehmensberater </p>
                             </p>
+
+                            <p>Quelle: <a href="https://www.it-recht-kanzlei.de/"> https://www.it-recht-kanzlei.de/</a></p>
+
                           </div>
                         </Col>
                       </Row>
@@ -331,6 +332,9 @@ export default class Impressum extends Component {
                               Daten im Übrigen dann gelöscht, wenn sie für die Zwecke, für die sie erhoben oder auf
                               sonstige Weise verarbeitet wurden, nicht mehr notwendig sind.
                             </p>
+
+                            <p>Quelle: <a href="https://www.it-recht-kanzlei.de/"> https://www.it-recht-kanzlei.de/</a></p>
+
                           </div>
                         </Col>
                       </Row>

@@ -82,7 +82,7 @@ class footer extends React.Component {
                     </a>
                   </li>
                   <li className="list-unstyled margin-p-20 ">
-                    <a href="mailto:info@ekm.de">
+                    <a href="mailto:info@ekm-erfolg.de">
                       <h5 className="title">
                         <MDBIcon
                             fas
@@ -269,7 +269,7 @@ class footer extends React.Component {
                 <MDBCol xs={4} className="margin-auto">
                   <ul className="margin-p-10">
                     <li className="list-unstyled margin-p-10 ">
-                      <a href="mailto:info@ekm.de">
+                      <a href="mailto:info@ekm-erfolg.de">
                         <h5 className="title">
                           <MDBIcon
                               fas
