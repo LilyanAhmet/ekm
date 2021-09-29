@@ -60,7 +60,7 @@ export default class Impressum extends Component {
                                 Deutschland
                               </p>
                               <p>
-                                Tel.: 01723922407 <br />""
+                                Tel.: 01723922407 <br />
                                 E-Mail: info@ekm-erfolg.de
                               </p>
                               <p>
